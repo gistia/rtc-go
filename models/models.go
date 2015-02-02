@@ -22,13 +22,14 @@ type ReturnValue struct {
 }
 
 type Value struct {
-	StartIndex     int64 `xml:"startIndex"`
-	TotalCount     int64 `xml:"totalCount"`
-	EstimatedTotal int64 `xml:"estimatedTotal"`
-	Limit          int64 `xml:"limit"`
-	Token          string
-	Headers        []Header `xml:"headers"`
-	Rows           []Row    `xml:"rows"`
+	StartIndex     int64      `xml:"startIndex"`
+	TotalCount     int64      `xml:"totalCount"`
+	EstimatedTotal int64      `xml:"estimatedTotal"`
+	Limit          int64      `xml:"limit"`
+	Token          string     `xml:"resultToken"`
+	Headers        []Header   `xml:"headers"`
+	Rows           []Row      `xml:"rows"`
+	WorkItems      []WorkItem `xml:"workItemSummaryDTOs"`
 }
 
 type Header struct {
@@ -48,6 +49,15 @@ type Row struct {
 	StateGroup  string   `xml:"stateGroup"`
 	Labels      []string `xml:"labels"`
 	LocationUri string   `xml:"locationUri"`
+}
+
+type WorkItem struct {
+	WorkItemId  string `xml:"workItemItemId"`
+	Id          string `xml:"id"`
+	Summary     string `xml:"summary"`
+	OwnerName   string `xml:"ownerName"`
+	Type        string `xml:"typeName"`
+	LocationUri string `xml:"locationUri"`
 }
 
 func NewFromXml(xmlData []byte) (Envelope, error) {

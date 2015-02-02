@@ -21,9 +21,41 @@ func main() {
 				list()
 			},
 		},
+
+		{
+			Name:      "find",
+			ShortName: "f",
+			Usage:     "searches work items that match",
+			Action: func(c *cli.Context) {
+				find(c.Args()[0])
+			},
+		},
 	}
 
 	app.Run(os.Args)
+}
+
+func login() (*rtc.RTC, error) {
+	res := rtc.NewRTC("fcoury@br.ibm.com", "tempra14")
+	err := res.Login()
+
+	if err != nil {
+		return nil, err
+	}
+
+	return res, nil
+}
+
+func renderTable(wis []*rtc.WorkItem) {
+	table := tablewriter.NewWriter(os.Stdout)
+	table.SetHeader([]string{"Id", "Type", "Summary"})
+	table.SetAlignment(tablewriter.ALIGN_LEFT)
+	table.SetColWidth(200)
+
+	for _, wi := range wis {
+		table.Append([]string{wi.Id, wi.Type, wi.Summary})
+	}
+	table.Render()
 }
 
 func list() {
@@ -39,13 +71,19 @@ func list() {
 		panic(err)
 	}
 
-	table := tablewriter.NewWriter(os.Stdout)
-	table.SetHeader([]string{"Id", "Summary"})
-	table.SetAlignment(tablewriter.ALIGN_LEFT)
-	table.SetColWidth(200)
+	renderTable(wis)
+}
 
-	for _, wi := range wis {
-		table.Append([]string{wi.Id, wi.Summary})
+func find(query string) {
+	rtc, err := login()
+	if err != nil {
+		panic(err)
 	}
-	table.Render()
+
+	wis, err := rtc.Search(query)
+	if err != nil {
+		panic(err)
+	}
+
+	renderTable(wis)
 }

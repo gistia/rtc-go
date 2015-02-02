@@ -1,8 +1,10 @@
 package rtc
 
 import (
+	"fmt"
 	"io/ioutil"
 	"net/http"
+	"net/url"
 
 	"github.com/fcoury/rtc-go/browser"
 	"github.com/fcoury/rtc-go/models"
@@ -24,6 +26,7 @@ type WorkItem struct {
 	Estimate     string
 	FiledAgainst string
 	PlannedFor   string
+	LocationUri  string
 }
 
 func NewRTC(user string, password string) *RTC {
@@ -32,6 +35,22 @@ func NewRTC(user string, password string) *RTC {
 
 func (rtc *RTC) request(method string, url string, data string) (*http.Response, error) {
 	return rtc.browser.Request(method, url, data)
+}
+
+func (rtc *RTC) requestBody(method string, url string, data string) ([]byte, error) {
+	resp, err := rtc.browser.Request(method, url, data)
+
+	if err != nil {
+		return nil, err
+	}
+
+	body, err := ioutil.ReadAll(resp.Body)
+
+	if err != nil {
+		return nil, err
+	}
+
+	return body, err
 }
 
 func (rtc *RTC) Login() error {
@@ -98,9 +117,39 @@ func (rtc *RTC) CurrentWorkItems() ([]*WorkItem, error) {
 			Estimate:     row.Labels[5],
 			FiledAgainst: row.Labels[6],
 			PlannedFor:   row.Labels[7],
+			LocationUri:  row.LocationUri,
 		}
 		workItems = append(workItems, wi)
 	}
 
 	return workItems, err
+}
+
+func (rtc *RTC) Search(query string) ([]*WorkItem, error) {
+	var workItems []*WorkItem
+
+	url := fmt.Sprintf("https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.rest.IQueryRestService/results?maxResults=100&fullText=%s&projectAreaItemId=_U7zMYFRcEd61fuNW84kdiQ", url.QueryEscape(query))
+
+	body, err := rtc.requestBody("GET", url, "")
+	if err != nil {
+		return workItems, err
+	}
+
+	env, err := models.NewFromXml(body)
+	if err != nil {
+		return workItems, err
+	}
+
+	for _, twi := range env.Body.Response.ReturnValue.Value.WorkItems {
+		wi := &WorkItem{
+			Id:          twi.Id,
+			Summary:     twi.Summary,
+			Type:        twi.Type,
+			OwnedBy:     twi.OwnerName,
+			LocationUri: twi.LocationUri,
+		}
+		workItems = append(workItems, wi)
+	}
+
+	return workItems, nil
 }
