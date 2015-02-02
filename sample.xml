@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<soapenv:Envelope
+	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:com.ibm.team.repository.common.services="http:///com/ibm/team/core/services.ecore"
+	xmlns:workitem.query.restDTO="com.ibm.team.workitem.query.rest.dto"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<soapenv:Body>
+		<response>
+			<method>postGetResultSet</method>
+			<interface>com.ibm.team.workitem.common.internal.rest.IQueryRestService</interface>
+			<returnValue xsi:type="com.ibm.team.repository.common.services:ComplexDataArg">
+				<type>COMPLEX</type>
+				<value xsi:type="workitem.query.restDTO:ResultSetDTO">
+					<startIndex>0</startIndex>
+					<totalCount>22</totalCount>
+					<estimatedTotal>-1</estimatedTotal>
+					<limit>22</limit>
+					<token>_3oq28arbEeSicYpAbHXWsw</token>
+					<headers>
+						<attributeId>workItemType</attributeId>
+						<attributeType>type</attributeType>
+						<label>Type</label>
+						<isOrderable>true</isOrderable>
+						<alignment>right</alignment>
+						<width>2.5em</width>
+						<iconOnly>true</iconOnly>
+						<labelOnly>false</labelOnly>
+						<color xsi:nil="true"/>
+					</headers>
+					<headers>
+						<attributeId>summary</attributeId>
+						<attributeType>mediumHtml</attributeType>
+						<label>Summary</label>
+						<isOrderable>true</isOrderable>
+						<alignment>left</alignment>
+						<width>50em</width>
+						<iconOnly>false</iconOnly>
+						<labelOnly>false</labelOnly>
+						<color xsi:nil="true"/>
+					</headers>
+					<headers>
+						<attributeId>creator</attributeId>
+						<attributeType>contributor</attributeType>
+						<label>Created By</label>
+						<isOrderable>true</isOrderable>
+						<alignment>left</alignment>
+						<width>11em</width>
+						<iconOnly>false</iconOnly>
+						<labelOnly>false</labelOnly>
+						<color xsi:nil="true"/>
+					</headers>
+					<headers>
+						<attributeId>owner</attributeId>
+						<attributeType>contributor</attributeType>
+						<label>Owned By</label>
+						<isOrderable>true</isOrderable>
+						<alignment>left</alignment>
+						<width>11em</width>
+						<iconOnly>false</iconOnly>
+						<labelOnly>false</labelOnly>
+						<color xsi:nil="true"/>
+					</headers>
+					<headers>
+						<attributeId>creationDate</attributeId>
+						<attributeType>timestamp</attributeType>
+						<label>Creation Date</label>
+						<isOrderable>true</isOrderable>
+						<alignment>left</alignment>
+						<width>9.5em</width>
+						<iconOnly>false</iconOnly>
+						<labelOnly>false</labelOnly>
+						<color>gray</color>
+					</headers>
+					<headers>
+						<attributeId>duration</attributeId>
+						<attributeType>duration</attributeType>
+						<label>Estimate</label>
+						<isOrderable>true</isOrderable>
+						<alignment>left</alignment>
+						<width>15em</width>
+						<iconOnly>false</iconOnly>
+						<labelOnly>false</labelOnly>
+						<color xsi:nil="true"/>
+					</headers>
+					<headers>
+						<attributeId>category</attributeId>
+						<attributeType>category</attributeType>
+						<label>Filed Against</label>
+						<isOrderable>true</isOrderable>
+						<alignment>left</alignment>
+						<width>20em</width>
+						<iconOnly>false</iconOnly>
+						<labelOnly>false</labelOnly>
+						<color xsi:nil="true"/>
+					</headers>
+					<headers>
+						<attributeId>target</attributeId>
+						<attributeType>interval</attributeType>
+						<label>Planned For</label>
+						<isOrderable>true</isOrderable>
+						<alignment>left</alignment>
+						<width>15em</width>
+						<iconOnly>false</iconOnly>
+						<labelOnly>false</labelOnly>
+						<color xsi:nil="true"/>
+					</headers>
+					<headers>
+						<attributeId>projectArea</attributeId>
+						<attributeType>projectArea</attributeType>
+						<label>Project Area</label>
+						<isOrderable>true</isOrderable>
+						<alignment>left</alignment>
+						<width>15em</width>
+						<iconOnly>false</iconOnly>
+						<labelOnly>false</labelOnly>
+						<color xsi:nil="true"/>
+					</headers>
+					<headers>
+						<attributeId>internalTags</attributeId>
+						<attributeType>tags</attributeType>
+						<label>Tags</label>
+						<isOrderable>true</isOrderable>
+						<alignment>left</alignment>
+						<width>15em</width>
+						<iconOnly>false</iconOnly>
+						<labelOnly>false</labelOnly>
+						<color xsi:nil="true"/>
+					</headers>
+					<rows>
+						<id>1279685</id>
+						<itemId>_IDpPV6fhEeSicYpAbHXWsw</itemId>
+						<stateGroup>1</stateGroup>
+						<labels>Task</labels>
+						<labels>DB2: New Cancellation Option - Cancelled by OM - Pending Resolution</labels>
+						<labels>Felipe Gonçalves Coury</labels>
+						<labels>Felipe Gonçalves Coury</labels>
+						<labels>1422554660209</labels>
+						<labels>Unassigned</labels>
+						<labels>Epic/User Story</labels>
+						<labels>[2015] February R1, S1</labels>
+						<labels>SD-OPS</labels>
+						<labels></labels>
+						<iconUrls>https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/task.gif</iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<locationUri>https://igartc01.swg.usma.ibm.com/jazz/resource/itemName/com.ibm.team.workitem.WorkItem/1279685</locationUri>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+					</rows>
+					<rows>
+						<id>1279544</id>
+						<itemId>_Vl1m16fSEeSicYpAbHXWsw</itemId>
+						<stateGroup>1</stateGroup>
+						<labels>Task</labels>
+						<labels>Production problem: order T05D21 completed ActivationCode but email was not sent</labels>
+						<labels>Felipe Gonçalves Coury</labels>
+						<labels>Felipe Gonçalves Coury</labels>
+						<labels>1422548317897</labels>
+						<labels>2 hours</labels>
+						<labels>Unassigned</labels>
+						<labels>[2015] January R1, S3</labels>
+						<labels>SD-OPS</labels>
+						<labels></labels>
+						<iconUrls>https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/task.gif</iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<locationUri>https://igartc01.swg.usma.ibm.com/jazz/resource/itemName/com.ibm.team.workitem.WorkItem/1279544</locationUri>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+					</rows>
+					<rows>
+						<id>1276642</id>
+						<itemId>_vyGvnqJlEeS4fen3HD7Mow</itemId>
+						<stateGroup>4</stateGroup>
+						<labels>Task</labels>
+						<labels>Test: New Cancellation Option - Cancelled by OM - Pending Resolution</labels>
+						<labels>Felipe Gonçalves Coury</labels>
+						<labels>Felipe Gonçalves Coury</labels>
+						<labels>1421951889023</labels>
+						<labels>8 hours</labels>
+						<labels>Epic/User Story</labels>
+						<labels>[2015] January R1, S3</labels>
+						<labels>SD-OPS</labels>
+						<labels></labels>
+						<iconUrls>https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/task.gif</iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<locationUri>https://igartc01.swg.usma.ibm.com/jazz/resource/itemName/com.ibm.team.workitem.WorkItem/1276642</locationUri>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+					</rows>
+					<rows>
+						<id>1276605</id>
+						<itemId>_cb5VYKJQEeS4fen3HD7Mow</itemId>
+						<stateGroup>4</stateGroup>
+						<labels>Task</labels>
+						<labels>Artifacts: Fix vulnerability discovered by WASC security scan Oct 2014</labels>
+						<labels>Felipe Gonçalves Coury</labels>
+						<labels>Felipe Gonçalves Coury</labels>
+						<labels>1421943127123</labels>
+						<labels>8 hours</labels>
+						<labels>Epic/User Story</labels>
+						<labels>Unassigned</labels>
+						<labels>SD-OPS</labels>
+						<labels></labels>
+						<iconUrls>https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/task.gif</iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<locationUri>https://igartc01.swg.usma.ibm.com/jazz/resource/itemName/com.ibm.team.workitem.WorkItem/1276605</locationUri>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+					</rows>
+					<rows>
+						<id>1276258</id>
+						<itemId>_gcasUKHTEeS4fen3HD7Mow</itemId>
+						<stateGroup>1</stateGroup>
+						<labels>Story</labels>
+						<labels>Fix vulnerability discovered by WASC security scan Oct 2014</labels>
+						<labels>Agustin Arellano Chavez</labels>
+						<labels>Felipe Gonçalves Coury</labels>
+						<labels>1421889657910</labels>
+						<labels>Unassigned</labels>
+						<labels>Product Backlog</labels>
+						<labels>[2015] February R1, S1</labels>
+						<labels>SD-OPS</labels>
+						<labels></labels>
+						<iconUrls>https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/story.gif</iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<locationUri>https://igartc01.swg.usma.ibm.com/jazz/resource/itemName/com.ibm.team.workitem.WorkItem/1276258</locationUri>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+					</rows>
+					<rows>
+						<id>1267141</id>
+						<itemId>_FzYcpZT4EeS4fen3HD7Mow</itemId>
+						<stateGroup>1</stateGroup>
+						<labels>Task</labels>
+						<labels>Production Problem: Unexpected error during translation</labels>
+						<labels>Felipe Gonçalves Coury</labels>
+						<labels>Felipe Gonçalves Coury</labels>
+						<labels>1420475487449</labels>
+						<labels>4 hours</labels>
+						<labels>Epic/User Story/Defect</labels>
+						<labels>[2015] January R1, S3</labels>
+						<labels>SD-OPS</labels>
+						<labels></labels>
+						<iconUrls>https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/task.gif</iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<locationUri>https://igartc01.swg.usma.ibm.com/jazz/resource/itemName/com.ibm.team.workitem.WorkItem/1267141</locationUri>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+					</rows>
+					<rows>
+						<id>1264242</id>
+						<itemId>_AgXNoIqhEeS4fen3HD7Mow</itemId>
+						<stateGroup>1</stateGroup>
+						<labels>Task</labels>
+						<labels>RDC Errors with no division</labels>
+						<labels>Felipe Gonçalves Coury</labels>
+						<labels>Felipe Gonçalves Coury</labels>
+						<labels>1419338502920</labels>
+						<labels>1 hour</labels>
+						<labels>Epic/User Story/Defect</labels>
+						<labels>[2015] January R1, S3</labels>
+						<labels>SD-OPS</labels>
+						<labels></labels>
+						<iconUrls>https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/task.gif</iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<locationUri>https://igartc01.swg.usma.ibm.com/jazz/resource/itemName/com.ibm.team.workitem.WorkItem/1264242</locationUri>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+					</rows>
+					<rows>
+						<id>1198148</id>
+						<itemId>_1tQHZylbEeSiZoD3z7rhUw</itemId>
+						<stateGroup>4</stateGroup>
+						<labels>Task</labels>
+						<labels>Artifacts: DSW BOM creation into Manufacturing DB via BOM Uploader Tool</labels>
+						<labels>Felipe Gonçalves Coury</labels>
+						<labels>Felipe Gonçalves Coury</labels>
+						<labels>1408643549725</labels>
+						<labels>Unassigned</labels>
+						<labels>Unassigned</labels>
+						<labels>Unassigned</labels>
+						<labels>SD-OPS</labels>
+						<labels></labels>
+						<iconUrls>https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/task.gif</iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<locationUri>https://igartc01.swg.usma.ibm.com/jazz/resource/itemName/com.ibm.team.workitem.WorkItem/1198148</locationUri>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+					</rows>
+					<rows>
+						<id>1177992</id>
+						<itemId>_00oAjgiREeSXM5jQuXmfUA</itemId>
+						<stateGroup>1</stateGroup>
+						<labels>Defect</labels>
+						<labels>Cancel Process broken when PILO rejects cancellation</labels>
+						<labels>Agustin Arellano Chavez</labels>
+						<labels>Felipe Gonçalves Coury</labels>
+						<labels>1405038503296</labels>
+						<labels>Unassigned</labels>
+						<labels>Product Backlog</labels>
+						<labels>[2015] January R1, S3</labels>
+						<labels>SD-OPS</labels>
+						<labels></labels>
+						<iconUrls>https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/bug.gif</iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<locationUri>https://igartc01.swg.usma.ibm.com/jazz/resource/itemName/com.ibm.team.workitem.WorkItem/1177992</locationUri>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+					</rows>
+					<rows>
+						<id>1173090</id>
+						<itemId>__WiAmQFgEeSXM5jQuXmfUA</itemId>
+						<stateGroup>1</stateGroup>
+						<labels>Defect</labels>
+						<labels>Ship note from PILO failure caused by wrong Packaging Delivery Group Id</labels>
+						<labels>Agustin Arellano Chavez</labels>
+						<labels>Felipe Gonçalves Coury</labels>
+						<labels>1404250427328</labels>
+						<labels>Unassigned</labels>
+						<labels>Product Backlog</labels>
+						<labels>[2015] January R1, S3</labels>
+						<labels>SD-OPS</labels>
+						<labels></labels>
+						<iconUrls>https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/bug.gif</iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<iconUrls></iconUrls>
+						<locationUri>https://igartc01.swg.usma.ibm.com/jazz/resource/itemName/com.ibm.team.workitem.WorkItem/1173090</locationUri>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+						<info>
+						</info>
+					</rows>
+				</value>
+			</returnValue>
+		</response>
+	</soapenv:Body>
+</soapenv:Envelope>
