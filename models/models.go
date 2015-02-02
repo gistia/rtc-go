@@ -43,9 +43,9 @@ type Header struct {
 }
 
 type Row struct {
-	Id          int64    `xml:"id"`
+	Id          string   `xml:"id"`
 	ItemId      string   `xml:"itemId"`
-	StateGroup  int64    `xml:"stateGroup"`
+	StateGroup  string   `xml:"stateGroup"`
 	Labels      []string `xml:"labels"`
 	LocationUri string   `xml:"locationUri"`
 }

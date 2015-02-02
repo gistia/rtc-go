@@ -12,8 +12,8 @@ type Browser struct {
 	Debug        bool
 }
 
-func NewBrowser() *Browser {
-	return &Browser{Debug: true}
+func NewBrowser(debug bool) *Browser {
+	return &Browser{Debug: debug}
 }
 
 func (b *Browser) Request(method string, url string, data string) (*http.Response, error) {
