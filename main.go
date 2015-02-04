@@ -78,6 +78,15 @@ func main() {
 			},
 		},
 
+		{
+			Name:      "artifact",
+			ShortName: "art",
+			Usage:     "creates an artifact task for a story",
+			Action: func(c *cli.Context) {
+				createArtifact(c.Args()[0])
+			},
+		},
+
 		// dev-related commands
 
 		{
@@ -345,4 +354,22 @@ func move(id string, iterId string) {
 	}
 
 	fmt.Println("Successfully moved work item " + id + " to iteration " + iter.Label)
+}
+
+func createArtifact(id string) {
+	r, err := login()
+	if err != nil {
+		panic(err)
+	}
+
+	// wi, err := r.CreateSubTask(id, "Artifacts")
+	// if err != nil {
+	// 	fmt.Println(err.Error())
+	// }
+
+	// fmt.Println("Created " + wi.Title())
+	err = r.GetAllValues()
+	if err != nil {
+		panic(err)
+	}
 }

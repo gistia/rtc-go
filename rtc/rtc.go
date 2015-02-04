@@ -22,6 +22,8 @@ type RTC struct {
 
 type WorkItem struct {
 	Id           string
+	ItemId       string
+	StateId      string
 	Type         string
 	Summary      string
 	CreatedBy    string
@@ -60,6 +62,10 @@ type Iteration struct {
 	Label     string
 	Completed string
 	Archived  string
+}
+
+func (wi *WorkItem) Title() string {
+	return fmt.Sprintf("%s %s - %s", wi.Type, wi.Id, wi.Summary)
 }
 
 func NewRTC(user string, password string) *RTC {
@@ -248,6 +254,7 @@ func (rtc *RTC) Retrieve(id string) (*WorkItem, error) {
 
 	wi := &WorkItem{
 		Id:          rwi.Id,
+		ItemId:      rwi.ItemId,
 		Summary:     rwi.Summary,
 		Type:        rwi.Type,
 		OwnedBy:     rwi.OwnerName,
@@ -278,17 +285,21 @@ func (rtc *RTC) Create(wi *WorkItem) (*WorkItem, error) {
 	data := fmt.Sprintf("itemId=%s&type=task&additionalSaveParameters=com.ibm.team.workitem.common.internal.updateBacklinks&sanitizeHTML=true&projectAreaItemId=_U7zMYFRcEd61fuNW84kdiQ", itemId)
 
 	for k, _ := range values {
-		data = data + "&attributeIdentifiers=" + url.QueryEscape(k)
+		data = data + "&attributeIdentifiers=" + k // url.QueryEscape(k)
+		// fmt.Printf("%s => %s\n", k, url.QueryEscape(k))
 	}
 
 	for _, v := range values {
-		data = data + "&attributeValues=" + url.QueryEscape(v)
+		data = data + "&attributeValues=" + v // url.QueryEscape(v)
+		// fmt.Printf("%s => %s\n", v, url.QueryEscape(v))
 	}
 
-	fmt.Println("Trying URL:", createUrl, data)
+	// fmt.Println("\n\nTrying URL:", createUrl, data)
+	// fmt.Println("\n")
 
+	// return nil, nil
 	env, err := rtc.requestXml("POST", createUrl, data)
-	fmt.Printf("Env: %+v", env)
+	fmt.Printf("Env: %+v\n", env)
 
 	id := env.Body.Response.ReturnValue.Value.WorkItem.ParsedId()
 
@@ -391,6 +402,8 @@ func (rtc *RTC) GetWorkItem(id string) (*WorkItem, error) {
 	val := env.Body.Response.ReturnValue.Value
 	attrs := getAttributes(val)
 
+	wi.ItemId = val.ItemId
+	wi.StateId = val.StateId
 	wi.PlannedFor = attrs["target"]
 	wi.State = attrs["internalState"]
 	wi.Resolution = attrs["internalResolution"]
@@ -417,30 +430,6 @@ func (rtc *RTC) GetWorkItem(id string) (*WorkItem, error) {
 	}
 
 	return wi, nil
-}
-
-func GetAllValues() {
-	// curl "https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.rest.IWorkItemRestService/allValues?projectAreaItemId=_U7zMYFRcEd61fuNW84kdiQ&typeId=task&includeArchived=false&ids=workItemType&ids=internalSeverity&ids=foundIn&ids=creator&ids=category&ids=internalTags&ids=internalPriority&ids=owner&ids=target&ids=task&ids=key-component&ids=environment&itemId=_IDpPV6fhEeSicYpAbHXWsw" -H "Cookie: com_ibm_team_process_web_ui_internal_admin_projects_ProcessTree_0SaveSelectedCookie="%"2F0; JazzFormAuth=Form; net-jazz-ajax-cookie-rememberUserId=; ibmSurvey=1422910922008; UnicaNIODID=r2adbtayyw2-ZDKlNvR; pSite=https"%"3A"%"2F"%"2Fwww.ibm.com"%"2Fdeveloperworks"%"2Ftopics"%"2Frest"%"2520api"%"2520"%"2520python"%"2F; mmcore.tst=0.911; mmid=-1314913985"%"7CAQAAAAo69LY+igsAAA"%"3D"%"3D; mmcore.pd=1780648624"%"7CAQAAAAoBQjr0tj6KC46Z2xgBAHt7sKJCDdJIEXd3dy5nb29nbGUuY29tLmJyDgAAAHt7sKJCDdJIAAAAAP////8AGQAAAP////8AEXd3dy5nb29nbGUuY29tLmJyBIoLAQAAAAAAAwAAAAAA////////////////AAAAAAABRQ"%"3D"%"3D; mmcore.srv=nycvwcgus02; CoreID6=79140352120814229109241&ci=50200000|DEVWRKS; CoreM_State=73~-1~-1~-1~-1~3~3~5~3~3~7~7~|~~|~~|~~|~||||||~|~~|~~|~~|~~|~~|~~|~~|~; CoreM_State_Content=6~|~~|~|; 50200000_clogin=v=1&l=1422910924&e=1422912724704; JSESSIONID=0000McnEpThigYe4KZtmvEkcYTo:-1; LtpaToken2=70cBRFB6lNvXdQliLRmvCjp8ZnvqveWfCVzRA2BiVRyXShkY5aSsu17Gsk8AtNSaVqfcRL5nsnHPExAqKUvt8zTUK7oTtkIuxKF/jQzhZlTXKj7BbfTswaI8Q0FTOKwrX4phxwuDuTYkPjP0L+aAldpGpgk6i8xfcAgqNCR6qeaueBX4ymmOpJZ3eRh1vPqixSQPd/rTXpHYsFIeBhyy0em2qprzYmSls7EGA4G7xgIaZtmx8Hu9OEMHrMCl5f6xL6c+JiWjmAgGrUSwmzRT2MmA4112fiRH+bEJbywZfw44HkU98Q7MjiXqSvyVXXMwXuwyxOFItzWr3KpnM4Tr20Ha/CEw1A3n54r3TCvmPTQku3AdYCLtrwqdiajACspfzUuELuXOssLijwB7pDo+y9L4hV2S+PRHajw7XixZgoiGQKGkZoQWG8EOs0aWzEpK7DN8Cx3AA4FI9NXmt7nJ5UPiMJ4875Xu4lsKeaBCbiyyZIcaCafV0I5TwSUomcso1cxyHPRaRuqlfMGdOPSYu9kxnVsqIgnrKURYA475hKxWB7f/WLHXSyWMUILSYYR2cO0AJj/sFgI9k+bLzVSjM49sg/v62hxTjx5KNEu2I0NwfE/fwHfmIuua5TLIRd6AOoZ7OnBF0+D+OUhinY+bLoUgUMNrCgG2Xv0uqWzjISo=" -H "X-jazz-downstream-auth-client-level: 4.0" -H "Accept-Encoding: gzip, deflate, sdch" -H "Accept-Language: en-US,en;q=0.8" -H "X-com-ibm-team-configuration-versions: LATEST" -H "User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36" -H "Content-Type: application/x-www-form-urlencoded; charset=utf-8" -H "accept: text/json" -H "Referer: https://igartc01.swg.usma.ibm.com/jazz/web/projects/SD-OPS" -H "X-Requested-With: XMLHttpRequest" -H "Connection: keep-alive" --compressed
-
-	// allValuesUrl := "https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.rest.IWorkItemRestService/allValues?projectAreaItemId=_U7zMYFRcEd61fuNW84kdiQ&typeId=task&includeArchived=false&ids=workItemType&ids=internalSeverity&ids=foundIn&ids=creator&ids=category&ids=internalTags&ids=internalPriority&ids=owner&ids=target&ids=task&ids=key-component&ids=environment&itemId=_IDpPV6fhEeSicYpAbHXWsw"
-
-}
-
-func StartWorking() {
-	// curl "https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.rest.IWorkItemRestService/workItem2" -H "Cookie: com_ibm_team_process_web_ui_internal_admin_projects_ProcessTree_0SaveSelectedCookie="%"2F0; JazzFormAuth=Form; net-jazz-ajax-cookie-rememberUserId=; ibmSurvey=1422910922008; UnicaNIODID=r2adbtayyw2-ZDKlNvR; pSite=https"%"3A"%"2F"%"2Fwww.ibm.com"%"2Fdeveloperworks"%"2Ftopics"%"2Frest"%"2520api"%"2520"%"2520python"%"2F; mmcore.tst=0.911; mmid=-1314913985"%"7CAQAAAAo69LY+igsAAA"%"3D"%"3D; mmcore.pd=1780648624"%"7CAQAAAAoBQjr0tj6KC46Z2xgBAHt7sKJCDdJIEXd3dy5nb29nbGUuY29tLmJyDgAAAHt7sKJCDdJIAAAAAP////8AGQAAAP////8AEXd3dy5nb29nbGUuY29tLmJyBIoLAQAAAAAAAwAAAAAA////////////////AAAAAAABRQ"%"3D"%"3D; mmcore.srv=nycvwcgus02; CoreID6=79140352120814229109241&ci=50200000|DEVWRKS; CoreM_State=73~-1~-1~-1~-1~3~3~5~3~3~7~7~|~~|~~|~~|~||||||~|~~|~~|~~|~~|~~|~~|~~|~; CoreM_State_Content=6~|~~|~|; 50200000_clogin=v=1&l=1422910924&e=1422912724704; LtpaToken2=70cBRFB6lNvXdQliLRmvCjp8ZnvqveWfCVzRA2BiVRyXShkY5aSsu17Gsk8AtNSaVqfcRL5nsnHPExAqKUvt8zTUK7oTtkIuxKF/jQzhZlTXKj7BbfTswaI8Q0FTOKwrX4phxwuDuTYkPjP0L+aAldpGpgk6i8xfcAgqNCR6qeaueBX4ymmOpJZ3eRh1vPqixSQPd/rTXpHYsFIeBhyy0em2qprzYmSls7EGA4G7xgIaZtmx8Hu9OEMHrMCl5f6xL6c+JiWjmAgGrUSwmzRT2MmA4112fiRH+bEJbywZfw44HkU98Q7MjiXqSvyVXXMwXuwyxOFItzWr3KpnM4Tr20Ha/CEw1A3n54r3TCvmPTQku3AdYCLtrwqdiajACspfzUuELuXOssLijwB7pDo+y9L4hV2S+PRHajw7XixZgoiGQKGkZoQWG8EOs0aWzEpK7DN8Cx3AA4FI9NXmt7nJ5UPiMJ4875Xu4lsKeaBCbiyyZIcaCafV0I5TwSUomcso1cxyHPRaRuqlfMGdOPSYu9kxnVsqIgnrKURYA475hKxWB7f/WLHXSyWMUILSYYR2cO0AJj/sFgI9k+bLzVSjM49sg/v62hxTjx5KNEu2I0NwfE/fwHfmIuua5TLIRd6AOoZ7OnBF0+D+OUhinY+bLoUgUMNrCgG2Xv0uqWzjISo=; JSESSIONID=0000gUhTj2U6flkabQKFBEcrhW0:-1" -H "X-jazz-downstream-auth-client-level: 4.0" -H "Origin: https://igartc01.swg.usma.ibm.com" -H "Accept-Encoding: gzip, deflate" -H "Accept-Language: en-US,en;q=0.8" -H "X-com-ibm-team-configuration-versions: LATEST" -H "User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36" -H "Content-Type: application/x-www-form-urlencoded; charset=UTF-8" -H "accept: text/json" -H "Referer: https://igartc01.swg.usma.ibm.com/jazz/web/projects/SD-OPS" -H "X-Requested-With: XMLHttpRequest" -H "Connection: keep-alive" --data "attributeIdentifiers=internalResolution&attributeValues=&action=bugzillaWorkflow.action.startWorking&itemId=_IDpPV6fhEeSicYpAbHXWsw&type=task&stateId=_hrpkQKfhEeSicYpAbHXWsw&additionalSaveParameters=com.ibm.team.workitem.common.internal.updateBacklinks&sanitizeHTML=true&projectAreaItemId=_U7zMYFRcEd61fuNW84kdiQ" --compressed
-	// stop - bugzillaWorkflow.action.stopWorking
-	// reopen - bugzillaWorkflow.action.reopen
-	// resolve/fixed -
-	// attributeIdentifiers:internalResolution
-	// attributeValues:1
-	// action:bugzillaWorkflow.action.resolve
-	// itemId:_2JmUQKsEEeSicYpAbHXWsw
-	// type:task
-	// stateId:_zNF4QKvzEeSicYpAbHXWsw
-	// additionalSaveParameters:com.ibm.team.workitem.common.internal.updateBacklinks
-	// sanitizeHTML:true
-	// projectAreaItemId:_U7zMYFRcEd61fuNW84kdiQ
-	// reopen - bugzillaWorkflow.action.reopen
 }
 
 func (rtc *RTC) ChangeStatus(id string, s string) (*models.Envelope, error) {
@@ -498,6 +487,31 @@ func (rtc *RTC) SaveAttribute(id string, attr string, value string) (*models.Env
 	return env, err
 }
 
+func (rtc *RTC) AddParent(id string, parentId string) error {
+	wi, err := rtc.GetWorkItem(id)
+	if err != nil {
+		return err
+	}
+
+	pwi, err := rtc.GetWorkItem(parentId)
+	if err != nil {
+		return err
+	}
+
+	link := url.QueryEscape(fmt.Sprintf(`{"cmd":"addLink","type":"com.ibm.team.workitem.linktype.parentworkitem","end":"target","name":"Parent","itemId":"%s","comment":"%s: %s"}`, pwi.ItemId, pwi.Id, pwi.Summary))
+
+	linkUrl := "https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.rest.IWorkItemRestService/workItem2"
+	data := fmt.Sprintf("itemId=%s&type=task&stateId=%s&updateLinks=%s&additionalSaveParameters=com.ibm.team.workitem.common.internal.updateBacklinks&sanitizeHTML=true&projectAreaItemId=_U7zMYFRcEd61fuNW84kdiQ", wi.ItemId, wi.StateId, link)
+
+	body, err := rtc.requestBody("POST", linkUrl, data)
+	if err != nil {
+		return err
+	}
+
+	fmt.Println(string(body))
+	return nil
+}
+
 func (rtc *RTC) MoveToIteration(id string, iterId string) (*WorkItem, models.Iteration, error) {
 	var iter models.Iteration
 
@@ -530,6 +544,50 @@ func (rtc *RTC) MoveToIteration(id string, iterId string) (*WorkItem, models.Ite
 	}
 
 	return wi, iter, nil
+}
+
+func (rtc *RTC) CreateSubTask(id string, subType string) (*WorkItem, error) {
+	pwi, err := rtc.Retrieve(id)
+	if err != nil {
+		return nil, err
+	}
+
+	summary := fmt.Sprintf("%s: %s", subType, pwi.Summary)
+
+	wi := &WorkItem{
+		Summary: summary,
+		Type:    "task",
+	}
+
+	wi, err = rtc.Create(wi)
+	if err != nil {
+		return nil, err
+	}
+
+	rtc.AddParent(wi.Id, pwi.Id)
+
+	return wi, nil
+}
+
+func (rtc *RTC) GetAllValues() error {
+	// curl "https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.rest.IWorkItemRestService/allValues?projectAreaItemId=_U7zMYFRcEd61fuNW84kdiQ&typeId=task&includeArchived=false&ids=workItemType&ids=internalSeverity&ids=foundIn&ids=creator&ids=category&ids=internalTags&ids=internalPriority&ids=owner&ids=target&ids=task&ids=key-component&ids=environment&itemId=_IDpPV6fhEeSicYpAbHXWsw" -H "Cookie: com_ibm_team_process_web_ui_internal_admin_projects_ProcessTree_0SaveSelectedCookie="%"2F0; JazzFormAuth=Form; net-jazz-ajax-cookie-rememberUserId=; ibmSurvey=1422910922008; UnicaNIODID=r2adbtayyw2-ZDKlNvR; pSite=https"%"3A"%"2F"%"2Fwww.ibm.com"%"2Fdeveloperworks"%"2Ftopics"%"2Frest"%"2520api"%"2520"%"2520python"%"2F; mmcore.tst=0.911; mmid=-1314913985"%"7CAQAAAAo69LY+igsAAA"%"3D"%"3D; mmcore.pd=1780648624"%"7CAQAAAAoBQjr0tj6KC46Z2xgBAHt7sKJCDdJIEXd3dy5nb29nbGUuY29tLmJyDgAAAHt7sKJCDdJIAAAAAP////8AGQAAAP////8AEXd3dy5nb29nbGUuY29tLmJyBIoLAQAAAAAAAwAAAAAA////////////////AAAAAAABRQ"%"3D"%"3D; mmcore.srv=nycvwcgus02; CoreID6=79140352120814229109241&ci=50200000|DEVWRKS; CoreM_State=73~-1~-1~-1~-1~3~3~5~3~3~7~7~|~~|~~|~~|~||||||~|~~|~~|~~|~~|~~|~~|~~|~; CoreM_State_Content=6~|~~|~|; 50200000_clogin=v=1&l=1422910924&e=1422912724704; JSESSIONID=0000McnEpThigYe4KZtmvEkcYTo:-1; LtpaToken2=70cBRFB6lNvXdQliLRmvCjp8ZnvqveWfCVzRA2BiVRyXShkY5aSsu17Gsk8AtNSaVqfcRL5nsnHPExAqKUvt8zTUK7oTtkIuxKF/jQzhZlTXKj7BbfTswaI8Q0FTOKwrX4phxwuDuTYkPjP0L+aAldpGpgk6i8xfcAgqNCR6qeaueBX4ymmOpJZ3eRh1vPqixSQPd/rTXpHYsFIeBhyy0em2qprzYmSls7EGA4G7xgIaZtmx8Hu9OEMHrMCl5f6xL6c+JiWjmAgGrUSwmzRT2MmA4112fiRH+bEJbywZfw44HkU98Q7MjiXqSvyVXXMwXuwyxOFItzWr3KpnM4Tr20Ha/CEw1A3n54r3TCvmPTQku3AdYCLtrwqdiajACspfzUuELuXOssLijwB7pDo+y9L4hV2S+PRHajw7XixZgoiGQKGkZoQWG8EOs0aWzEpK7DN8Cx3AA4FI9NXmt7nJ5UPiMJ4875Xu4lsKeaBCbiyyZIcaCafV0I5TwSUomcso1cxyHPRaRuqlfMGdOPSYu9kxnVsqIgnrKURYA475hKxWB7f/WLHXSyWMUILSYYR2cO0AJj/sFgI9k+bLzVSjM49sg/v62hxTjx5KNEu2I0NwfE/fwHfmIuua5TLIRd6AOoZ7OnBF0+D+OUhinY+bLoUgUMNrCgG2Xv0uqWzjISo=" -H "X-jazz-downstream-auth-client-level: 4.0" -H "Accept-Encoding: gzip, deflate, sdch" -H "Accept-Language: en-US,en;q=0.8" -H "X-com-ibm-team-configuration-versions: LATEST" -H "User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36" -H "Content-Type: application/x-www-form-urlencoded; charset=utf-8" -H "accept: text/json" -H "Referer: https://igartc01.swg.usma.ibm.com/jazz/web/projects/SD-OPS" -H "X-Requested-With: XMLHttpRequest" -H "Connection: keep-alive" --compressed
+
+	allValuesUrl := "https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.rest.IWorkItemRestService/allValues?projectAreaItemId=_U7zMYFRcEd61fuNW84kdiQ&typeId=task&includeArchived=false&ids=workItemType&ids=internalSeverity&ids=foundIn&ids=creator&ids=category&ids=internalTags&ids=internalPriority&ids=owner&ids=target&ids=task&ids=key-component&ids=environment&itemId=_IDpPV6fhEeSicYpAbHXWsw"
+
+	env, err := rtc.requestXml("GET", allValuesUrl, "")
+	if err != nil {
+		return err
+	}
+
+	fmt.Printf("%+v\n", env)
+	for k, v := range env.Body.Response.ReturnValue.GetItems() {
+		fmt.Println("***", k)
+
+		for kk, vv := range v {
+			fmt.Printf("%s = %s\n", kk, vv)
+		}
+	}
+	return nil
 }
 
 // values["category"] = "_aXl2IGW0Ed6uZsIllQzRvg"

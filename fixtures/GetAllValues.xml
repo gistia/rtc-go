@@ -1,0 +1,2816 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<soapenv:Envelope
+	xmlns:workitem.restDTO="com.ibm.team.workitem.rest.dto"
+	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:com.ibm.team.repository.common.services="http:///com/ibm/team/core/services.ecore"
+	xmlns:workitem.query.restDTO="com.ibm.team.workitem.query.rest.dto"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<soapenv:Body>
+		<response>
+			<method>getAllValues</method>
+			<interface>com.ibm.team.workitem.common.internal.rest.IWorkItemRestService</interface>
+			<returnValue xsi:type="com.ibm.team.repository.common.services:ComplexArrayDataArg">
+				<type>COMPLEX</type>
+				<values xsi:type="workitem.restDTO:UIItemSetDTO">
+					<attributeName>target</attributeName>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>Unassigned</label>
+						<iconUrl xsi:nil="true"/>
+						<id></id>
+						<itemType>interval</itemType>
+						<isNullValue>true</isNullValue>
+						<arguments xsi:nil="true"/>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>Future Release Items</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_7kcggMD6Ed-LoM7MAf45_g</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/Future Release</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-01-01T07:00:00.000Z</startDate>
+						<endDate>2012-03-31T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>Rapid Recovery 2011</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_QbPhYDVIEeCZKZCE5PhExQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2011-rapid-recovery</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2011-04-01T06:00:00.000Z</startDate>
+						<endDate>2011-04-09T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2011] PULSE Blue Harmony R1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_kSMv0EQREeCjVv6AyNTTOQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2011-pulse-bhr1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2011-03-01T07:00:00.000Z</startDate>
+						<endDate>2011-08-03T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2011] July Release 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_QXpv4H9MEeC0mrjI0onsMA</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2011-July-release1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2011-05-19T23:35:00.000Z</startDate>
+						<endDate>2011-07-08T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2011] October Release 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_soS-8J0wEeCDL_mv5rQ5Ew</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2011-October-release1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2011-07-04T06:00:00.000Z</startDate>
+						<endDate>2011-10-14T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2011] July/Aug Standalone</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_qVT-EKMiEeC1V9G28UI-rA</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2011-July-August</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2011-06-30T06:00:00.000Z</startDate>
+						<endDate>2011-08-19T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2011] November Release 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_jAeYYM5tEeC7W-mMAxv6vg</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2011-November-release1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2011-09-26T06:00:00.000Z</startDate>
+						<endDate>2011-11-11T07:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2011] November Release 2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_twfLsO3lEeCVMPy3HST-5w</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2011-November-release2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2011-10-29T06:01:00.000Z</startDate>
+						<endDate>2011-11-25T07:01:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2011] October Release 2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_Utb4MPTbEeCj97v43hf-Mw</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2011-October-release2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2011-10-10T14:04:00.000Z</startDate>
+						<endDate>2011-10-18T02:04:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] January Release 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_u9rHIA7MEeGf9OrXyJOm5Q</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-jan-release1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2011-11-21T14:26:00.000Z</startDate>
+						<endDate>2011-12-09T14:26:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] February Release 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_YMQngDceEeGmIrcI_mi51g</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-feb-release1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2011-12-16T21:51:00.000Z</startDate>
+						<endDate>2012-02-20T21:51:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] April Release 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_4J0OIFNKEeGgFcDids6CUQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-apr-release1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-02-04T18:19:00.000Z</startDate>
+						<endDate>2012-04-06T17:19:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] May Release 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_OlBd4GPIEeGEma5tnWouwQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-may-release1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-03-01T17:58:00.000Z</startDate>
+						<endDate>2012-05-25T16:58:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>Rapid Recovery 2012</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_I9WMAHzoEeGHioCJE3iiZg</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-rapid-recovery</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-04-23T17:20:00.000Z</startDate>
+						<endDate>2012-05-07T17:20:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] April Release 2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_t2oVsIMvEeGAfNlHLHIO7g</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-apr-release2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-04-10T17:06:44.921Z</startDate>
+						<endDate>2012-04-13T17:06:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] April Release 3</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_gj28MIPsEeGQdsKOXDeL9Q</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-apr-release3</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-04-11T15:38:51.046Z</startDate>
+						<endDate xsi:nil="true"/>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] May Release 2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_iHkIAJVuEeGy-d96R5iOCQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-may-release2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-05-05T22:22:00.000Z</startDate>
+						<endDate>2012-05-25T22:22:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] July Release 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_-R0rgKAoEeGk2OEjAM60Wg</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-july-release1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-05-28T12:01:00.000Z</startDate>
+						<endDate>2012-06-30T00:01:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] August Release 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_6f0c8LWGEeGOt7b6B2uyoQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-august-release1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-07-23T18:36:00.000Z</startDate>
+						<endDate>2012-08-10T18:36:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] October R1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_fkqDoOMQEeGzssuuu3DlPQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2012] October R1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-08-13T17:25:00.000Z</startDate>
+						<endDate>2012-10-12T17:25:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] October R2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_1iK44AKCEeKv0fACHfjJEQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2012] October R2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-09-24T05:00:00.000Z</startDate>
+						<endDate>2012-11-02T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] November R1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_MdnUUxlVEeKvyarb0eKoZQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2012] November R1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-10-22T05:00:00.000Z</startDate>
+						<endDate>2012-11-09T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] November R2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_WYyOUCn7EeKNod2hbU-puQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2012] November R2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-11-12T06:00:00.000Z</startDate>
+						<endDate>2012-11-23T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2013] January R1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_WYyOUin7EeKNod2hbU-puQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2013] January R1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-11-26T06:00:00.000Z</startDate>
+						<endDate>2012-12-28T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2013] Februrary R1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_qZqnIWPtEeKW457PZAYS9w</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2013] Februrary R1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2013-01-21T06:00:00.000Z</startDate>
+						<endDate>2013-02-22T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2013] April R1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_IZFLUXCeEeKS_ZrvF0n3OQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2013] April R1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2013-02-23T06:00:00.000Z</startDate>
+						<endDate>2013-03-15T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2013] April R2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_kRaakpyEEeKr8Yyb3oV1qA</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2013] April R2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2013-04-06T06:00:00.000Z</startDate>
+						<endDate>2013-04-21T05:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>Rapid Recovery 2013</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_FgCPUKEqEeKyb9mJM4WX4A</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/Release</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2013-11-08T13:00:00.000Z</startDate>
+						<endDate>2013-11-15T13:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2013] May R1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_A1yzo6w0EeKVvp9MtmAJSA</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2013] May R1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2013-04-22T05:00:00.000Z</startDate>
+						<endDate>2013-05-24T05:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2015] SW Mfg Cons R1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_WC5n4LmYEeKMH7rCm0XIlQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2015] SW Mfg Cons R1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-08-02T05:00:00.000Z</startDate>
+						<endDate>2014-11-29T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2013] July R1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_tQZpwsSPEeKzSZV_KTskYw</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2013] July R1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2013-05-27T05:00:00.000Z</startDate>
+						<endDate>2013-07-26T05:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2013] October R1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_QZjt0gE2EeOGsMtq3iE-Yg</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2013] October R1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2013-08-10T05:00:00.000Z</startDate>
+						<endDate>2013-08-31T05:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2013] November R1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_RBs9ojHjEeO1S_-sspuhkQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2013] November R1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2013-10-14T05:00:00.000Z</startDate>
+						<endDate>2013-11-30T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2014] January R1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_oBFgMFXiEeO5pr0T3KWerg</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2014] January R1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2013-12-01T06:00:00.000Z</startDate>
+						<endDate>2014-01-31T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2014] February R1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_7ukTIYq2EeOeDJAzbkTndw</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2014] February R1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-02-01T06:00:00.000Z</startDate>
+						<endDate>2014-02-22T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2014] February R2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_xrjNAZWhEeO0evHG5j5-9g</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2014] February R2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-02-14T06:00:00.000Z</startDate>
+						<endDate>2014-02-28T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2014] April R1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_xrjNA5WhEeO0evHG5j5-9g</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2014] March R1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-02-21T06:00:00.000Z</startDate>
+						<endDate>2014-03-21T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2014] ETC SDC / PULSE sunset R1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_mBQ0msDtEeONN6Xe0w7zyQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2014] ETC SDC // PULSE sunset R1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-03-31T06:00:00.000Z</startDate>
+						<endDate>2014-05-10T04:59:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2014] May R1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>__o93kNCQEeOupe5ioFVABA</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2014] May R1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-05-05T05:00:00.000Z</startDate>
+						<endDate>2014-05-24T04:59:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2014] Jul R1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_GRPW0OHOEeOEOpcAXDVKdg</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2014] Jul R1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-05-26T05:00:00.000Z</startDate>
+						<endDate>2014-07-25T05:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2014] Aug R1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_PAPfgBNsEeSTmIwxF2nAQQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2014] Aug R1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-07-28T05:00:00.000Z</startDate>
+						<endDate>2014-09-05T05:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2014] Oct R1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_Af-RUDRYEeS8eIYgxrZiFg</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2014] Oct R1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-09-08T05:00:00.000Z</startDate>
+						<endDate>2014-09-27T04:59:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>Rapid Recovery 2014</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_DHk1YDd8EeS8RIENNrVUDA</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/Rapid Recovery 2014</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-11-08T13:00:00.000Z</startDate>
+						<endDate>2014-11-15T13:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2014] Nov R1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_L1RpAFhwEeS2CZWZOgGMjQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2014] Nov R1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-10-20T05:00:00.000Z</startDate>
+						<endDate>2014-11-07T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2015] January R1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_CqAmQHcPEeSqiuQhaWloBA</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2015] January R1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-12-01T06:00:00.000Z</startDate>
+						<endDate>2014-12-19T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2015] Sw Mfg Cons R2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_kOMUwKAmEeS4fen3HD7Mow</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2015] Sw Mfg Cons R2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2015-01-19T06:00:00.000Z</startDate>
+						<endDate>2015-02-27T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2015] February R1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_H5fMQKHXEeS4fen3HD7Mow</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2015] February R1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2015-01-26T06:00:00.000Z</startDate>
+						<endDate>2015-02-13T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>1Q 2012 Future Release Items</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_EYmdwMD7Ed-LoM7MAf45_g</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/Future Release/1Q2012Future Release</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-01-01T07:00:00.000Z</startDate>
+						<endDate>2012-03-31T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>Rapid Recovery 2011 - Sprint 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_ZI2KsDVIEeCZKZCE5PhExQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2011-rapid-recovery/2011-rapid-recovery-sprint1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2011-04-01T06:00:00.000Z</startDate>
+						<endDate>2011-04-09T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2011] PULSE BH R1 - Sprint 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_qZgFQEQREeCjVv6AyNTTOQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2011-pulse-bhr1/pulseBHR1sprnt1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2011-03-01T14:38:31.312Z</startDate>
+						<endDate>2011-03-20T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2011] PULSE BH R1 - Sprint 2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_Tj5AEJHcEeCemOi4zgPsyw</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2011-pulse-bhr1/pulseBHR1sprnt2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2011-06-01T06:00:00.000Z</startDate>
+						<endDate>2011-06-30T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2011] PULSE BH R1 - Sprint 3</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_l5h90KfZEeCOwLFUpSn04Q</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2011-pulse-bhr1/pulseBHR1sprnt3</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2011-07-04T06:00:00.000Z</startDate>
+						<endDate>2011-07-15T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2011] July Release 1 - Sprint 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_i3jZsH9MEeC0mrjI0onsMA</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2011-July-release1/2011-July-release1-sprint1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2011-05-19T23:38:00.000Z</startDate>
+						<endDate>2011-06-10T23:38:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2011] July Release 1 - Sprint 2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_bXFPkJHcEeCemOi4zgPsyw</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2011-July-release1/2011-July-release1-sprint2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2011-06-11T06:00:00.000Z</startDate>
+						<endDate>2011-07-08T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2011] October Release 1 - Sprint 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_6UV4MJ0wEeCDL_mv5rQ5Ew</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2011-October-release1/2011-October-release1-sprint1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2011-07-04T06:00:00.000Z</startDate>
+						<endDate>2011-07-31T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2011] October Release 1 - Sprint 2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_toixILSAEeC_PvaAb7q5Vg</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2011-October-release1/2011-October-release1-sprint2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2011-08-01T06:00:00.000Z</startDate>
+						<endDate>2011-08-21T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2011] October Release 1 - Sprint 3</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_bao5QLlBEeCDa7rPY68c4A</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2011-October-release1/2011-October-release1-sprint3</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2011-08-22T06:00:00.000Z</startDate>
+						<endDate>2011-09-18T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2011] October Release 1 - Sprint 4</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_wF3BUN5zEeCJ6JZhjgRoTA</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2011-October-release1/2011-October-release1-sprint4</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2011-09-19T06:00:00.000Z</startDate>
+						<endDate>2011-10-07T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2011] July/August Standalone</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_wSyCEKMiEeC1V9G28UI-rA</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2011-July-August/2011-July-August</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2011-06-30T14:10:19.078Z</startDate>
+						<endDate>2011-08-19T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2011] November Release 1 - Sprint 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_pOL30M5tEeC7W-mMAxv6vg</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2011-November-release1/2011-November-release1-sprint1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2011-09-26T06:00:00.000Z</startDate>
+						<endDate>2011-10-14T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2011] November Release 1 - Sprint 2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_3zHogPm9EeC4vpWNXwXKTw</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2011-November-release1/2011-November-release1-sprint2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2011-10-15T06:00:00.000Z</startDate>
+						<endDate>2011-11-11T07:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2011] November Release 2 - Sprint 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_2Ldz8O3lEeCVMPy3HST-5w</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2011-November-release2/2011-November-release2-sprint1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2011-10-29T06:01:00.000Z</startDate>
+						<endDate>2011-11-25T07:01:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2011] October Release 2 - Sprint 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_a0cSsPTbEeCj97v43hf-Mw</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2011-October-release2/2011-October-release2-sprint1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2011-10-10T14:06:00.000Z</startDate>
+						<endDate>2011-10-18T02:06:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] January Release 1 - Sprint 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_2LA3kA7MEeGf9OrXyJOm5Q</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-jan-release1/2012-jan-release1-sprint1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2011-11-21T14:27:00.000Z</startDate>
+						<endDate>2011-12-09T14:27:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] January Release 1 - Sprint 2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_FfqSgB0UEeGtB5ytdc0zWA</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-jan-release1/2012-jan-release1-sprint2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2011-12-10T14:27:00.000Z</startDate>
+						<endDate>2011-12-30T14:27:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] January Release 1 - Sprint 3</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_kxCdQDJpEeGJfL-REhCx_Q</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-jan-release1/2012-jan-release1-sprint3</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2011-12-31T14:27:00.000Z</startDate>
+						<endDate>2012-01-27T14:27:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] February Release 1 - Sprint 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_iJIgUDceEeGmIrcI_mi51g</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-feb-release1/2012-feb-release1-sprint1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2011-12-16T21:52:00.000Z</startDate>
+						<endDate>2012-01-13T21:52:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] February Release 1 - Sprint 2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_TfzqoECOEeGr7aU7iK7_qw</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-feb-release1/2012-feb-release1-sprint2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-01-14T21:52:00.000Z</startDate>
+						<endDate>2012-02-03T21:52:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] February Release 1 - Sprint 3</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_5TNIIEz0EeGcy_NNrT3gng</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-feb-release1/2012-feb-release1-sprint3</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-02-04T21:52:00.000Z</startDate>
+						<endDate>2012-02-24T21:52:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] April Release 1 - Sprint 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_6gYK8FNMEeGgFcDids6CUQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-apr-release1/2012-apr-release1-sprint1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-02-04T18:35:00.000Z</startDate>
+						<endDate>2012-02-24T18:35:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] April Release 1 - Sprint 2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_t3BVYGbiEeG9tsK4SsjSvw</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-apr-release1/2012-apr-release1-sprint2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-02-25T18:35:00.000Z</startDate>
+						<endDate>2012-03-16T18:35:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] April Release 1 - Sprint 3</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_CsluMHHoEeGLw5mLp2aIQA</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-apr-release1/2012-apr-release1-sprint3</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-03-17T17:35:00.000Z</startDate>
+						<endDate>2012-04-06T18:35:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] May Release 1 - Sprint 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_Y-qLMGPIEeGEma5tnWouwQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-may-release1/2012-may-release1-sprint1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-03-01T17:59:37.984Z</startDate>
+						<endDate>2012-03-23T16:59:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] May Release 1 - Sprint 2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_3D064Hm0EeGZk_m273_vDQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-may-release1/2012-may-release1-sprint2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-03-24T16:59:00.000Z</startDate>
+						<endDate>2012-04-13T16:59:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] May Release 1 - Sprint 3</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_ofXaQIWZEeGZRsETRXqr_A</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-may-release1/2012-may-release1-sprint3</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-04-14T16:59:00.000Z</startDate>
+						<endDate>2012-05-04T16:59:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>Rapid Recovery 2012 - Sprint 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_TYLMIHzoEeGHioCJE3iiZg</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-rapid-recovery/2012-rapid-recovery-sprint1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-04-23T17:20:00.000Z</startDate>
+						<endDate>2012-05-07T17:20:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] April Release 2 - Sprint 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_0DdEUIMvEeGAfNlHLHIO7g</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-apr-release2/2012-apr-release2-sprint1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-04-10T17:08:01.937Z</startDate>
+						<endDate>2012-04-13T17:08:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] April Release 3 - Sprint 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_rwwScIPsEeGQdsKOXDeL9Q</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-apr-release3/2012-apr-release3-sprint1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-04-11T15:39:36.296Z</startDate>
+						<endDate>2012-04-23T15:39:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] May Release 2 - Sprint 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_WlGU8JVvEeGy-d96R5iOCQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-may-release2/2012-may-release2-sprint1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-05-05T22:28:00.000Z</startDate>
+						<endDate>2012-05-25T22:28:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] July Release 1 - Sprint 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_XI0aQKApEeGk2OEjAM60Wg</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-july-release1/2012-july-release1-sprint1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-05-28T12:03:00.000Z</startDate>
+						<endDate>2012-06-09T00:03:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] July Release 1 - Sprint 2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_is2sQLGPEeGID4HFsp5vFw</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-july-release1/2012-july-release1-sprint2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-06-11T17:28:00.000Z</startDate>
+						<endDate>2012-06-29T17:28:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] August Release 1 Sprint 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_oL3vALWHEeGOt7b6B2uyoQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-august-release1/2012-august-release1-sprint1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-07-02T18:42:00.000Z</startDate>
+						<endDate>2012-07-20T18:42:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] August Release 1, Sprint 2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_BHrr8NKKEeGdsNPyEUXtQQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/2012-august-release1/2012-august-release1-sprint2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-07-23T16:41:00.000Z</startDate>
+						<endDate>2012-08-10T16:41:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] October R1, Sprint 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_rN3icOMQEeGzssuuu3DlPQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2012] October R1/[2012] October R1, Sprint 1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-08-13T17:26:00.000Z</startDate>
+						<endDate>2012-08-31T17:26:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] October R1, Sprint 2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_h3eaF_OTEeGg5bI0qidh9w</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2012] October R1/[2012] October R1, Sprint 2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-09-03T20:54:00.000Z</startDate>
+						<endDate>2012-09-22T05:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] October R2, Sprint 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_1iK44QKCEeKv0fACHfjJEQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2012] October R2/[2012] October R2, Sprint 1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-09-24T05:00:00.000Z</startDate>
+						<endDate>2012-10-12T05:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] October R2, Sprint 2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_K-PyYRO6EeKoGsYNVAEQeg</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2012] October R2/[2012] October R2, Sprint 2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-10-15T05:00:00.000Z</startDate>
+						<endDate>2012-10-26T05:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] November R1, Sprint 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_MdnUVBlVEeKvyarb0eKoZQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2012] November R1/[2012] November R1, Sprint 1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-10-22T05:00:00.000Z</startDate>
+						<endDate>2012-11-09T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2012] November R2, Sprint 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_WYyOUSn7EeKNod2hbU-puQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2012] November R2/[2012] November R2, Sprint 1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-11-12T06:00:00.000Z</startDate>
+						<endDate>2012-11-23T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2013] January R1, Sprint 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_WYyOUyn7EeKNod2hbU-puQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2013] January R1/[2013] January R1, Sprint 1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-11-26T06:00:00.000Z</startDate>
+						<endDate>2012-12-07T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2013] January R1, Sprint 2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_CCKhAj_UEeKUZN1MszCI4w</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2013] January R1/[2013] January R1, Sprint 2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-12-10T06:00:00.000Z</startDate>
+						<endDate>2012-12-28T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2013] January R1, Sprint 3</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_W8ySkE-zEeKZrM_l0L4qZg</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2013] January R1/[2013] January R1, Sprint 3 </arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2012-12-31T06:00:00.000Z</startDate>
+						<endDate>2013-01-18T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2013] February R1, Sprint 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_qZqnImPtEeKW457PZAYS9w</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2013] Februrary R1/[2013] February R1, Sprint 1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2013-01-21T06:00:00.000Z</startDate>
+						<endDate>2013-02-22T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2013] April R1, Sprint 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_IZFLU3CeEeKS_ZrvF0n3OQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2013] April R1/[2013] April R1, Sprint 1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2013-02-25T14:00:00.000Z</startDate>
+						<endDate>2013-03-15T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2013] April R1, Sprint 2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_c-bYAIzUEeKIQ_WCvsnI6w</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2013] April R1/[2013] April R1, Sprint 2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2013-03-16T06:00:00.000Z</startDate>
+						<endDate>2013-04-05T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2013] April R2, Sprint 1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_kRaak5yEEeKr8Yyb3oV1qA</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2013] April R2/[2013] April R2, Sprint 1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2013-04-06T06:00:00.000Z</startDate>
+						<endDate>2013-04-21T05:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>Rapid Recovery 2013</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_DV750KErEeKyb9mJM4WX4A</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/Release/new_iteration</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2013-11-08T13:00:00.000Z</startDate>
+						<endDate>2013-11-15T13:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2013] May R1, S1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_A1yzpaw0EeKVvp9MtmAJSA</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2013] May R1/[2013] May R1, S1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2013-04-22T05:00:00.000Z</startDate>
+						<endDate>2013-05-10T05:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2013] May R1, S2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_tWS6ILjNEeKMH7rCm0XIlQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2013] May R1/[2013] May R1, S2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2013-05-11T05:00:00.000Z</startDate>
+						<endDate>2013-05-24T05:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2015] SW Mfg Cons R1, S1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_WC5n4bmYEeKMH7rCm0XIlQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2015] SW Mfg Cons R1/[2015] SW Mfg Cons R1, S1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-08-01T17:36:00.000Z</startDate>
+						<endDate>2014-08-30T05:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2013] July R1, S1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_tQZpw8SPEeKzSZV_KTskYw</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2013] July R1/[2013] July R1, S1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2013-05-27T05:00:00.000Z</startDate>
+						<endDate>2013-06-14T05:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2013] July R1, S2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_g7Ul8NRSEeKWPqpB7yLpOw</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2013] July R1/[2013] July R1, S2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2013-06-15T05:00:00.000Z</startDate>
+						<endDate>2013-07-05T05:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2013] July R1, S3</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_on3EIONWEeK-S92ZneUQBg</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2013] July R1/[2013] July R1, S3</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2013-07-06T05:00:00.000Z</startDate>
+						<endDate>2013-07-26T05:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2013] July R1, S4</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_nOazwPYUEeKi9KBWQ2Rjvw</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2013] July R1/[2013] July R1, S4</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2013-07-27T05:00:00.000Z</startDate>
+						<endDate>2013-08-09T05:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2013] October R1, S1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_QZjt0wE2EeOGsMtq3iE-Yg</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2013] October R1/[2013] October R1, S1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2013-08-10T05:00:00.000Z</startDate>
+						<endDate>2013-08-31T05:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2013] October R1, S2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_dONfgBTTEeOc0c_xNAqVyA</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2013] October R1/[2013] October R1, S2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2013-09-02T05:00:00.000Z</startDate>
+						<endDate>2013-09-20T05:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2013] October R1, S3</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_Vp0IACIbEeOS7OBDvv3jzg</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2013] October R1/[2013] October R1, S3</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2013-09-21T05:00:00.000Z</startDate>
+						<endDate>2013-10-11T05:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2013] November R1, S1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_RBs9ozHjEeO1S_-sspuhkQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2013] November R1/[2013] November R1, S1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2013-10-14T05:00:00.000Z</startDate>
+						<endDate>2013-10-20T05:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2013] November R1, S2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_vnv0UTtvEeOyRbnsASjh5w</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2013] November R1/[2013] November R1, S2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2013-10-21T05:00:00.000Z</startDate>
+						<endDate>2013-11-08T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2013] November R1, S3</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_gw6pgEfREeOGpMf7Qji9mg</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2013] November R1/[2013] November R1, S3</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2013-11-09T06:00:00.000Z</startDate>
+						<endDate>2013-11-30T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2014] January R1, S1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_oBFgMlXiEeO5pr0T3KWerg</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2014] January R1/[2014] January R1, S1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2013-12-01T06:00:00.000Z</startDate>
+						<endDate>2013-12-21T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2014] January R1, S2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_wLtO4mv0EeO4d4qYmv3N5A</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2014] January R1/[2014] January R1, S2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2013-12-22T06:00:00.000Z</startDate>
+						<endDate>2014-01-11T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2014] January R1, S3</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_aetboHlVEeORopCGlE03rA</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2014] January R1/[2014] January R1, S3</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-01-12T06:00:00.000Z</startDate>
+						<endDate>2014-01-31T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2014] February R1, S1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_7ukTIoq2EeOeDJAzbkTndw</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2014] February R1/[2014] February R1, S1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-02-01T06:00:00.000Z</startDate>
+						<endDate>2014-02-22T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2014] February R2, S1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_xrjNApWhEeO0evHG5j5-9g</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2014] February R2/[2014] February R1, S1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-02-14T06:00:00.000Z</startDate>
+						<endDate>2014-02-28T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2014] April R1, S1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_DN0w8pWiEeO0evHG5j5-9g</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2014] March R1/[2014] March R1, S1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-02-21T06:00:00.000Z</startDate>
+						<endDate>2014-03-21T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2014] April R1, S2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_MYiXYLBZEeOfovc-Zrrm6Q</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2014] March R1/[2014] April R1, S2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-03-24T06:00:00.000Z</startDate>
+						<endDate>2014-04-12T04:59:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2014] April R1, S3</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_mBQ0mcDtEeONN6Xe0w7zyQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2014] March R1/[2014] April R1, S3</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-04-14T05:00:00.000Z</startDate>
+						<endDate>2014-05-03T04:59:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2014] ETC SDC / PULSE sunset R1, S1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_a7NQsMDuEeONN6Xe0w7zyQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2014] ETC SDC // PULSE sunset R1/[2014] ETC SDC // PULSE sunset R1, S1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-03-31T06:00:00.000Z</startDate>
+						<endDate>2014-04-19T04:59:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2014] May R1, S1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>__o93kdCQEeOupe5ioFVABA</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2014] May R1/[2014] May R1, S1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-05-05T05:00:00.000Z</startDate>
+						<endDate>2014-05-24T04:59:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2014] Jul R1, S1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_GRPW0eHOEeOEOpcAXDVKdg</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2014] Jul R1/[2014] Jul R1, S1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-05-26T05:00:00.000Z</startDate>
+						<endDate>2014-06-14T04:59:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2014] Jul R1, S2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_DXo5UPZPEeOrApK-m3kgSg</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2014] Jul R1/[2014] Jul R1, S2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-06-16T05:00:00.000Z</startDate>
+						<endDate>2014-07-05T04:59:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2014] Jul R1, S3</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_aXgOAAOaEeSXM5jQuXmfUA</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2014] Jul R1/[2014] Jul R1, S3</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-07-07T05:00:00.000Z</startDate>
+						<endDate>2014-07-26T04:59:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2014] Aug R1, S1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_PAPfgRNsEeSTmIwxF2nAQQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2014] Aug R1/[2014] Aug R1, S1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-07-28T05:00:00.000Z</startDate>
+						<endDate>2014-08-16T04:59:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2014] Aug R1, S2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>__VdFMCTQEeSiZoD3z7rhUw</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2014] Aug R1/[2014] Aug R1, S2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-08-18T05:00:00.000Z</startDate>
+						<endDate>2014-09-06T04:59:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2014] Oct R1, S1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_Af-RUTRYEeS8eIYgxrZiFg</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2014] Oct R1/[2014] Oct R1, S1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-09-08T05:00:00.000Z</startDate>
+						<endDate>2014-09-27T04:59:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2014] Oct R1, S2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_FHMYgETJEeSDrqqPWHvJbg</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2014] Oct R1/[2014] Oct R1, S2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-09-29T05:00:00.000Z</startDate>
+						<endDate>2014-10-18T04:59:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>Rapid Recovery 2014</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_STZ9ADeVEeSxzsX-Py0rHA</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/Rapid Recovery 2014/Rapid Recovery 2014</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-11-08T13:00:00.000Z</startDate>
+						<endDate>2014-11-15T13:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2014] Nov R1, S1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_L1RpAVhwEeS2CZWZOgGMjQ</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2014] Nov R1/[2014] Nov R1, S1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-10-20T05:00:00.000Z</startDate>
+						<endDate>2014-11-08T05:59:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2014] Nov R1, S2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_leGxEGbZEeSvrNvavp5NKA</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2014] Nov R1/[2014] Nov R1, S2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-11-10T06:00:00.000Z</startDate>
+						<endDate>2014-11-29T05:59:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2015] January R1, S1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_CqAmQXcPEeSqiuQhaWloBA</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2015] January R1/[2015] January R1, S1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-12-01T06:00:00.000Z</startDate>
+						<endDate>2014-12-19T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2015] January R1, S2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_kXSIcYqzEeS4fen3HD7Mow</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2015] January R1/[2015] January R1, S2</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2014-12-22T06:00:00.000Z</startDate>
+						<endDate>2015-01-10T05:59:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2015] January R1, S3</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_9e52SZduEeS4fen3HD7Mow</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2015] January R1/[2015] January R1, S3</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2015-01-12T06:00:00.000Z</startDate>
+						<endDate>2015-01-31T05:59:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2015] Sw Mfg Cons R2, S1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_kOMUwaAmEeS4fen3HD7Mow</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2015] Sw Mfg Cons R2/[2015] Sw Mfg Cons R2, S1</arguments>
+						<isArchived>false</isArchived>
+						<current>false</current>
+						<inScope>true</inScope>
+						<startDate>2015-01-19T06:00:00.000Z</startDate>
+						<endDate>2015-02-06T06:00:00.000Z</endDate>
+					</uiItems>
+					<uiItems xsi:type="workitem.restDTO:IterationDTO">
+						<label>[2015] February R1, S1</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_H5fMQaHXEeS4fen3HD7Mow</id>
+						<itemType>interval</itemType>
+						<isNullValue>false</isNullValue>
+						<arguments>/main-development/[2015] February R1/[2015] February R1, S1</arguments>
+						<isArchived>false</isArchived>
+						<current>true</current>
+						<inScope>true</inScope>
+						<startDate>2015-01-26T06:00:00.000Z</startDate>
+						<endDate>2015-02-14T05:59:00.000Z</endDate>
+					</uiItems>
+				</values>
+				<values xsi:type="workitem.restDTO:UIItemSetDTO">
+					<attributeName>internalPriority</attributeName>
+					<uiItems>
+						<label>Unassigned</label>
+						<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned.gif</iconUrl>
+						<id>priority.literal.l01</id>
+						<itemType>priority</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>10 Low</label>
+						<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/low.gif</iconUrl>
+						<id>priority.literal.l02</id>
+						<itemType>priority</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>9 low</label>
+						<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/low.gif</iconUrl>
+						<id>priority.literal.l03</id>
+						<itemType>priority</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>8 Low</label>
+						<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/low.gif</iconUrl>
+						<id>priority.literal.l04</id>
+						<itemType>priority</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>7 Low</label>
+						<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/low.gif</iconUrl>
+						<id>priority.literal.l05</id>
+						<itemType>priority</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>6 Low</label>
+						<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/low.gif</iconUrl>
+						<id>priority.literal.l06</id>
+						<itemType>priority</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>5 Medium</label>
+						<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/medium.gif</iconUrl>
+						<id>priority.literal.l07</id>
+						<itemType>priority</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>4 Medium</label>
+						<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/medium.gif</iconUrl>
+						<id>priority.literal.l08</id>
+						<itemType>priority</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>3 Medium</label>
+						<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/medium.gif</iconUrl>
+						<id>priority.literal.l09</id>
+						<itemType>priority</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>2 Medium</label>
+						<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/medium.gif</iconUrl>
+						<id>priority.literal.l10</id>
+						<itemType>priority</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>1 High</label>
+						<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/high.gif</iconUrl>
+						<id>priority.literal.l11</id>
+						<itemType>priority</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+				</values>
+				<values xsi:type="workitem.restDTO:UIItemSetDTO">
+					<attributeName>environment</attributeName>
+					<uiItems>
+						<label>Unassigned</label>
+						<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned2.gif</iconUrl>
+						<id>environment.literal.l9</id>
+						<itemType>environment</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>Quandary</label>
+						<iconUrl xsi:nil="true"/>
+						<id>environment.literal.l1</id>
+						<itemType>environment</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>Quandary2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>environment.literal.l2</id>
+						<itemType>environment</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>Quandary3</label>
+						<iconUrl xsi:nil="true"/>
+						<id>environment.literal.l3</id>
+						<itemType>environment</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>Massive</label>
+						<iconUrl xsi:nil="true"/>
+						<id>environment.literal.l4</id>
+						<itemType>environment</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>Massive2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>environment.literal.l5</id>
+						<itemType>environment</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>Massive3</label>
+						<iconUrl xsi:nil="true"/>
+						<id>environment.literal.l6</id>
+						<itemType>environment</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>Capitol2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>environment.literal.l7</id>
+						<itemType>environment</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>Capitol3</label>
+						<iconUrl xsi:nil="true"/>
+						<id>environment.literal.l8</id>
+						<itemType>environment</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+				</values>
+				<values xsi:type="workitem.restDTO:UIItemSetDTO">
+					<attributeName>owner</attributeName>
+					<uiItems>
+						<label>Unassigned</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_YNh4MOlsEdq4xpiOKg5hvA</id>
+						<itemType>contributor</itemType>
+						<isNullValue>true</isNullValue>
+					</uiItems>
+					<uiItems>
+						<label>Agustin Arellano Chavez</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_RApb0IlkEeGADLE4ybFPmw</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Bei Bei Zhan</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_HSIvEB5jEeCwysnUo5bGmw</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Betty P. Kessock</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_aDscoBTJEd6sg4Eb6lM3lA</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Carlos Antonio De Almeida Lyrio</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_mBNugC6nEd69hfWBX_TYeQ</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Carlos Bellarde Goncalves</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_4GFAsLMCEd6Ov43d5_wASA</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Carolyn Young</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_Cgp38GsfEd6s_NkjhjLPrg</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Chao Xu</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_U59wEBLFEeCwysnUo5bGmw</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Eleanor Kelly</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_RetrEJZNEeGpKpwjabBDLg</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Eric W. Gustafson</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_tykQYMfFEd6U_7iw6glrhw</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Felipe Gonçalves Coury</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_PrOIoMZ5Ed-Lr-wDR3V_pA</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Frederick H. Hackbarth</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_HOCM8BTDEd6sg4Eb6lM3lA</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Gregory Golder</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_fhz_MFUUEd61fuNW84kdiQ</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Hui Lan Huang</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_VR4E0JcdEd6Uc50T8Oii-A</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Junko Ohtani</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_TqRx0GCNEeChMpYxRRZQVQ</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Kimberly J. Eidem</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_W9cDsN1oEeCJU5o_FzuUrw</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Kirk Lind</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_JCRXoE-QEd6WkYofeccjWA</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Lawrence J. Karl</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_fDfXcBTJEd6sg4Eb6lM3lA</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Leonardo Gomes de Olivera</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_fr0PwFUUEd61fuNW84kdiQ</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Luis Fernando Stumpf Nogueira</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_3-E3ZhmUEeOwddJaILkiVQ</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Murilo Leandro Ribeiro</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_L91uQQ21EeSQYdcjfuMOFw</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Paul Everitt</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_ScJn4Ce3Ed--X7Wj9hCopQ</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>ROBERT NIELSEN</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_KrE8IBWLEd-yUYJz9B13-Q</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Samuel L Talbott</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_feeXUFUUEd61fuNW84kdiQ</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>SARAH NEWBY</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_fbGTMFUUEd61fuNW84kdiQ</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Sergio Luiz Barbutti</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_8vXSgBxkEeKmkeflQutW3Q</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Wei Ping Luo</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_IdUOkF81Ed6E3-DC4e76cA</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Yi Qiong Fan</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_kTyvQGExEeChMpYxRRZQVQ</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Yong Jun Jin</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_AdbioCr8EeCmV-5VCpeMyA</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+				</values>
+				<values xsi:type="workitem.restDTO:UIItemSetDTO">
+					<attributeName>task</attributeName>
+					<uiItems>
+						<label>Unassigned</label>
+						<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned2.gif</iconUrl>
+						<id>task-type.literal.l1</id>
+						<itemType>task-type</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>Code</label>
+						<iconUrl xsi:nil="true"/>
+						<id>task-type.literal.l2</id>
+						<itemType>task-type</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>Design</label>
+						<iconUrl xsi:nil="true"/>
+						<id>task-type.literal.l3</id>
+						<itemType>task-type</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>Documentation</label>
+						<iconUrl xsi:nil="true"/>
+						<id>task-type.literal.l9</id>
+						<itemType>task-type</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>WebSphere Application Server</label>
+						<iconUrl xsi:nil="true"/>
+						<id>task-type.literal.l4</id>
+						<itemType>task-type</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>zLinux</label>
+						<iconUrl xsi:nil="true"/>
+						<id>task-type.literal.l5</id>
+						<itemType>task-type</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>WebSphere MQ</label>
+						<iconUrl xsi:nil="true"/>
+						<id>task-type.literal.l6</id>
+						<itemType>task-type</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>WBI Message Broker</label>
+						<iconUrl xsi:nil="true"/>
+						<id>task-type.literal.l7</id>
+						<itemType>task-type</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>DB2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>task-type.literal.l8</id>
+						<itemType>task-type</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+				</values>
+				<values xsi:type="workitem.restDTO:UIItemSetDTO">
+					<attributeName>internalTags</attributeName>
+					<uiItems>
+						<label>1047084</label>
+						<iconUrl xsi:nil="true"/>
+						<id>1047084</id>
+						<itemType>tags</itemType>
+					</uiItems>
+					<uiItems>
+						<label>854840</label>
+						<iconUrl xsi:nil="true"/>
+						<id>854840</id>
+						<itemType>tags</itemType>
+					</uiItems>
+					<uiItems>
+						<label>894550</label>
+						<iconUrl xsi:nil="true"/>
+						<id>894550</id>
+						<itemType>tags</itemType>
+					</uiItems>
+					<uiItems>
+						<label>894552</label>
+						<iconUrl xsi:nil="true"/>
+						<id>894552</id>
+						<itemType>tags</itemType>
+					</uiItems>
+					<uiItems>
+						<label>894555</label>
+						<iconUrl xsi:nil="true"/>
+						<id>894555</id>
+						<itemType>tags</itemType>
+					</uiItems>
+					<uiItems>
+						<label>894557</label>
+						<iconUrl xsi:nil="true"/>
+						<id>894557</id>
+						<itemType>tags</itemType>
+					</uiItems>
+					<uiItems>
+						<label>894558</label>
+						<iconUrl xsi:nil="true"/>
+						<id>894558</id>
+						<itemType>tags</itemType>
+					</uiItems>
+					<uiItems>
+						<label>case</label>
+						<iconUrl xsi:nil="true"/>
+						<id>case</id>
+						<itemType>tags</itemType>
+					</uiItems>
+					<uiItems>
+						<label>db2</label>
+						<iconUrl xsi:nil="true"/>
+						<id>db2</id>
+						<itemType>tags</itemType>
+					</uiItems>
+					<uiItems>
+						<label>java</label>
+						<iconUrl xsi:nil="true"/>
+						<id>java</id>
+						<itemType>tags</itemType>
+					</uiItems>
+					<uiItems>
+						<label>jsf</label>
+						<iconUrl xsi:nil="true"/>
+						<id>jsf</id>
+						<itemType>tags</itemType>
+					</uiItems>
+					<uiItems>
+						<label>sql</label>
+						<iconUrl xsi:nil="true"/>
+						<id>sql</id>
+						<itemType>tags</itemType>
+					</uiItems>
+					<uiItems>
+						<label>tc</label>
+						<iconUrl xsi:nil="true"/>
+						<id>tc</id>
+						<itemType>tags</itemType>
+					</uiItems>
+					<uiItems>
+						<label>test</label>
+						<iconUrl xsi:nil="true"/>
+						<id>test</id>
+						<itemType>tags</itemType>
+					</uiItems>
+					<uiItems>
+						<label>web</label>
+						<iconUrl xsi:nil="true"/>
+						<id>web</id>
+						<itemType>tags</itemType>
+					</uiItems>
+				</values>
+				<values xsi:type="workitem.restDTO:UIItemSetDTO">
+					<attributeName>foundIn</attributeName>
+					<uiItems>
+						<label>Unassigned</label>
+						<iconUrl xsi:nil="true"/>
+						<id></id>
+						<itemType>deliverable</itemType>
+					</uiItems>
+				</values>
+				<values xsi:type="workitem.restDTO:UIItemSetDTO">
+					<attributeName>internalSeverity</attributeName>
+					<uiItems>
+						<label>Unclassified</label>
+						<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned2.gif</iconUrl>
+						<id>severity.literal.l1</id>
+						<itemType>severity</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>Minor</label>
+						<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/minor.gif</iconUrl>
+						<id>severity.literal.l2</id>
+						<itemType>severity</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>Normal</label>
+						<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/normal.gif</iconUrl>
+						<id>severity.literal.l3</id>
+						<itemType>severity</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>Major</label>
+						<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/major.gif</iconUrl>
+						<id>severity.literal.l4</id>
+						<itemType>severity</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>Critical</label>
+						<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/critical.gif</iconUrl>
+						<id>severity.literal.l5</id>
+						<itemType>severity</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>Blocker</label>
+						<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/blocker.gif</iconUrl>
+						<id>severity.literal.l6</id>
+						<itemType>severity</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+				</values>
+				<values xsi:type="workitem.restDTO:UIItemSetDTO">
+					<attributeName>creator</attributeName>
+					<uiItems>
+						<label>Unassigned</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_YNh4MOlsEdq4xpiOKg5hvA</id>
+						<itemType>contributor</itemType>
+						<isNullValue>true</isNullValue>
+					</uiItems>
+					<uiItems>
+						<label>Agustin Arellano Chavez</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_RApb0IlkEeGADLE4ybFPmw</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Ann Muret</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_9y2gMGU4Ed6fKr3h1uuO8Q</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Bei Bei Zhan</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_HSIvEB5jEeCwysnUo5bGmw</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Betty P. Kessock</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_aDscoBTJEd6sg4Eb6lM3lA</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Bruno Taveira Pereira</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_o7LYcB5EEd66ePq2k6MFkQ</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Carlos Antonio De Almeida Lyrio</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_mBNugC6nEd69hfWBX_TYeQ</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Carlos Bellarde Goncalves</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_4GFAsLMCEd6Ov43d5_wASA</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Carolyn Young</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_Cgp38GsfEd6s_NkjhjLPrg</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Chao Xu</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_U59wEBLFEeCwysnUo5bGmw</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Cheng Xu</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_yV2aYBT2EeCwysnUo5bGmw</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Deborah J. Derr</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_CGXvkBTDEd6sg4Eb6lM3lA</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Eleanor Kelly</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_RetrEJZNEeGpKpwjabBDLg</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Eric W. Gustafson</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_tykQYMfFEd6U_7iw6glrhw</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Felipe Gonçalves Coury</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_PrOIoMZ5Ed-Lr-wDR3V_pA</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Frederick H. Hackbarth</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_HOCM8BTDEd6sg4Eb6lM3lA</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Gregory Golder</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_fhz_MFUUEd61fuNW84kdiQ</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Hui Lan Huang</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_VR4E0JcdEd6Uc50T8Oii-A</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Junko Ohtani</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_TqRx0GCNEeChMpYxRRZQVQ</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Kimberly J. Eidem</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_W9cDsN1oEeCJU5o_FzuUrw</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Kirk Lind</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_JCRXoE-QEd6WkYofeccjWA</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Lawrence J. Karl</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_fDfXcBTJEd6sg4Eb6lM3lA</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Leonardo Gomes de Olivera</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_fr0PwFUUEd61fuNW84kdiQ</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Luis Fernando Stumpf Nogueira</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_3-E3ZhmUEeOwddJaILkiVQ</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Marcelo De Campos</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_8kJDYJC3EeKXqLHswwVHBQ</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Maria Boylan</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_P9fi0AU2Ed-TRp1ly5GLLw</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Murilo Leandro Ribeiro</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_L91uQQ21EeSQYdcjfuMOFw</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Paul Everitt</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_ScJn4Ce3Ed--X7Wj9hCopQ</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>ROBERT NIELSEN</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_KrE8IBWLEd-yUYJz9B13-Q</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Samuel L Talbott</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_feeXUFUUEd61fuNW84kdiQ</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>SARAH NEWBY</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_fbGTMFUUEd61fuNW84kdiQ</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Sergio Luiz Barbutti</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_8vXSgBxkEeKmkeflQutW3Q</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Shao Bin Zheng</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_0aSOUC3DEeCmV-5VCpeMyA</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Wei Ping Luo</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_IdUOkF81Ed6E3-DC4e76cA</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Weston Pawlowski</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_ClQrIGsfEd6s_NkjhjLPrg</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Yi Qiong Fan</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_kTyvQGExEeChMpYxRRZQVQ</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Yong Jun Jin</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_AdbioCr8EeCmV-5VCpeMyA</id>
+						<itemType>contributor</itemType>
+					</uiItems>
+				</values>
+				<values xsi:type="workitem.restDTO:UIItemSetDTO">
+					<attributeName>category</attributeName>
+					<uiItems>
+						<label>Unassigned</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_VLyJIFRcEd61fuNW84kdiQ</id>
+						<itemType>category</itemType>
+						<isNullValue>true</isNullValue>
+						<arguments>Unassigned</arguments>
+					</uiItems>
+					<uiItems>
+						<label>Epic</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_WrjpQGW0Ed6uZsIllQzRvg</id>
+						<itemType>category</itemType>
+						<arguments>Epic</arguments>
+					</uiItems>
+					<uiItems>
+						<label>   User Story</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_aXl2IGW0Ed6uZsIllQzRvg</id>
+						<itemType>category</itemType>
+						<arguments>Epic/User Story</arguments>
+					</uiItems>
+					<uiItems>
+						<label>      Business Rule</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_fCEBMGW0Ed6uZsIllQzRvg</id>
+						<itemType>category</itemType>
+						<arguments>Epic/User Story/Business Rule</arguments>
+					</uiItems>
+					<uiItems>
+						<label>      Defect</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_g0gPMGW0Ed6uZsIllQzRvg</id>
+						<itemType>category</itemType>
+						<arguments>Epic/User Story/Defect</arguments>
+					</uiItems>
+					<uiItems>
+						<label>      Task</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_eNnFcGW0Ed6uZsIllQzRvg</id>
+						<itemType>category</itemType>
+						<arguments>Epic/User Story/Task</arguments>
+					</uiItems>
+					<uiItems>
+						<label>      Test Case</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_f9EQ4GW0Ed6uZsIllQzRvg</id>
+						<itemType>category</itemType>
+						<arguments>Epic/User Story/Test Case</arguments>
+					</uiItems>
+					<uiItems>
+						<label>Product Backlog</label>
+						<iconUrl xsi:nil="true"/>
+						<id>_VTmoYVRcEd61fuNW84kdiQ</id>
+						<itemType>category</itemType>
+						<arguments>Product Backlog</arguments>
+					</uiItems>
+				</values>
+				<values xsi:type="workitem.restDTO:UIItemSetDTO">
+					<attributeName>workItemType</attributeName>
+					<uiItems>
+						<label>Defect</label>
+						<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/bug.gif</iconUrl>
+						<id>defect</id>
+						<itemType>type</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Task</label>
+						<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/task.gif</iconUrl>
+						<id>task</id>
+						<itemType>type</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Test Case</label>
+						<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/retrospect_obj.gif</iconUrl>
+						<id>testCase</id>
+						<itemType>type</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Build</label>
+						<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/enhancement.gif</iconUrl>
+						<id>build</id>
+						<itemType>type</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Retrospective</label>
+						<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/retrospect_obj.gif</iconUrl>
+						<id>com.ibm.team.workitem.workItemType.retrospective</id>
+						<itemType>type</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Story</label>
+						<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/story.gif</iconUrl>
+						<id>com.ibm.team.apt.workItemType.story</id>
+						<itemType>type</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Epic</label>
+						<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/ticket.gif</iconUrl>
+						<id>epic</id>
+						<itemType>type</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Business rules</label>
+						<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/rfs.gif</iconUrl>
+						<id>businessRules</id>
+						<itemType>type</itemType>
+					</uiItems>
+					<uiItems>
+						<label>Impediment</label>
+						<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/imped_obj.gif</iconUrl>
+						<id>com.ibm.team.workitem.workitemtype.impediment</id>
+						<itemType>type</itemType>
+					</uiItems>
+				</values>
+				<values xsi:type="workitem.restDTO:UIItemSetDTO">
+					<attributeName>key-component</attributeName>
+					<uiItems>
+						<label>Unassigned</label>
+						<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned2.gif</iconUrl>
+						<id>component-real.literal.l21</id>
+						<itemType>component-real</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>sdops-Base</label>
+						<iconUrl xsi:nil="true"/>
+						<id>component-real.literal.l1</id>
+						<itemType>component-real</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>sdops-EjbUnitTest</label>
+						<iconUrl xsi:nil="true"/>
+						<id>component-real.literal.l2</id>
+						<itemType>component-real</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>sdops-EjbUnitTestWeb</label>
+						<iconUrl xsi:nil="true"/>
+						<id>component-real.literal.l3</id>
+						<itemType>component-real</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>sdops-ExternalServices</label>
+						<iconUrl xsi:nil="true"/>
+						<id>component-real.literal.l4</id>
+						<itemType>component-real</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>sdops-Framework</label>
+						<iconUrl xsi:nil="true"/>
+						<id>component-real.literal.l5</id>
+						<itemType>component-real</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>sdops-Interfaces-Inbound</label>
+						<iconUrl xsi:nil="true"/>
+						<id>component-real.literal.l6</id>
+						<itemType>component-real</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>sdops-Interfaces-Outbound</label>
+						<iconUrl xsi:nil="true"/>
+						<id>component-real.literal.l7</id>
+						<itemType>component-real</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>sdops-Interfaces-Services</label>
+						<iconUrl xsi:nil="true"/>
+						<id>component-real.literal.l8</id>
+						<itemType>component-real</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>sdops-MfgDb</label>
+						<iconUrl xsi:nil="true"/>
+						<id>component-real.literal.l9</id>
+						<itemType>component-real</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>sdops-MfgDbWeb</label>
+						<iconUrl xsi:nil="true"/>
+						<id>component-real.literal.l10</id>
+						<itemType>component-real</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>sdops-Migration</label>
+						<iconUrl xsi:nil="true"/>
+						<id>component-real.literal.l11</id>
+						<itemType>component-real</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>sdops-MigrationClient</label>
+						<iconUrl xsi:nil="true"/>
+						<id>component-real.literal.l12</id>
+						<itemType>component-real</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>sdops-NettingDb</label>
+						<iconUrl xsi:nil="true"/>
+						<id>component-real.literal.l13</id>
+						<itemType>component-real</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>sdops-OrderDb</label>
+						<iconUrl xsi:nil="true"/>
+						<id>component-real.literal.l14</id>
+						<itemType>component-real</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>sdops-Router</label>
+						<iconUrl xsi:nil="true"/>
+						<id>component-real.literal.l15</id>
+						<itemType>component-real</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>sdops-RulesDb</label>
+						<iconUrl xsi:nil="true"/>
+						<id>component-real.literal.l16</id>
+						<itemType>component-real</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>sdops-Scheduler</label>
+						<iconUrl xsi:nil="true"/>
+						<id>component-real.literal.l17</id>
+						<itemType>component-real</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>sdops-WebUI</label>
+						<iconUrl xsi:nil="true"/>
+						<id>component-real.literal.l18</id>
+						<itemType>component-real</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>sdops-WorkflowFramework</label>
+						<iconUrl xsi:nil="true"/>
+						<id>component-real.literal.l19</id>
+						<itemType>component-real</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+					<uiItems>
+						<label>sdops-Workflows</label>
+						<iconUrl xsi:nil="true"/>
+						<id>component-real.literal.l20</id>
+						<itemType>component-real</itemType>
+						<isArchived>false</isArchived>
+					</uiItems>
+				</values>
+			</returnValue>
+		</response>
+	</soapenv:Body>
+</soapenv:Envelope>

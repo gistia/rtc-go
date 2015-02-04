@@ -2,6 +2,7 @@ package models
 
 import (
 	"encoding/xml"
+	"regexp"
 	"strings"
 )
 
@@ -20,9 +21,50 @@ type Response struct {
 }
 
 type ReturnValue struct {
-	Type     string    `xml:"type"`
-	Value    Value     `xml:"value"`
-	Releases []Release `xml:"values"`
+	Type       string      `xml:"type"`
+	Value      Value       `xml:"value"`
+	ItemValues []ItemValue `xml:"UIItemSetDTO"`
+	Releases   []Release   `xml:"IterationDTO"`
+}
+
+func (r ReturnValue) GetItems() map[string]map[string]string {
+	var m map[string]map[string]string
+	m = make(map[string]map[string]string)
+
+	for _, iv := range r.ItemValues {
+		m[iv.AttributeName] = iv.GetPairs()
+	}
+
+	return m
+}
+
+type ItemValue struct {
+	AttributeName string `xml:"attributeName"`
+	Items         []Item `xml:"uiItems"`
+}
+
+func (i ItemValue) GetPairs() map[string]string {
+	var m map[string]string
+	m = make(map[string]string)
+
+	for _, it := range i.Items {
+		m[it.Id] = it.Label
+	}
+
+	return m
+}
+
+type Item struct {
+	Id          string `xml:"id"`
+	Label       string `xml:"label"`
+	ItemType    string `xml:"itemType"`
+	IsNullValue string `xml:"isNullValue"`
+	Arguments   string `xml:"arguments"`
+	IsArchived  string `xml:"isArchived"`
+	Current     string `xml:"current"`
+	InScope     string `xml:"inScope"`
+	StartDate   string `xml:"startDate"`
+	EndDate     string `xml:"endDate"`
 }
 
 type Release struct {
@@ -116,6 +158,7 @@ type WorkItem struct {
 	WorkItemId  string       `xml:"workItemItemId"`
 	Id          string       `xml:"id"`
 	ItemId      string       `xml:"itemId"`
+	StateId     string       `xml:"stateId"`
 	Summary     string       `xml:"summary"`
 	OwnerName   string       `xml:"ownerName"`
 	CreatorName string       `xml:"creatorName"`
@@ -142,7 +185,20 @@ type AttrValue struct {
 
 func NewFromXml(xmlData []byte) (*Envelope, error) {
 	var b *Envelope
-	err := xml.Unmarshal(xmlData, &b)
+
+	xlated := string(xmlData)
+	xlated = strings.Replace(xlated, "\n", "", -1)
+
+	reg, err := regexp.Compile(`<values xsi:type="(.*?):(.*?)">(.*?)</values>`)
+	if err != nil {
+		return nil, err
+	}
+
+	safe := reg.ReplaceAllString(xlated, "<$2>$3</$2>")
+
+	// fmt.Println(safe)
+
+	err = xml.Unmarshal([]byte(safe), &b)
 
 	return b, err
 }
