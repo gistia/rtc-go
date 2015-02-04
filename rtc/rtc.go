@@ -106,7 +106,11 @@ func (rtc *RTC) requestXml(method string, url string, data string) (*models.Enve
 
 func (rtc *RTC) Login() error {
 	url := fmt.Sprintf("https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.repository.service.internal.webuiInitializer.IWebUIInitializerRestService/j_security_check?j_username=%s&j_password=%s", url.QueryEscape(rtc.User), url.QueryEscape(rtc.Password))
-	_, err := rtc.request("GET", url, "")
+	resp, err := rtc.request("GET", url, "")
+
+	if len(resp.Header["Location"]) > 0 && strings.Contains(resp.Header["Location"][0], "authfailed") {
+		return errors.New("Failed to authenticate user " + rtc.User)
+	}
 
 	if err != nil {
 		return err
@@ -569,25 +573,15 @@ func (rtc *RTC) CreateSubTask(id string, subType string) (*WorkItem, error) {
 	return wi, nil
 }
 
-func (rtc *RTC) GetAllValues() error {
-	// curl "https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.rest.IWorkItemRestService/allValues?projectAreaItemId=_U7zMYFRcEd61fuNW84kdiQ&typeId=task&includeArchived=false&ids=workItemType&ids=internalSeverity&ids=foundIn&ids=creator&ids=category&ids=internalTags&ids=internalPriority&ids=owner&ids=target&ids=task&ids=key-component&ids=environment&itemId=_IDpPV6fhEeSicYpAbHXWsw" -H "Cookie: com_ibm_team_process_web_ui_internal_admin_projects_ProcessTree_0SaveSelectedCookie="%"2F0; JazzFormAuth=Form; net-jazz-ajax-cookie-rememberUserId=; ibmSurvey=1422910922008; UnicaNIODID=r2adbtayyw2-ZDKlNvR; pSite=https"%"3A"%"2F"%"2Fwww.ibm.com"%"2Fdeveloperworks"%"2Ftopics"%"2Frest"%"2520api"%"2520"%"2520python"%"2F; mmcore.tst=0.911; mmid=-1314913985"%"7CAQAAAAo69LY+igsAAA"%"3D"%"3D; mmcore.pd=1780648624"%"7CAQAAAAoBQjr0tj6KC46Z2xgBAHt7sKJCDdJIEXd3dy5nb29nbGUuY29tLmJyDgAAAHt7sKJCDdJIAAAAAP////8AGQAAAP////8AEXd3dy5nb29nbGUuY29tLmJyBIoLAQAAAAAAAwAAAAAA////////////////AAAAAAABRQ"%"3D"%"3D; mmcore.srv=nycvwcgus02; CoreID6=79140352120814229109241&ci=50200000|DEVWRKS; CoreM_State=73~-1~-1~-1~-1~3~3~5~3~3~7~7~|~~|~~|~~|~||||||~|~~|~~|~~|~~|~~|~~|~~|~; CoreM_State_Content=6~|~~|~|; 50200000_clogin=v=1&l=1422910924&e=1422912724704; JSESSIONID=0000McnEpThigYe4KZtmvEkcYTo:-1; LtpaToken2=70cBRFB6lNvXdQliLRmvCjp8ZnvqveWfCVzRA2BiVRyXShkY5aSsu17Gsk8AtNSaVqfcRL5nsnHPExAqKUvt8zTUK7oTtkIuxKF/jQzhZlTXKj7BbfTswaI8Q0FTOKwrX4phxwuDuTYkPjP0L+aAldpGpgk6i8xfcAgqNCR6qeaueBX4ymmOpJZ3eRh1vPqixSQPd/rTXpHYsFIeBhyy0em2qprzYmSls7EGA4G7xgIaZtmx8Hu9OEMHrMCl5f6xL6c+JiWjmAgGrUSwmzRT2MmA4112fiRH+bEJbywZfw44HkU98Q7MjiXqSvyVXXMwXuwyxOFItzWr3KpnM4Tr20Ha/CEw1A3n54r3TCvmPTQku3AdYCLtrwqdiajACspfzUuELuXOssLijwB7pDo+y9L4hV2S+PRHajw7XixZgoiGQKGkZoQWG8EOs0aWzEpK7DN8Cx3AA4FI9NXmt7nJ5UPiMJ4875Xu4lsKeaBCbiyyZIcaCafV0I5TwSUomcso1cxyHPRaRuqlfMGdOPSYu9kxnVsqIgnrKURYA475hKxWB7f/WLHXSyWMUILSYYR2cO0AJj/sFgI9k+bLzVSjM49sg/v62hxTjx5KNEu2I0NwfE/fwHfmIuua5TLIRd6AOoZ7OnBF0+D+OUhinY+bLoUgUMNrCgG2Xv0uqWzjISo=" -H "X-jazz-downstream-auth-client-level: 4.0" -H "Accept-Encoding: gzip, deflate, sdch" -H "Accept-Language: en-US,en;q=0.8" -H "X-com-ibm-team-configuration-versions: LATEST" -H "User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36" -H "Content-Type: application/x-www-form-urlencoded; charset=utf-8" -H "accept: text/json" -H "Referer: https://igartc01.swg.usma.ibm.com/jazz/web/projects/SD-OPS" -H "X-Requested-With: XMLHttpRequest" -H "Connection: keep-alive" --compressed
-
+func (rtc *RTC) GetAllValues() (map[string]map[string]string, error) {
 	allValuesUrl := "https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.rest.IWorkItemRestService/allValues?projectAreaItemId=_U7zMYFRcEd61fuNW84kdiQ&typeId=task&includeArchived=false&ids=workItemType&ids=internalSeverity&ids=foundIn&ids=creator&ids=category&ids=internalTags&ids=internalPriority&ids=owner&ids=target&ids=task&ids=key-component&ids=environment&itemId=_IDpPV6fhEeSicYpAbHXWsw"
 
 	env, err := rtc.requestXml("GET", allValuesUrl, "")
 	if err != nil {
-		return err
+		return nil, err
 	}
 
-	fmt.Printf("%+v\n", env)
-	for k, v := range env.Body.Response.ReturnValue.GetItems() {
-		fmt.Println("***", k)
-
-		for kk, vv := range v {
-			fmt.Printf("%s = %s\n", kk, vv)
-		}
-	}
-	return nil
+	return env.Body.Response.ReturnValue.GetItems(), nil
 }
 
 // values["category"] = "_aXl2IGW0Ed6uZsIllQzRvg"

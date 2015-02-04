@@ -7,10 +7,13 @@ import (
 	"strings"
 
 	"github.com/codegangsta/cli"
+	"github.com/fcoury/rtc-go/config"
 	"github.com/fcoury/rtc-go/rtc"
 	"github.com/kennygrant/sanitize"
 	"github.com/olekukonko/tablewriter"
 )
+
+var appConfig *config.Config
 
 func main() {
 	app := cli.NewApp()
@@ -87,6 +90,15 @@ func main() {
 			},
 		},
 
+		{
+			Name:      "config",
+			ShortName: "cf",
+			Usage:     "reconfigures the app settings",
+			Action: func(c *cli.Context) {
+				reconfig()
+			},
+		},
+
 		// dev-related commands
 
 		{
@@ -138,11 +150,19 @@ func main() {
 		},
 	}
 
+	c, err := config.ReadConfig()
+	if err != nil {
+		fmt.Println(err.Error())
+		return
+	}
+
+	appConfig = c
+
 	app.Run(os.Args)
 }
 
 func login() (*rtc.RTC, error) {
-	res := rtc.NewRTC("fcoury@br.ibm.com", "tempra14")
+	res := rtc.NewRTC(appConfig.User, appConfig.Pass)
 	err := res.Login()
 
 	if err != nil {
@@ -368,8 +388,21 @@ func createArtifact(id string) {
 	// }
 
 	// fmt.Println("Created " + wi.Title())
-	err = r.GetAllValues()
+	m, err := r.GetAllValues()
 	if err != nil {
 		panic(err)
 	}
+
+	for k, v := range m {
+		fmt.Println("***", k)
+
+		for kk, vv := range v {
+			fmt.Printf("%s = %s\n", kk, vv)
+		}
+	}
+
+}
+
+func reconfig() {
+	config.CreateConfig()
 }
