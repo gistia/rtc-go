@@ -1,0 +1,1333 @@
+Body: <?xml version="1.0" encoding="UTF-8" ?>
+<soapenv:Envelope
+	xmlns:workitem.restDTO="com.ibm.team.workitem.rest.dto"
+	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:com.ibm.team.repository.common.services="http:///com/ibm/team/core/services.ecore"
+	xmlns:workitem.query.restDTO="com.ibm.team.workitem.query.rest.dto"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<soapenv:Body>
+		<response>
+			<method>getWorkItemDTO2</method>
+			<interface>com.ibm.team.workitem.common.internal.rest.IWorkItemRestService</interface>
+			<returnValue xsi:type="com.ibm.team.repository.common.services:ComplexDataArg">
+				<type>COMPLEX</type>
+				<value xsi:type="workitem.restDTO:WorkItemDTO">
+					<itemId>_vepaAasWEeSicYpAbHXWsw</itemId>
+					<stateId>_peVn8KsXEeSicYpAbHXWsw</stateId>
+					<locationUri>https://igartc01.swg.usma.ibm.com/jazz/resource/itemName/com.ibm.team.workitem.WorkItem/1281671</locationUri>
+					<attributes>
+						<key>rule</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>database-changes</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>documentation-changes</key>
+						<value xsi:type="workitem.restDTO:ContentDTO">
+							<content></content>
+							<isHTML>true</isHTML>
+						</value>
+					</attributes>
+					<attributes>
+						<key>code-changes</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>properties-changes</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>usecase</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>relatedUseCase</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>process</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned2.gif</iconUrl>
+							<id>component.literal.l13</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>configuration</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>component</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>comments</key>
+						<value xsi:type="workitem.restDTO:ContentDTO">
+							<content></content>
+							<isHTML>true</isHTML>
+						</value>
+					</attributes>
+					<attributes>
+						<key>com.ibm.team.apt.estimate.minimal</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label></label>
+							<iconUrl></iconUrl>
+							<id>-1</id>
+							<validationRegex>([0-9]+((\.|\,)[0-9]+)?)|((([0-9]+((\.|\,)[0-9]+)?)|(\.[0-9]+))\s*(milliseconds|millisecond|millisecs|millisec|seconds|minutes|second|minute|weeks|hours|week|days|secs|hour|mins|day|sec|min|ms|w|d|s|h|m)\s*)+</validationRegex>
+						</value>
+					</attributes>
+					<attributes>
+						<key>com.ibm.team.apt.estimate.maximal</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label></label>
+							<iconUrl></iconUrl>
+							<id>-1</id>
+							<validationRegex>([0-9]+((\.|\,)[0-9]+)?)|((([0-9]+((\.|\,)[0-9]+)?)|(\.[0-9]+))\s*(milliseconds|millisecond|millisecs|millisec|seconds|minutes|second|minute|weeks|hours|week|days|secs|hour|mins|day|sec|min|ms|w|d|s|h|m)\s*)+</validationRegex>
+						</value>
+					</attributes>
+					<attributes>
+						<key>com.ibm.team.apt.attribute.planitem.priority._pm7NmRYUEd6L1tNIGdz5qQ</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>items-for-deployment</key>
+						<value xsi:type="workitem.restDTO:ContentDTO">
+							<content></content>
+							<isHTML>true</isHTML>
+						</value>
+					</attributes>
+					<attributes>
+						<key>package</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>EAR</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif</iconUrl>
+							<id>build-package-type.literal.l1</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>was</key>
+						<value xsi:type="workitem.restDTO:ContentDTO">
+							<content></content>
+							<isHTML>true</isHTML>
+						</value>
+					</attributes>
+					<attributes>
+						<key>mq</key>
+						<value xsi:type="workitem.restDTO:ContentDTO">
+							<content></content>
+							<isHTML>true</isHTML>
+						</value>
+					</attributes>
+					<attributes>
+						<key>code-review-time</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>0</label>
+							<id>0</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>code</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>database</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>root</key>
+						<value xsi:type="workitem.restDTO:ContentDTO">
+							<content></content>
+							<isHTML>true</isHTML>
+						</value>
+					</attributes>
+					<attributes>
+						<key>task</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned2.gif</iconUrl>
+							<id>task-type.literal.l1</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>key-component</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned2.gif</iconUrl>
+							<id>component-real.literal.l21</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>properties-change</key>
+						<value xsi:type="workitem.restDTO:ContentDTO">
+							<content></content>
+							<isHTML>true</isHTML>
+						</value>
+					</attributes>
+					<attributes>
+						<key>code-change</key>
+						<value xsi:type="workitem.restDTO:ContentDTO">
+							<content></content>
+							<isHTML>true</isHTML>
+						</value>
+					</attributes>
+					<attributes>
+						<key>database-change</key>
+						<value xsi:type="workitem.restDTO:ContentDTO">
+							<content></content>
+							<isHTML>true</isHTML>
+						</value>
+					</attributes>
+					<attributes>
+						<key>test-state</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned2.gif</iconUrl>
+							<id>test-state.literal.l1</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>testPhase</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned2.gif</iconUrl>
+							<id>test-phase.literal.l7</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>defectType</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned2.gif</iconUrl>
+							<id>defect-type.literal.l11</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>environment</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned2.gif</iconUrl>
+							<id>environment.literal.l9</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>defectReproduced</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Yes</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/normal.gif</iconUrl>
+							<id>defect-reproduced.literal.l1</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>phaseDetected</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned2.gif</iconUrl>
+							<id>phase-detected.literal.l7</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>projectArea</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>SD-OPS</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.process.common/icons/obj16/projectarea_obj.gif</iconUrl>
+							<id>_U7zMYFRcEd61fuNW84kdiQ</id>
+							<isArchived>false</isArchived>
+						</value>
+					</attributes>
+					<attributes>
+						<key>modifiedBy</key>
+						<value xsi:type="workitem.restDTO:ContributorDTO">
+							<id>_PrOIoMZ5Ed-Lr-wDR3V_pA</id>
+							<itemId>_PrOIoMZ5Ed-Lr-wDR3V_pA</itemId>
+							<userId>fcoury@br.ibm.com</userId>
+							<name>Felipe Gonçalves Coury</name>
+							<label>Felipe Gonçalves Coury</label>
+							<emailAddress>fcoury@br.ibm.com</emailAddress>
+							<locationUri>https://igartc01.swg.usma.ibm.com/jazz/resource/itemOid/com.ibm.team.repository.Contributor/_PrOIoMZ5Ed-Lr-wDR3V_pA</locationUri>
+							<webUri>https://igajts01.swg.usma.ibm.com/jts/users/fcoury%40br.ibm.com</webUri>
+						</value>
+					</attributes>
+					<attributes>
+						<key>modified</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Feb 2, 2015 3:11 PM</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif</iconUrl>
+							<id>2015-02-02T20:11:18.383Z</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>creator</key>
+						<value xsi:type="workitem.restDTO:ContributorDTO">
+							<id>_PrOIoMZ5Ed-Lr-wDR3V_pA</id>
+							<itemId>_PrOIoMZ5Ed-Lr-wDR3V_pA</itemId>
+							<userId>fcoury@br.ibm.com</userId>
+							<name>Felipe Gonçalves Coury</name>
+							<label>Felipe Gonçalves Coury</label>
+							<emailAddress>fcoury@br.ibm.com</emailAddress>
+							<locationUri>https://igartc01.swg.usma.ibm.com/jazz/resource/itemOid/com.ibm.team.repository.Contributor/_PrOIoMZ5Ed-Lr-wDR3V_pA</locationUri>
+							<webUri>https://igajts01.swg.usma.ibm.com/jts/users/fcoury%40br.ibm.com</webUri>
+						</value>
+					</attributes>
+					<attributes>
+						<key>category</key>
+						<value xsi:type="workitem.restDTO:CategoryDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif</iconUrl>
+							<id>_VLyJIFRcEd61fuNW84kdiQ</id>
+							<path>Unassigned</path>
+						</value>
+					</attributes>
+					<attributes>
+						<key>internalTags</key>
+						<value xsi:type="workitem.restDTO:ContentDTO">
+							<content></content>
+							<isHTML>false</isHTML>
+						</value>
+					</attributes>
+					<attributes>
+						<key>internalPriority</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned.gif</iconUrl>
+							<id>priority.literal.l01</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>timeSpent</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label></label>
+							<iconUrl></iconUrl>
+							<id>-1</id>
+							<validationRegex>([0-9]+((\.|\,)[0-9]+)?)|((([0-9]+((\.|\,)[0-9]+)?)|(\.[0-9]+))\s*(milliseconds|millisecond|millisecs|millisec|seconds|minutes|second|minute|weeks|hours|week|days|secs|hour|mins|day|sec|min|ms|w|d|s|h|m)\s*)+</validationRegex>
+						</value>
+					</attributes>
+					<attributes>
+						<key>dueDate</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>duration</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label></label>
+							<iconUrl></iconUrl>
+							<id>-1</id>
+							<validationRegex>([0-9]+((\.|\,)[0-9]+)?)|((([0-9]+((\.|\,)[0-9]+)?)|(\.[0-9]+))\s*(milliseconds|millisecond|millisecs|millisec|seconds|minutes|second|minute|weeks|hours|week|days|secs|hour|mins|day|sec|min|ms|w|d|s|h|m)\s*)+</validationRegex>
+						</value>
+					</attributes>
+					<attributes>
+						<key>correctedEstimate</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label></label>
+							<iconUrl></iconUrl>
+							<id>-1</id>
+							<validationRegex>([0-9]+((\.|\,)[0-9]+)?)|((([0-9]+((\.|\,)[0-9]+)?)|(\.[0-9]+))\s*(milliseconds|millisecond|millisecs|millisec|seconds|minutes|second|minute|weeks|hours|week|days|secs|hour|mins|day|sec|min|ms|w|d|s|h|m)\s*)+</validationRegex>
+						</value>
+					</attributes>
+					<attributes>
+						<key>resolutionDate</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Feb 2, 2015 3:11 PM</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif</iconUrl>
+							<id>2015-02-02T20:11:13.011Z</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>startDate</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>creationDate</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Feb 2, 2015 3:04 PM</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif</iconUrl>
+							<id>2015-02-02T20:04:49.415Z</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>resolver</key>
+						<value xsi:type="workitem.restDTO:ContributorDTO">
+							<id>_PrOIoMZ5Ed-Lr-wDR3V_pA</id>
+							<itemId>_PrOIoMZ5Ed-Lr-wDR3V_pA</itemId>
+							<userId>fcoury@br.ibm.com</userId>
+							<name>Felipe Gonçalves Coury</name>
+							<label>Felipe Gonçalves Coury</label>
+							<emailAddress>fcoury@br.ibm.com</emailAddress>
+							<locationUri>https://igartc01.swg.usma.ibm.com/jazz/resource/itemOid/com.ibm.team.repository.Contributor/_PrOIoMZ5Ed-Lr-wDR3V_pA</locationUri>
+							<webUri>https://igajts01.swg.usma.ibm.com/jts/users/fcoury%40br.ibm.com</webUri>
+						</value>
+					</attributes>
+					<attributes>
+						<key>summary</key>
+						<value xsi:type="workitem.restDTO:ContentDTO">
+							<content>DebugOptions</content>
+							<isHTML>true</isHTML>
+						</value>
+					</attributes>
+					<attributes>
+						<key>target</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>owner</key>
+						<value xsi:type="workitem.restDTO:ContributorDTO">
+							<id>_YNh4MOlsEdq4xpiOKg5hvA</id>
+							<itemId>_YNh4MOlsEdq4xpiOKg5hvA</itemId>
+							<userId>unassigned</userId>
+							<name>Unassigned</name>
+							<label>Unassigned</label>
+							<emailAddress>unassigned</emailAddress>
+							<locationUri>https://igartc01.swg.usma.ibm.com/jazz/resource/itemOid/com.ibm.team.repository.Contributor/_YNh4MOlsEdq4xpiOKg5hvA</locationUri>
+							<webUri>https://igajts01.swg.usma.ibm.com/jts/users/unassigned</webUri>
+						</value>
+					</attributes>
+					<attributes>
+						<key>description</key>
+						<value xsi:type="workitem.restDTO:ContentDTO">
+							<content></content>
+							<isHTML>true</isHTML>
+						</value>
+					</attributes>
+					<attributes>
+						<key>foundIn</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>internalState</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Closed</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workflow/close.gif</iconUrl>
+							<id>5</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>internalResolution</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Fixed</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workflow/close.gif</iconUrl>
+							<id>1</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>internalSeverity</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Normal</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/normal.gif</iconUrl>
+							<id>severity.literal.l3</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>internalSubscriptions</key>
+						<value xsi:type="workitem.restDTO:ListDTO">
+						</value>
+					</attributes>
+					<attributes>
+						<key>workItemType</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Task</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/task.gif</iconUrl>
+							<id>task</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>id</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>1281671</label>
+							<id>1281671</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>internalComments</key>
+						<value xsi:type="workitem.restDTO:ListDTO">
+						</value>
+					</attributes>
+					<attributes>
+						<key>acceptance</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>com.ibm.team.apt.attribute.complexity</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>contextId</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>SD-OPS</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.process.common/icons/obj16/projectarea_obj.gif</iconUrl>
+							<id>_U7zMYFRcEd61fuNW84kdiQ</id>
+							<isArchived>false</isArchived>
+						</value>
+					</attributes>
+					<attributes>
+						<key>archived</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>false</label>
+							<id>false</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>process_root_cause</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif</iconUrl>
+							<id>Process_Root_Cause.literal.l27</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>work_product_where_found</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>C - Code</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif</iconUrl>
+							<id>Work_Product_where_found.literal.l2</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>phase_injected</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif</iconUrl>
+							<id>Phase_Injected.literal.l7</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>phase_detected</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif</iconUrl>
+							<id>Phase_Detected.literal.l13</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>defect_type</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Logic</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif</iconUrl>
+							<id>Defect_Type.literal.l10</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>process_area_where_found</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif</iconUrl>
+							<id>Process_Area_where_found.literal.l45</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>activity_found</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif</iconUrl>
+							<id>Activity_Found.literal.l45</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>com.ibm.team.apt.attribute.planitem.newRanking._pm7NmRYUEd6L1tNIGdz5qQ</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>defect_complexity</key>
+						<value xsi:type="workitem.restDTO:ListDTO">
+						</value>
+					</attributes>
+					<attributes>
+						<key>teamArea</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>SD-OPS</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.process.common/icons/obj16/teamarea_obj.gif</iconUrl>
+							<id>_1Hjb4FYBEd69G8biF2ewvg</id>
+							<isArchived>false</isArchived>
+						</value>
+					</attributes>
+					<attributes>
+						<key>stateGroup</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>2</label>
+							<id>2</id>
+						</value>
+					</attributes>
+				</value>
+			</returnValue>
+		</response>
+	</soapenv:Body>
+</soapenv:Envelope>
+Body: <?xml version="1.0" encoding="UTF-8" ?>
+<soapenv:Envelope
+	xmlns:workitem.restDTO="com.ibm.team.workitem.rest.dto"
+	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:com.ibm.team.repository.common.services="http:///com/ibm/team/core/services.ecore"
+	xmlns:workitem.query.restDTO="com.ibm.team.workitem.query.rest.dto"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<soapenv:Body>
+		<response>
+			<method>getWorkItemDTO2</method>
+			<interface>com.ibm.team.workitem.common.internal.rest.IWorkItemRestService</interface>
+			<returnValue xsi:type="com.ibm.team.repository.common.services:ComplexDataArg">
+				<type>COMPLEX</type>
+				<value xsi:type="workitem.restDTO:WorkItemDTO">
+					<itemId>_vepaAasWEeSicYpAbHXWsw</itemId>
+					<stateId>_peVn8KsXEeSicYpAbHXWsw</stateId>
+					<locationUri>https://igartc01.swg.usma.ibm.com/jazz/resource/itemName/com.ibm.team.workitem.WorkItem/1281671</locationUri>
+					<attributes>
+						<key>rule</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>database-changes</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>documentation-changes</key>
+						<value xsi:type="workitem.restDTO:ContentDTO">
+							<content></content>
+							<isHTML>true</isHTML>
+						</value>
+					</attributes>
+					<attributes>
+						<key>code-changes</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>properties-changes</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>usecase</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>relatedUseCase</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>process</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned2.gif</iconUrl>
+							<id>component.literal.l13</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>configuration</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>component</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>comments</key>
+						<value xsi:type="workitem.restDTO:ContentDTO">
+							<content></content>
+							<isHTML>true</isHTML>
+						</value>
+					</attributes>
+					<attributes>
+						<key>com.ibm.team.apt.estimate.minimal</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label></label>
+							<iconUrl></iconUrl>
+							<id>-1</id>
+							<validationRegex>([0-9]+((\.|\,)[0-9]+)?)|((([0-9]+((\.|\,)[0-9]+)?)|(\.[0-9]+))\s*(milliseconds|millisecond|millisecs|millisec|seconds|minutes|second|minute|weeks|hours|week|days|secs|hour|mins|day|sec|min|ms|w|d|s|h|m)\s*)+</validationRegex>
+						</value>
+					</attributes>
+					<attributes>
+						<key>com.ibm.team.apt.estimate.maximal</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label></label>
+							<iconUrl></iconUrl>
+							<id>-1</id>
+							<validationRegex>([0-9]+((\.|\,)[0-9]+)?)|((([0-9]+((\.|\,)[0-9]+)?)|(\.[0-9]+))\s*(milliseconds|millisecond|millisecs|millisec|seconds|minutes|second|minute|weeks|hours|week|days|secs|hour|mins|day|sec|min|ms|w|d|s|h|m)\s*)+</validationRegex>
+						</value>
+					</attributes>
+					<attributes>
+						<key>com.ibm.team.apt.attribute.planitem.priority._pm7NmRYUEd6L1tNIGdz5qQ</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>items-for-deployment</key>
+						<value xsi:type="workitem.restDTO:ContentDTO">
+							<content></content>
+							<isHTML>true</isHTML>
+						</value>
+					</attributes>
+					<attributes>
+						<key>package</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>EAR</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif</iconUrl>
+							<id>build-package-type.literal.l1</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>was</key>
+						<value xsi:type="workitem.restDTO:ContentDTO">
+							<content></content>
+							<isHTML>true</isHTML>
+						</value>
+					</attributes>
+					<attributes>
+						<key>mq</key>
+						<value xsi:type="workitem.restDTO:ContentDTO">
+							<content></content>
+							<isHTML>true</isHTML>
+						</value>
+					</attributes>
+					<attributes>
+						<key>code-review-time</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>0</label>
+							<id>0</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>code</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>database</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>root</key>
+						<value xsi:type="workitem.restDTO:ContentDTO">
+							<content></content>
+							<isHTML>true</isHTML>
+						</value>
+					</attributes>
+					<attributes>
+						<key>task</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned2.gif</iconUrl>
+							<id>task-type.literal.l1</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>key-component</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned2.gif</iconUrl>
+							<id>component-real.literal.l21</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>properties-change</key>
+						<value xsi:type="workitem.restDTO:ContentDTO">
+							<content></content>
+							<isHTML>true</isHTML>
+						</value>
+					</attributes>
+					<attributes>
+						<key>code-change</key>
+						<value xsi:type="workitem.restDTO:ContentDTO">
+							<content></content>
+							<isHTML>true</isHTML>
+						</value>
+					</attributes>
+					<attributes>
+						<key>database-change</key>
+						<value xsi:type="workitem.restDTO:ContentDTO">
+							<content></content>
+							<isHTML>true</isHTML>
+						</value>
+					</attributes>
+					<attributes>
+						<key>test-state</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned2.gif</iconUrl>
+							<id>test-state.literal.l1</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>testPhase</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned2.gif</iconUrl>
+							<id>test-phase.literal.l7</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>defectType</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned2.gif</iconUrl>
+							<id>defect-type.literal.l11</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>environment</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned2.gif</iconUrl>
+							<id>environment.literal.l9</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>defectReproduced</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Yes</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/normal.gif</iconUrl>
+							<id>defect-reproduced.literal.l1</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>phaseDetected</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned2.gif</iconUrl>
+							<id>phase-detected.literal.l7</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>projectArea</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>SD-OPS</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.process.common/icons/obj16/projectarea_obj.gif</iconUrl>
+							<id>_U7zMYFRcEd61fuNW84kdiQ</id>
+							<isArchived>false</isArchived>
+						</value>
+					</attributes>
+					<attributes>
+						<key>modifiedBy</key>
+						<value xsi:type="workitem.restDTO:ContributorDTO">
+							<id>_PrOIoMZ5Ed-Lr-wDR3V_pA</id>
+							<itemId>_PrOIoMZ5Ed-Lr-wDR3V_pA</itemId>
+							<userId>fcoury@br.ibm.com</userId>
+							<name>Felipe Gonçalves Coury</name>
+							<label>Felipe Gonçalves Coury</label>
+							<emailAddress>fcoury@br.ibm.com</emailAddress>
+							<locationUri>https://igartc01.swg.usma.ibm.com/jazz/resource/itemOid/com.ibm.team.repository.Contributor/_PrOIoMZ5Ed-Lr-wDR3V_pA</locationUri>
+							<webUri>https://igajts01.swg.usma.ibm.com/jts/users/fcoury%40br.ibm.com</webUri>
+						</value>
+					</attributes>
+					<attributes>
+						<key>modified</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Feb 2, 2015 3:11 PM</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif</iconUrl>
+							<id>2015-02-02T20:11:18.383Z</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>creator</key>
+						<value xsi:type="workitem.restDTO:ContributorDTO">
+							<id>_PrOIoMZ5Ed-Lr-wDR3V_pA</id>
+							<itemId>_PrOIoMZ5Ed-Lr-wDR3V_pA</itemId>
+							<userId>fcoury@br.ibm.com</userId>
+							<name>Felipe Gonçalves Coury</name>
+							<label>Felipe Gonçalves Coury</label>
+							<emailAddress>fcoury@br.ibm.com</emailAddress>
+							<locationUri>https://igartc01.swg.usma.ibm.com/jazz/resource/itemOid/com.ibm.team.repository.Contributor/_PrOIoMZ5Ed-Lr-wDR3V_pA</locationUri>
+							<webUri>https://igajts01.swg.usma.ibm.com/jts/users/fcoury%40br.ibm.com</webUri>
+						</value>
+					</attributes>
+					<attributes>
+						<key>category</key>
+						<value xsi:type="workitem.restDTO:CategoryDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif</iconUrl>
+							<id>_VLyJIFRcEd61fuNW84kdiQ</id>
+							<path>Unassigned</path>
+						</value>
+					</attributes>
+					<attributes>
+						<key>internalTags</key>
+						<value xsi:type="workitem.restDTO:ContentDTO">
+							<content></content>
+							<isHTML>false</isHTML>
+						</value>
+					</attributes>
+					<attributes>
+						<key>internalPriority</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned.gif</iconUrl>
+							<id>priority.literal.l01</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>timeSpent</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label></label>
+							<iconUrl></iconUrl>
+							<id>-1</id>
+							<validationRegex>([0-9]+((\.|\,)[0-9]+)?)|((([0-9]+((\.|\,)[0-9]+)?)|(\.[0-9]+))\s*(milliseconds|millisecond|millisecs|millisec|seconds|minutes|second|minute|weeks|hours|week|days|secs|hour|mins|day|sec|min|ms|w|d|s|h|m)\s*)+</validationRegex>
+						</value>
+					</attributes>
+					<attributes>
+						<key>dueDate</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>duration</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label></label>
+							<iconUrl></iconUrl>
+							<id>-1</id>
+							<validationRegex>([0-9]+((\.|\,)[0-9]+)?)|((([0-9]+((\.|\,)[0-9]+)?)|(\.[0-9]+))\s*(milliseconds|millisecond|millisecs|millisec|seconds|minutes|second|minute|weeks|hours|week|days|secs|hour|mins|day|sec|min|ms|w|d|s|h|m)\s*)+</validationRegex>
+						</value>
+					</attributes>
+					<attributes>
+						<key>correctedEstimate</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label></label>
+							<iconUrl></iconUrl>
+							<id>-1</id>
+							<validationRegex>([0-9]+((\.|\,)[0-9]+)?)|((([0-9]+((\.|\,)[0-9]+)?)|(\.[0-9]+))\s*(milliseconds|millisecond|millisecs|millisec|seconds|minutes|second|minute|weeks|hours|week|days|secs|hour|mins|day|sec|min|ms|w|d|s|h|m)\s*)+</validationRegex>
+						</value>
+					</attributes>
+					<attributes>
+						<key>resolutionDate</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Feb 2, 2015 3:11 PM</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif</iconUrl>
+							<id>2015-02-02T20:11:13.011Z</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>startDate</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>creationDate</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Feb 2, 2015 3:04 PM</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif</iconUrl>
+							<id>2015-02-02T20:04:49.415Z</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>resolver</key>
+						<value xsi:type="workitem.restDTO:ContributorDTO">
+							<id>_PrOIoMZ5Ed-Lr-wDR3V_pA</id>
+							<itemId>_PrOIoMZ5Ed-Lr-wDR3V_pA</itemId>
+							<userId>fcoury@br.ibm.com</userId>
+							<name>Felipe Gonçalves Coury</name>
+							<label>Felipe Gonçalves Coury</label>
+							<emailAddress>fcoury@br.ibm.com</emailAddress>
+							<locationUri>https://igartc01.swg.usma.ibm.com/jazz/resource/itemOid/com.ibm.team.repository.Contributor/_PrOIoMZ5Ed-Lr-wDR3V_pA</locationUri>
+							<webUri>https://igajts01.swg.usma.ibm.com/jts/users/fcoury%40br.ibm.com</webUri>
+						</value>
+					</attributes>
+					<attributes>
+						<key>summary</key>
+						<value xsi:type="workitem.restDTO:ContentDTO">
+							<content>DebugOptions</content>
+							<isHTML>true</isHTML>
+						</value>
+					</attributes>
+					<attributes>
+						<key>target</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>owner</key>
+						<value xsi:type="workitem.restDTO:ContributorDTO">
+							<id>_YNh4MOlsEdq4xpiOKg5hvA</id>
+							<itemId>_YNh4MOlsEdq4xpiOKg5hvA</itemId>
+							<userId>unassigned</userId>
+							<name>Unassigned</name>
+							<label>Unassigned</label>
+							<emailAddress>unassigned</emailAddress>
+							<locationUri>https://igartc01.swg.usma.ibm.com/jazz/resource/itemOid/com.ibm.team.repository.Contributor/_YNh4MOlsEdq4xpiOKg5hvA</locationUri>
+							<webUri>https://igajts01.swg.usma.ibm.com/jts/users/unassigned</webUri>
+						</value>
+					</attributes>
+					<attributes>
+						<key>description</key>
+						<value xsi:type="workitem.restDTO:ContentDTO">
+							<content></content>
+							<isHTML>true</isHTML>
+						</value>
+					</attributes>
+					<attributes>
+						<key>foundIn</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>internalState</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Closed</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workflow/close.gif</iconUrl>
+							<id>5</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>internalResolution</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Fixed</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workflow/close.gif</iconUrl>
+							<id>1</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>internalSeverity</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Normal</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/normal.gif</iconUrl>
+							<id>severity.literal.l3</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>internalSubscriptions</key>
+						<value xsi:type="workitem.restDTO:ListDTO">
+						</value>
+					</attributes>
+					<attributes>
+						<key>workItemType</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Task</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/task.gif</iconUrl>
+							<id>task</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>id</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>1281671</label>
+							<id>1281671</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>internalComments</key>
+						<value xsi:type="workitem.restDTO:ListDTO">
+						</value>
+					</attributes>
+					<attributes>
+						<key>acceptance</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>com.ibm.team.apt.attribute.complexity</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>contextId</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>SD-OPS</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.process.common/icons/obj16/projectarea_obj.gif</iconUrl>
+							<id>_U7zMYFRcEd61fuNW84kdiQ</id>
+							<isArchived>false</isArchived>
+						</value>
+					</attributes>
+					<attributes>
+						<key>archived</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>false</label>
+							<id>false</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>process_root_cause</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif</iconUrl>
+							<id>Process_Root_Cause.literal.l27</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>work_product_where_found</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>C - Code</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif</iconUrl>
+							<id>Work_Product_where_found.literal.l2</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>phase_injected</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif</iconUrl>
+							<id>Phase_Injected.literal.l7</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>phase_detected</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif</iconUrl>
+							<id>Phase_Detected.literal.l13</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>defect_type</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Logic</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif</iconUrl>
+							<id>Defect_Type.literal.l10</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>process_area_where_found</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif</iconUrl>
+							<id>Process_Area_where_found.literal.l45</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>activity_found</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif</iconUrl>
+							<id>Activity_Found.literal.l45</id>
+						</value>
+					</attributes>
+					<attributes>
+						<key>com.ibm.team.apt.attribute.planitem.newRanking._pm7NmRYUEd6L1tNIGdz5qQ</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>Unassigned</label>
+						</value>
+					</attributes>
+					<attributes>
+						<key>defect_complexity</key>
+						<value xsi:type="workitem.restDTO:ListDTO">
+						</value>
+					</attributes>
+					<attributes>
+						<key>teamArea</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>SD-OPS</label>
+							<iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.process.common/icons/obj16/teamarea_obj.gif</iconUrl>
+							<id>_1Hjb4FYBEd69G8biF2ewvg</id>
+							<isArchived>false</isArchived>
+						</value>
+					</attributes>
+					<attributes>
+						<key>stateGroup</key>
+						<value xsi:type="workitem.query.restDTO:UIItemDTO">
+							<label>2</label>
+							<id>2</id>
+						</value>
+					</attributes>
+				</value>
+			</returnValue>
+		</response>
+	</soapenv:Body>
+</soapenv:Envelope>
+Body: <?xml version="1.0" encoding="UTF-8" ?>
+<soapenv:Envelope
+	xmlns:workitem.restDTO="com.ibm.team.workitem.rest.dto"
+	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:com.ibm.team.repository.common.services="http:///com/ibm/team/core/services.ecore"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<soapenv:Body>
+		<response>
+			<method>getResults</method>
+			<interface>com.ibm.team.workitem.common.internal.rest.IQueryRestService</interface>
+			<returnValue xsi:type="com.ibm.team.repository.common.services:ComplexDataArg">
+				<type>COMPLEX</type>
+				<value xsi:type="workitem.restDTO:WorkItemSummaryPage">
+					<startIndex>0</startIndex>
+					<totalQueryResultCount>1</totalQueryResultCount>
+					<resultToken>_Iu7EEasaEeSicYpAbHXWsw</resultToken>
+					<workItemSummaryDTOs>
+						<workItemItemId>_vepaAasWEeSicYpAbHXWsw</workItemItemId>
+						<id>1281671</id>
+						<state>5</state>
+						<stateName>Closed</stateName>
+						<stateIconURL>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workflow/close.gif</stateIconURL>
+						<priorityValue>priority.literal.l01</priorityValue>
+						<priorityName>Unassigned</priorityName>
+						<priorityIconURL>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned.gif</priorityIconURL>
+						<severityValue>severity.literal.l3</severityValue>
+						<severityName>Normal</severityName>
+						<severityIconURL>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/normal.gif</severityIconURL>
+						<summary>DebugOptions</summary>
+						<ownerItemId>_YNh4MOlsEdq4xpiOKg5hvA</ownerItemId>
+						<ownerName>Unassigned</ownerName>
+						<creatorItemId>_PrOIoMZ5Ed-Lr-wDR3V_pA</creatorItemId>
+						<creatorName>Felipe Gonçalves Coury</creatorName>
+						<modified>2015-02-02T20:11:18.383Z</modified>
+						<type2>task</type2>
+						<typeName>Task</typeName>
+						<typeIconURL>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/task.gif</typeIconURL>
+						<resolution>1</resolution>
+						<resolutionName>Fixed</resolutionName>
+						<resolutionIconURL>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workflow/close.gif</resolutionIconURL>
+						<description></description>
+						<categoryItemId>_VLyJIFRcEd61fuNW84kdiQ</categoryItemId>
+						<categoryName>Unassigned</categoryName>
+						<locationUri>https://igartc01.swg.usma.ibm.com/jazz/resource/itemName/com.ibm.team.workitem.WorkItem/1281671</locationUri>
+					</workItemSummaryDTOs>
+				</value>
+			</returnValue>
+		</response>
+	</soapenv:Body>
+</soapenv:Envelope>
+Body: <?xml version="1.0" encoding="UTF-8" ?>
+<soapenv:Envelope
+	xmlns:workitem.restDTO="com.ibm.team.workitem.rest.dto"
+	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:com.ibm.team.repository.common.services="http:///com/ibm/team/core/services.ecore"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<soapenv:Body>
+		<response>
+			<method>getResults</method>
+			<interface>com.ibm.team.workitem.common.internal.rest.IQueryRestService</interface>
+			<returnValue xsi:type="com.ibm.team.repository.common.services:ComplexDataArg">
+				<type>COMPLEX</type>
+				<value xsi:type="workitem.restDTO:WorkItemSummaryPage">
+					<startIndex>0</startIndex>
+					<totalQueryResultCount>1</totalQueryResultCount>
+					<resultToken>_Iu7EEasaEeSicYpAbHXWsw</resultToken>
+					<workItemSummaryDTOs>
+						<workItemItemId>_vepaAasWEeSicYpAbHXWsw</workItemItemId>
+						<id>1281671</id>
+						<state>5</state>
+						<stateName>Closed</stateName>
+						<stateIconURL>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workflow/close.gif</stateIconURL>
+						<priorityValue>priority.literal.l01</priorityValue>
+						<priorityName>Unassigned</priorityName>
+						<priorityIconURL>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned.gif</priorityIconURL>
+						<severityValue>severity.literal.l3</severityValue>
+						<severityName>Normal</severityName>
+						<severityIconURL>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/normal.gif</severityIconURL>
+						<summary>DebugOptions</summary>
+						<ownerItemId>_YNh4MOlsEdq4xpiOKg5hvA</ownerItemId>
+						<ownerName>Unassigned</ownerName>
+						<creatorItemId>_PrOIoMZ5Ed-Lr-wDR3V_pA</creatorItemId>
+						<creatorName>Felipe Gonçalves Coury</creatorName>
+						<modified>2015-02-02T20:11:18.383Z</modified>
+						<type2>task</type2>
+						<typeName>Task</typeName>
+						<typeIconURL>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/task.gif</typeIconURL>
+						<resolution>1</resolution>
+						<resolutionName>Fixed</resolutionName>
+						<resolutionIconURL>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workflow/close.gif</resolutionIconURL>
+						<description></description>
+						<categoryItemId>_VLyJIFRcEd61fuNW84kdiQ</categoryItemId>
+						<categoryName>Unassigned</categoryName>
+						<locationUri>https://igartc01.swg.usma.ibm.com/jazz/resource/itemName/com.ibm.team.workitem.WorkItem/1281671</locationUri>
+					</workItemSummaryDTOs>
+				</value>
+			</returnValue>
+		</response>
+	</soapenv:Body>
+</soapenv:Envelope>
+<nil>
+Body: <?xml version="1.0" encoding="UTF-8" ?>
+<soapenv:Envelope
+	xmlns:workitem.restDTO="com.ibm.team.workitem.rest.dto"
+	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:com.ibm.team.repository.common.services="http:///com/ibm/team/core/services.ecore"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<soapenv:Body>
+		<response>
+			<method>getResults</method>
+			<interface>com.ibm.team.workitem.common.internal.rest.IQueryRestService</interface>
+			<returnValue xsi:type="com.ibm.team.repository.common.services:ComplexDataArg">
+				<type>COMPLEX</type>
+				<value xsi:type="workitem.restDTO:WorkItemSummaryPage">
+					<startIndex>0</startIndex>
+					<totalQueryResultCount>1</totalQueryResultCount>
+					<resultToken>_M8kJMasaEeSicYpAbHXWsw</resultToken>
+					<workItemSummaryDTOs>
+						<workItemItemId>_vepaAasWEeSicYpAbHXWsw</workItemItemId>
+						<id>1281671</id>
+						<state>5</state>
+						<stateName>Closed</stateName>
+						<stateIconURL>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workflow/close.gif</stateIconURL>
+						<priorityValue>priority.literal.l01</priorityValue>
+						<priorityName>Unassigned</priorityName>
+						<priorityIconURL>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned.gif</priorityIconURL>
+						<severityValue>severity.literal.l3</severityValue>
+						<severityName>Normal</severityName>
+						<severityIconURL>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/normal.gif</severityIconURL>
+						<summary>DebugOptions</summary>
+						<ownerItemId>_YNh4MOlsEdq4xpiOKg5hvA</ownerItemId>
+						<ownerName>Unassigned</ownerName>
+						<creatorItemId>_PrOIoMZ5Ed-Lr-wDR3V_pA</creatorItemId>
+						<creatorName>Felipe Gonçalves Coury</creatorName>
+						<modified>2015-02-02T20:11:18.383Z</modified>
+						<type2>task</type2>
+						<typeName>Task</typeName>
+						<typeIconURL>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/task.gif</typeIconURL>
+						<resolution>1</resolution>
+						<resolutionName>Fixed</resolutionName>
+						<resolutionIconURL>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workflow/close.gif</resolutionIconURL>
+						<description></description>
+						<categoryItemId>_VLyJIFRcEd61fuNW84kdiQ</categoryItemId>
+						<categoryName>Unassigned</categoryName>
+						<locationUri>https://igartc01.swg.usma.ibm.com/jazz/resource/itemName/com.ibm.team.workitem.WorkItem/1281671</locationUri>
+					</workItemSummaryDTOs>
+				</value>
+			</returnValue>
+		</response>
+	</soapenv:Body>
+</soapenv:Envelope>
+Env: &{Body:{Response:{Method:getResults Interface:com.ibm.team.workitem.common.internal.rest.IQueryRestService ReturnValue:{Type:COMPLEX Value:{StartIndex:0 TotalCount:0 EstimatedTotal:0 Limit:0 ItemId: Token:_M8kJMasaEeSicYpAbHXWsw Headers:[] Rows:[] WorkItems:[{WorkItemId:_vepaAasWEeSicYpAbHXWsw Id:1281671 ItemId: Summary:DebugOptions OwnerName:Unassigned Type:Task LocationUri:https://igartc01.swg.usma.ibm.com/jazz/resource/itemName/com.ibm.team.workitem.WorkItem/1281671}] WorkItem:{WorkItemId: Id: ItemId: Summary: OwnerName: Type: LocationUri:} Attributes:[]}}}}}
+<nil>

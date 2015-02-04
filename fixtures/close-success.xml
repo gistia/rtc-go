@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<soapenv:Envelope
+        xmlns:workitem.restDTO="com.ibm.team.workitem.rest.dto"
+        xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:com.ibm.team.repository.common.services="http:///com/ibm/team/core/services.ecore"
+        xmlns:workitem.query.restDTO="com.ibm.team.workitem.query.rest.dto"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <soapenv:Body>
+                <response>
+                        <method>postWorkItem2</method>
+                        <interface>com.ibm.team.workitem.common.internal.rest.IWorkItemRestService</interface>
+                        <returnValue xsi:type="com.ibm.team.repository.common.services:ComplexDataArg">
+                                <type>COMPLEX</type>
+                                <value xsi:type="workitem.restDTO:OperationReportDTO">
+                                        <severity>0</severity>
+                                        <operationName>Save Work Item</operationName>
+                                        <workItem>
+                                                <itemId>_2JmUQKsEEeSicYpAbHXWsw</itemId>
+                                                <stateId>_AJmqoav3EeSicYpAbHXWsw</stateId>
+                                                <locationUri>https://igartc01.swg.usma.ibm.com/jazz/resource/itemName/com.ibm.team.workitem.WorkIcationUri>
+                                                <attributes>
+                                                        <key>modifiedBy</key>
+                                                        <value xsi:type="workitem.restDTO:ContributorDTO">
+                                                                <id>_PrOIoMZ5Ed-Lr-wDR3V_pA</id>
+                                                                <itemId>_PrOIoMZ5Ed-Lr-wDR3V_pA</itemId>
+                                                                <userId>fcoury@br.ibm.com</userId>
+                                                                <name>Felipe Gonçalves Coury</name>
+                                                                <label>Felipe Gonçalves Coury</label>
+                                                                <emailAddress>fcoury@br.ibm.com</emailAddress>
+                                                                <locationUri>https://igartc01.swg.usma.ibm.com/jazz/resource/itemOid/com.ibm.teamtributor/_PrOIoMZ5Ed-Lr-wDR3V_pA</locationUri>
+                                                                <webUri>https://igajts01.swg.usma.ibm.com/jts/users/fcoury%40br.ibm.com</webUri>
+                                                        </value>
+                                                </attributes>
+                                                <attributes>
+                                                        <key>modified</key>
+                                                        <value xsi:type="workitem.query.restDTO:UIItemDTO">
+                                                                <label>Feb 3, 2015 5:50 PM</label>
+                                                                <iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentSom.ibm.team.workitem.common/icons/obj16/type_none.gif</iconUrl>
+                                                                <id>2015-02-03T22:50:08.330Z</id>
+                                                        </value>
+                                                </attributes>
+                                                <attributes>
+                                                        <key>internalState</key>
+                                                        <value xsi:type="workitem.query.restDTO:UIItemDTO">
+                                                                <label>Closed</label>
+                                                                <iconUrl>/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentSttachment/_U7zMYFRcEd61fuNW84kdiQ/workflow/close.gif</iconUrl>
+                                                                <id>5</id>
+                                                        </value>
+                                                </attributes>
+                                                <attributes>
+                                                        <key>id</key>
+                                                        <value xsi:type="workitem.query.restDTO:UIItemDTO">
+                                                                <label>1281636</label>
+                                                                <id>1281636</id>
+                                                        </value>
+                                                </attributes>
+                                        </workItem>
+                                </value>
+                        </returnValue>
+                </response>
+        </soapenv:Body>
+</soapenv:Envelope>

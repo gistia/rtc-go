@@ -1,0 +1,1759 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<soapenv:Envelope
+	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:rest="com.ibm.team.process.internal.common.rest"
+	xmlns:com.ibm.team.repository.common.services="http:///com/ibm/team/core/services.ecore"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<soapenv:Body>
+		<response>
+			<method>getIterations</method>
+			<interface>com.ibm.team.process.internal.service.web.IProcessWebUIService</interface>
+			<returnValue xsi:type="com.ibm.team.repository.common.services:ComplexArrayDataArg">
+				<type>COMPLEX</type>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_7kcggMD6Ed-LoM7MAf45_g</itemId>
+					<stateId>_YJF9cOWKEeC99f40DHDfLA</stateId>
+					<label>Future Release Items</label>
+					<id>Future Release</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2012-01-01T07:00:00.000Z</startDate>
+					<endDate>2012-03-31T06:00:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_EYmdwMD7Ed-LoM7MAf45_g</itemId>
+						<stateId>_YHRYgOWKEeC99f40DHDfLA</stateId>
+						<label>1Q 2012 Future Release Items</label>
+						<id>1Q2012Future Release</id>
+						<parentItemId>_7kcggMD6Ed-LoM7MAf45_g</parentItemId>
+						<startDate>2012-01-01T07:00:00.000Z</startDate>
+						<endDate>2012-03-31T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_QbPhYDVIEeCZKZCE5PhExQ</itemId>
+					<stateId>_LQOLoEj1EeGYFrfkX0JNSw</stateId>
+					<label>Rapid Recovery 2011</label>
+					<id>2011-rapid-recovery</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2011-04-01T06:00:00.000Z</startDate>
+					<endDate>2011-04-09T06:00:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_ZI2KsDVIEeCZKZCE5PhExQ</itemId>
+						<stateId>_LRbskEj1EeGYFrfkX0JNSw</stateId>
+						<label>Rapid Recovery 2011 - Sprint 1</label>
+						<id>2011-rapid-recovery-sprint1</id>
+						<parentItemId>_QbPhYDVIEeCZKZCE5PhExQ</parentItemId>
+						<startDate>2011-04-01T06:00:00.000Z</startDate>
+						<endDate>2011-04-09T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_kSMv0EQREeCjVv6AyNTTOQ</itemId>
+					<stateId>_mWWcsKfZEeCQScr1QvzD6g</stateId>
+					<label>[2011] PULSE Blue Harmony R1</label>
+					<id>2011-pulse-bhr1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2011-03-01T07:00:00.000Z</startDate>
+					<endDate>2011-08-03T06:00:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_qZgFQEQREeCjVv6AyNTTOQ</itemId>
+						<stateId>_al5DMJHcEeCpsLFYbBdQmw</stateId>
+						<label>[2011] PULSE BH R1 - Sprint 1</label>
+						<id>pulseBHR1sprnt1</id>
+						<parentItemId>_kSMv0EQREeCjVv6AyNTTOQ</parentItemId>
+						<startDate>2011-03-01T14:38:31.312Z</startDate>
+						<endDate>2011-03-20T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_Tj5AEJHcEeCemOi4zgPsyw</itemId>
+						<stateId>_aiaRYJHcEeCpsLFYbBdQmw</stateId>
+						<label>[2011] PULSE BH R1 - Sprint 2</label>
+						<id>pulseBHR1sprnt2</id>
+						<parentItemId>_kSMv0EQREeCjVv6AyNTTOQ</parentItemId>
+						<startDate>2011-06-01T06:00:00.000Z</startDate>
+						<endDate>2011-06-30T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_l5h90KfZEeCOwLFUpSn04Q</itemId>
+						<stateId>_mVaokKfZEeCQScr1QvzD6g</stateId>
+						<label>[2011] PULSE BH R1 - Sprint 3</label>
+						<id>pulseBHR1sprnt3</id>
+						<parentItemId>_kSMv0EQREeCjVv6AyNTTOQ</parentItemId>
+						<startDate>2011-07-04T06:00:00.000Z</startDate>
+						<endDate>2011-07-15T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_QXpv4H9MEeC0mrjI0onsMA</itemId>
+					<stateId>_LbQFAKfVEeCQScr1QvzD6g</stateId>
+					<label>[2011] July Release 1</label>
+					<id>2011-July-release1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2011-05-19T23:35:00.000Z</startDate>
+					<endDate>2011-07-08T06:00:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_i3jZsH9MEeC0mrjI0onsMA</itemId>
+						<stateId>_LbtYAKfVEeCQScr1QvzD6g</stateId>
+						<label>[2011] July Release 1 - Sprint 1</label>
+						<id>2011-July-release1-sprint1</id>
+						<parentItemId>_QXpv4H9MEeC0mrjI0onsMA</parentItemId>
+						<startDate>2011-05-19T23:38:00.000Z</startDate>
+						<endDate>2011-06-10T23:38:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_bXFPkJHcEeCemOi4zgPsyw</itemId>
+						<stateId>_LbpGkKfVEeCQScr1QvzD6g</stateId>
+						<label>[2011] July Release 1 - Sprint 2</label>
+						<id>2011-July-release1-sprint2</id>
+						<parentItemId>_QXpv4H9MEeC0mrjI0onsMA</parentItemId>
+						<startDate>2011-06-11T06:00:00.000Z</startDate>
+						<endDate>2011-07-08T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_soS-8J0wEeCDL_mv5rQ5Ew</itemId>
+					<stateId>_zbCNZN5zEeCdCNvfUsGNvA</stateId>
+					<label>[2011] October Release 1</label>
+					<id>2011-October-release1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2011-07-04T06:00:00.000Z</startDate>
+					<endDate>2011-10-14T06:00:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_6UV4MJ0wEeCDL_mv5rQ5Ew</itemId>
+						<stateId>_pT7TcM5tEeClPbD0ZVkrCA</stateId>
+						<label>[2011] October Release 1 - Sprint 1</label>
+						<id>2011-October-release1-sprint1</id>
+						<parentItemId>_soS-8J0wEeCDL_mv5rQ5Ew</parentItemId>
+						<startDate>2011-07-04T06:00:00.000Z</startDate>
+						<endDate>2011-07-31T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_toixILSAEeC_PvaAb7q5Vg</itemId>
+						<stateId>_RUvg8Lk5EeCvn7o6pknanA</stateId>
+						<label>[2011] October Release 1 - Sprint 2</label>
+						<id>2011-October-release1-sprint2</id>
+						<parentItemId>_soS-8J0wEeCDL_mv5rQ5Ew</parentItemId>
+						<startDate>2011-08-01T06:00:00.000Z</startDate>
+						<endDate>2011-08-21T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_bao5QLlBEeCDa7rPY68c4A</itemId>
+						<stateId>_cNc2QLlBEeCvn7o6pknanA</stateId>
+						<label>[2011] October Release 1 - Sprint 3</label>
+						<id>2011-October-release1-sprint3</id>
+						<parentItemId>_soS-8J0wEeCDL_mv5rQ5Ew</parentItemId>
+						<startDate>2011-08-22T06:00:00.000Z</startDate>
+						<endDate>2011-09-18T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_wF3BUN5zEeCJ6JZhjgRoTA</itemId>
+						<stateId>_zaHAUN5zEeCdCNvfUsGNvA</stateId>
+						<label>[2011] October Release 1 - Sprint 4</label>
+						<id>2011-October-release1-sprint4</id>
+						<parentItemId>_soS-8J0wEeCDL_mv5rQ5Ew</parentItemId>
+						<startDate>2011-09-19T06:00:00.000Z</startDate>
+						<endDate>2011-10-07T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_qVT-EKMiEeC1V9G28UI-rA</itemId>
+					<stateId>_CE0BALSBEeCX1pUUC_3fvg</stateId>
+					<label>[2011] July/Aug Standalone</label>
+					<id>2011-July-August</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2011-06-30T06:00:00.000Z</startDate>
+					<endDate>2011-08-19T06:00:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_wSyCEKMiEeC1V9G28UI-rA</itemId>
+						<stateId>_CEnMsLSBEeCX1pUUC_3fvg</stateId>
+						<label>[2011] July/August Standalone</label>
+						<id>2011-July-August</id>
+						<parentItemId>_qVT-EKMiEeC1V9G28UI-rA</parentItemId>
+						<startDate>2011-06-30T14:10:19.078Z</startDate>
+						<endDate>2011-08-19T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_jAeYYM5tEeC7W-mMAxv6vg</itemId>
+					<stateId>_6NJa9Pm9EeCVObGzQsSbbA</stateId>
+					<label>[2011] November Release 1</label>
+					<id>2011-November-release1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2011-09-26T06:00:00.000Z</startDate>
+					<endDate>2011-11-11T07:00:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_pOL30M5tEeC7W-mMAxv6vg</itemId>
+						<stateId>_pSskYs5tEeClPbD0ZVkrCA</stateId>
+						<label>[2011] November Release 1 - Sprint 1</label>
+						<id>2011-November-release1-sprint1</id>
+						<parentItemId>_jAeYYM5tEeC7W-mMAxv6vg</parentItemId>
+						<startDate>2011-09-26T06:00:00.000Z</startDate>
+						<endDate>2011-10-14T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_3zHogPm9EeC4vpWNXwXKTw</itemId>
+						<stateId>_6M1R5Pm9EeCVObGzQsSbbA</stateId>
+						<label>[2011] November Release 1 - Sprint 2</label>
+						<id>2011-November-release1-sprint2</id>
+						<parentItemId>_jAeYYM5tEeC7W-mMAxv6vg</parentItemId>
+						<startDate>2011-10-15T06:00:00.000Z</startDate>
+						<endDate>2011-11-11T07:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_twfLsO3lEeCVMPy3HST-5w</itemId>
+					<stateId>_wLlzJw7JEeGj15x8gfR3Dg</stateId>
+					<label>[2011] November Release 2</label>
+					<id>2011-November-release2</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2011-10-29T06:01:00.000Z</startDate>
+					<endDate>2011-11-25T07:01:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_2Ldz8O3lEeCVMPy3HST-5w</itemId>
+						<stateId>_wLBLYA7JEeGj15x8gfR3Dg</stateId>
+						<label>[2011] November Release 2 - Sprint 1</label>
+						<id>2011-November-release2-sprint1</id>
+						<parentItemId>_twfLsO3lEeCVMPy3HST-5w</parentItemId>
+						<startDate>2011-10-29T06:01:00.000Z</startDate>
+						<endDate>2011-11-25T07:01:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_Utb4MPTbEeCj97v43hf-Mw</itemId>
+					<stateId>_foaYBPTbEeCVObGzQsSbbA</stateId>
+					<label>[2011] October Release 2</label>
+					<id>2011-October-release2</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2011-10-10T14:04:00.000Z</startDate>
+					<endDate>2011-10-18T02:04:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_a0cSsPTbEeCj97v43hf-Mw</itemId>
+						<stateId>_fnZrYPTbEeCVObGzQsSbbA</stateId>
+						<label>[2011] October Release 2 - Sprint 1</label>
+						<id>2011-October-release2-sprint1</id>
+						<parentItemId>_Utb4MPTbEeCj97v43hf-Mw</parentItemId>
+						<startDate>2011-10-10T14:06:00.000Z</startDate>
+						<endDate>2011-10-18T02:06:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_u9rHIA7MEeGf9OrXyJOm5Q</itemId>
+					<stateId>_rCZGkDJpEeGgmaZMxtDbmQ</stateId>
+					<label>[2012] January Release 1</label>
+					<id>2012-jan-release1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2011-11-21T14:26:00.000Z</startDate>
+					<endDate>2011-12-09T14:26:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_2LA3kA7MEeGf9OrXyJOm5Q</itemId>
+						<stateId>_2ufYEA7MEeGj15x8gfR3Dg</stateId>
+						<label>[2012] January Release 1 - Sprint 1</label>
+						<id>2012-jan-release1-sprint1</id>
+						<parentItemId>_u9rHIA7MEeGf9OrXyJOm5Q</parentItemId>
+						<startDate>2011-11-21T14:27:00.000Z</startDate>
+						<endDate>2011-12-09T14:27:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_FfqSgB0UEeGtB5ytdc0zWA</itemId>
+						<stateId>_FwcghB0UEeGV6OPPbZgIvA</stateId>
+						<label>[2012] January Release 1 - Sprint 2</label>
+						<id>2012-jan-release1-sprint2</id>
+						<parentItemId>_u9rHIA7MEeGf9OrXyJOm5Q</parentItemId>
+						<startDate>2011-12-10T14:27:00.000Z</startDate>
+						<endDate>2011-12-30T14:27:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_kxCdQDJpEeGJfL-REhCx_Q</itemId>
+						<stateId>_pZgV4kODEeGYFrfkX0JNSw</stateId>
+						<label>[2012] January Release 1 - Sprint 3</label>
+						<id>2012-jan-release1-sprint3</id>
+						<parentItemId>_u9rHIA7MEeGf9OrXyJOm5Q</parentItemId>
+						<startDate>2011-12-31T14:27:00.000Z</startDate>
+						<endDate>2012-01-27T14:27:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_YMQngDceEeGmIrcI_mi51g</itemId>
+					<stateId>_5Uik4Ez0EeGKt8lzo3890w</stateId>
+					<label>[2012] February Release 1</label>
+					<id>2012-feb-release1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2011-12-16T21:51:00.000Z</startDate>
+					<endDate>2012-02-20T21:51:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_iJIgUDceEeGmIrcI_mi51g</itemId>
+						<stateId>_i7KaNzceEeGISoWTYa7d9w</stateId>
+						<label>[2012] February Release 1 - Sprint 1</label>
+						<id>2012-feb-release1-sprint1</id>
+						<parentItemId>_YMQngDceEeGmIrcI_mi51g</parentItemId>
+						<startDate>2011-12-16T21:52:00.000Z</startDate>
+						<endDate>2012-01-13T21:52:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_TfzqoECOEeGr7aU7iK7_qw</itemId>
+						<stateId>_USwxkECOEeGYFrfkX0JNSw</stateId>
+						<label>[2012] February Release 1 - Sprint 2</label>
+						<id>2012-feb-release1-sprint2</id>
+						<parentItemId>_YMQngDceEeGmIrcI_mi51g</parentItemId>
+						<startDate>2012-01-14T21:52:00.000Z</startDate>
+						<endDate>2012-02-03T21:52:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_5TNIIEz0EeGcy_NNrT3gng</itemId>
+						<stateId>_l_KozFykEeGnp-g8lww-bA</stateId>
+						<label>[2012] February Release 1 - Sprint 3</label>
+						<id>2012-feb-release1-sprint3</id>
+						<parentItemId>_YMQngDceEeGmIrcI_mi51g</parentItemId>
+						<startDate>2012-02-04T21:52:00.000Z</startDate>
+						<endDate>2012-02-24T21:52:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_4J0OIFNKEeGgFcDids6CUQ</itemId>
+					<stateId>_DSvIMHHoEeGHi9p7uYSE0Q</stateId>
+					<label>[2012] April Release 1</label>
+					<id>2012-apr-release1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2012-02-04T18:19:00.000Z</startDate>
+					<endDate>2012-04-06T17:19:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_6gYK8FNMEeGgFcDids6CUQ</itemId>
+						<stateId>_7Dv9wFNMEeGKt8lzo3890w</stateId>
+						<label>[2012] April Release 1 - Sprint 1</label>
+						<id>2012-apr-release1-sprint1</id>
+						<parentItemId>_4J0OIFNKEeGgFcDids6CUQ</parentItemId>
+						<startDate>2012-02-04T18:35:00.000Z</startDate>
+						<endDate>2012-02-24T18:35:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_t3BVYGbiEeG9tsK4SsjSvw</itemId>
+						<stateId>_I_y_5GbrEeGL7tUt84aA5Q</stateId>
+						<label>[2012] April Release 1 - Sprint 2</label>
+						<id>2012-apr-release1-sprint2</id>
+						<parentItemId>_4J0OIFNKEeGgFcDids6CUQ</parentItemId>
+						<startDate>2012-02-25T18:35:00.000Z</startDate>
+						<endDate>2012-03-16T18:35:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_CsluMHHoEeGLw5mLp2aIQA</itemId>
+						<stateId>_DFevUHHoEeGHi9p7uYSE0Q</stateId>
+						<label>[2012] April Release 1 - Sprint 3</label>
+						<id>2012-apr-release1-sprint3</id>
+						<parentItemId>_4J0OIFNKEeGgFcDids6CUQ</parentItemId>
+						<startDate>2012-03-17T17:35:00.000Z</startDate>
+						<endDate>2012-04-06T18:35:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_OlBd4GPIEeGEma5tnWouwQ</itemId>
+					<stateId>_ZbpERJVvEeGsTYmYjXahng</stateId>
+					<label>[2012] May Release 1</label>
+					<id>2012-may-release1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2012-03-01T17:58:00.000Z</startDate>
+					<endDate>2012-05-25T16:58:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_Y-qLMGPIEeGEma5tnWouwQ</itemId>
+						<stateId>_ZddABGPIEeGL7tUt84aA5Q</stateId>
+						<label>[2012] May Release 1 - Sprint 1</label>
+						<id>2012-may-release1-sprint1</id>
+						<parentItemId>_OlBd4GPIEeGEma5tnWouwQ</parentItemId>
+						<startDate>2012-03-01T17:59:37.984Z</startDate>
+						<endDate>2012-03-23T16:59:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_3D064Hm0EeGZk_m273_vDQ</itemId>
+						<stateId>_3eCxsHm0EeGtSb1iUu6mvw</stateId>
+						<label>[2012] May Release 1 - Sprint 2</label>
+						<id>2012-may-release1-sprint2</id>
+						<parentItemId>_OlBd4GPIEeGEma5tnWouwQ</parentItemId>
+						<startDate>2012-03-24T16:59:00.000Z</startDate>
+						<endDate>2012-04-13T16:59:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_ofXaQIWZEeGZRsETRXqr_A</itemId>
+						<stateId>_sH5AJIWZEeG9BvJczOWMeg</stateId>
+						<label>[2012] May Release 1 - Sprint 3</label>
+						<id>2012-may-release1-sprint3</id>
+						<parentItemId>_OlBd4GPIEeGEma5tnWouwQ</parentItemId>
+						<startDate>2012-04-14T16:59:00.000Z</startDate>
+						<endDate>2012-05-04T16:59:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_I9WMAHzoEeGHioCJE3iiZg</itemId>
+					<stateId>_WN0jl3zoEeGtSb1iUu6mvw</stateId>
+					<label>Rapid Recovery 2012</label>
+					<id>2012-rapid-recovery</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2012-04-23T17:20:00.000Z</startDate>
+					<endDate>2012-05-07T17:20:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_TYLMIHzoEeGHioCJE3iiZg</itemId>
+						<stateId>_WM9n9HzoEeGtSb1iUu6mvw</stateId>
+						<label>Rapid Recovery 2012 - Sprint 1</label>
+						<id>2012-rapid-recovery-sprint1</id>
+						<parentItemId>_I9WMAHzoEeGHioCJE3iiZg</parentItemId>
+						<startDate>2012-04-23T17:20:00.000Z</startDate>
+						<endDate>2012-05-07T17:20:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_t2oVsIMvEeGAfNlHLHIO7g</itemId>
+					<stateId>_tgubRIPsEeG9BvJczOWMeg</stateId>
+					<label>[2012] April Release 2</label>
+					<id>2012-apr-release2</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2012-04-10T17:06:44.921Z</startDate>
+					<endDate>2012-04-13T17:06:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_0DdEUIMvEeGAfNlHLHIO7g</itemId>
+						<stateId>_0mEpMIMvEeG9BvJczOWMeg</stateId>
+						<label>[2012] April Release 2 - Sprint 1</label>
+						<id>2012-apr-release2-sprint1</id>
+						<parentItemId>_t2oVsIMvEeGAfNlHLHIO7g</parentItemId>
+						<startDate>2012-04-10T17:08:01.937Z</startDate>
+						<endDate>2012-04-13T17:08:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_gj28MIPsEeGQdsKOXDeL9Q</itemId>
+					<stateId>_teltRIPsEeG9BvJczOWMeg</stateId>
+					<label>[2012] April Release 3</label>
+					<id>2012-apr-release3</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2012-04-11T15:38:51.046Z</startDate>
+					<endDate xsi:nil="true"/>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_rwwScIPsEeGQdsKOXDeL9Q</itemId>
+						<stateId>_tgejpIPsEeG9BvJczOWMeg</stateId>
+						<label>[2012] April Release 3 - Sprint 1</label>
+						<id>2012-apr-release3-sprint1</id>
+						<parentItemId>_gj28MIPsEeGQdsKOXDeL9Q</parentItemId>
+						<startDate>2012-04-11T15:39:36.296Z</startDate>
+						<endDate>2012-04-23T15:39:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_iHkIAJVuEeGy-d96R5iOCQ</itemId>
+					<stateId>_qnHbcKAoEeGywNJHv88NXw</stateId>
+					<label>[2012] May Release 2</label>
+					<id>2012-may-release2</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2012-05-05T22:22:00.000Z</startDate>
+					<endDate>2012-05-25T22:22:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_WlGU8JVvEeGy-d96R5iOCQ</itemId>
+						<stateId>_ZbAyJJVvEeGsTYmYjXahng</stateId>
+						<label>[2012] May Release 2 - Sprint 1</label>
+						<id>2012-may-release2-sprint1</id>
+						<parentItemId>_iHkIAJVuEeGy-d96R5iOCQ</parentItemId>
+						<startDate>2012-05-05T22:28:00.000Z</startDate>
+						<endDate>2012-05-25T22:28:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_-R0rgKAoEeGk2OEjAM60Wg</itemId>
+					<stateId>_oaVzZLWIEeGKj9gDCRedVQ</stateId>
+					<label>[2012] July Release 1</label>
+					<id>2012-july-release1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2012-05-28T12:01:00.000Z</startDate>
+					<endDate>2012-06-30T00:01:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_XI0aQKApEeGk2OEjAM60Wg</itemId>
+						<stateId>_WPcl0LGOEeGyCLN7XKA2FA</stateId>
+						<label>[2012] July Release 1 - Sprint 1</label>
+						<id>2012-july-release1-sprint1</id>
+						<parentItemId>_-R0rgKAoEeGk2OEjAM60Wg</parentItemId>
+						<startDate>2012-05-28T12:03:00.000Z</startDate>
+						<endDate>2012-06-09T00:03:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_is2sQLGPEeGID4HFsp5vFw</itemId>
+						<stateId>_W-4218xKEeG8M6Igj4l-zQ</stateId>
+						<label>[2012] July Release 1 - Sprint 2</label>
+						<id>2012-july-release1-sprint2</id>
+						<parentItemId>_-R0rgKAoEeGk2OEjAM60Wg</parentItemId>
+						<startDate>2012-06-11T17:28:00.000Z</startDate>
+						<endDate>2012-06-29T17:28:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_6f0c8LWGEeGOt7b6B2uyoQ</itemId>
+					<stateId>_gZoIENKOEeGU361-_a3sUw</stateId>
+					<label>[2012] August Release 1</label>
+					<id>2012-august-release1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2012-07-23T18:36:00.000Z</startDate>
+					<endDate>2012-08-10T18:36:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_oL3vALWHEeGOt7b6B2uyoQ</itemId>
+						<stateId>_w76Q0NKdEeGU361-_a3sUw</stateId>
+						<label>[2012] August Release 1 Sprint 1</label>
+						<id>2012-august-release1-sprint1</id>
+						<parentItemId>_6f0c8LWGEeGOt7b6B2uyoQ</parentItemId>
+						<startDate>2012-07-02T18:42:00.000Z</startDate>
+						<endDate>2012-07-20T18:42:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_BHrr8NKKEeGdsNPyEUXtQQ</itemId>
+						<stateId>_WvDqx9KPEeGU361-_a3sUw</stateId>
+						<label>[2012] August Release 1, Sprint 2</label>
+						<id>2012-august-release1-sprint2</id>
+						<parentItemId>_6f0c8LWGEeGOt7b6B2uyoQ</parentItemId>
+						<startDate>2012-07-23T16:41:00.000Z</startDate>
+						<endDate>2012-08-10T16:41:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_fkqDoOMQEeGzssuuu3DlPQ</itemId>
+					<stateId>_ALsbIgdLEeK9Sb0TkZMmhQ</stateId>
+					<label>[2012] October R1</label>
+					<id>[2012] October R1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2012-08-13T17:25:00.000Z</startDate>
+					<endDate>2012-10-12T17:25:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_rN3icOMQEeGzssuuu3DlPQ</itemId>
+						<stateId>_1lDNxAKCEeKv0fACHfjJEQ</stateId>
+						<label>[2012] October R1, Sprint 1</label>
+						<id>[2012] October R1, Sprint 1</id>
+						<parentItemId>_fkqDoOMQEeGzssuuu3DlPQ</parentItemId>
+						<startDate>2012-08-13T17:26:00.000Z</startDate>
+						<endDate>2012-08-31T17:26:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_h3eaF_OTEeGg5bI0qidh9w</itemId>
+						<stateId>_AMr5oAdLEeK9Sb0TkZMmhQ</stateId>
+						<label>[2012] October R1, Sprint 2</label>
+						<id>[2012] October R1, Sprint 2</id>
+						<parentItemId>_fkqDoOMQEeGzssuuu3DlPQ</parentItemId>
+						<startDate>2012-09-03T20:54:00.000Z</startDate>
+						<endDate>2012-09-22T05:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_1iK44AKCEeKv0fACHfjJEQ</itemId>
+					<stateId>_590Rgh-REeKBWMZ226kC7w</stateId>
+					<label>[2012] October R2</label>
+					<id>[2012] October R2</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2012-09-24T05:00:00.000Z</startDate>
+					<endDate>2012-11-02T06:00:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_1iK44QKCEeKv0fACHfjJEQ</itemId>
+						<stateId>_h3BmRBcCEeKvyarb0eKoZQ</stateId>
+						<label>[2012] October R2, Sprint 1</label>
+						<id>[2012] October R2, Sprint 1</id>
+						<parentItemId>_1iK44AKCEeKv0fACHfjJEQ</parentItemId>
+						<startDate>2012-09-24T05:00:00.000Z</startDate>
+						<endDate>2012-10-12T05:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_K-PyYRO6EeKoGsYNVAEQeg</itemId>
+						<stateId>_5_SRIB-REeKBWMZ226kC7w</stateId>
+						<label>[2012] October R2, Sprint 2</label>
+						<id>[2012] October R2, Sprint 2</id>
+						<parentItemId>_1iK44AKCEeKv0fACHfjJEQ</parentItemId>
+						<startDate>2012-10-15T05:00:00.000Z</startDate>
+						<endDate>2012-10-26T05:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_MdnUUxlVEeKvyarb0eKoZQ</itemId>
+					<stateId>_5_0cpB-REeKBWMZ226kC7w</stateId>
+					<label>[2012] November R1</label>
+					<id>[2012] November R1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2012-10-22T05:00:00.000Z</startDate>
+					<endDate>2012-11-09T06:00:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_MdnUVBlVEeKvyarb0eKoZQ</itemId>
+						<stateId>_6AE7Uh-REeKBWMZ226kC7w</stateId>
+						<label>[2012] November R1, Sprint 1</label>
+						<id>[2012] November R1, Sprint 1</id>
+						<parentItemId>_MdnUUxlVEeKvyarb0eKoZQ</parentItemId>
+						<startDate>2012-10-22T05:00:00.000Z</startDate>
+						<endDate>2012-11-09T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_WYyOUCn7EeKNod2hbU-puQ</itemId>
+					<stateId>_5lbjOSq0EeKNod2hbU-puQ</stateId>
+					<label>[2012] November R2</label>
+					<id>[2012] November R2</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2012-11-12T06:00:00.000Z</startDate>
+					<endDate>2012-11-23T06:00:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_WYyOUSn7EeKNod2hbU-puQ</itemId>
+						<stateId>_5nwediq0EeKNod2hbU-puQ</stateId>
+						<label>[2012] November R2, Sprint 1</label>
+						<id>[2012] November R2, Sprint 1</id>
+						<parentItemId>_WYyOUCn7EeKNod2hbU-puQ</parentItemId>
+						<startDate>2012-11-12T06:00:00.000Z</startDate>
+						<endDate>2012-11-23T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_WYyOUin7EeKNod2hbU-puQ</itemId>
+					<stateId>_qckxMGPtEeKW457PZAYS9w</stateId>
+					<label>[2013] January R1</label>
+					<id>[2013] January R1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2012-11-26T06:00:00.000Z</startDate>
+					<endDate>2012-12-28T06:00:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_WYyOUyn7EeKNod2hbU-puQ</itemId>
+						<stateId>_5oznViq0EeKNod2hbU-puQ</stateId>
+						<label>[2013] January R1, Sprint 1</label>
+						<id>[2013] January R1, Sprint 1</id>
+						<parentItemId>_WYyOUin7EeKNod2hbU-puQ</parentItemId>
+						<startDate>2012-11-26T06:00:00.000Z</startDate>
+						<endDate>2012-12-07T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_CCKhAj_UEeKUZN1MszCI4w</itemId>
+						<stateId>_duCswECFEeKUZN1MszCI4w</stateId>
+						<label>[2013] January R1, Sprint 2</label>
+						<id>[2013] January R1, Sprint 2</id>
+						<parentItemId>_WYyOUin7EeKNod2hbU-puQ</parentItemId>
+						<startDate>2012-12-10T06:00:00.000Z</startDate>
+						<endDate>2012-12-28T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_W8ySkE-zEeKZrM_l0L4qZg</itemId>
+						<stateId>_qdYCeWPtEeKW457PZAYS9w</stateId>
+						<label>[2013] January R1, Sprint 3</label>
+						<id>[2013] January R1, Sprint 3 </id>
+						<parentItemId>_WYyOUin7EeKNod2hbU-puQ</parentItemId>
+						<startDate>2012-12-31T06:00:00.000Z</startDate>
+						<endDate>2013-01-18T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_qZqnIWPtEeKW457PZAYS9w</itemId>
+					<stateId>_IeNi-HCeEeKS_ZrvF0n3OQ</stateId>
+					<label>[2013] Februrary R1</label>
+					<id>[2013] Februrary R1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2013-01-21T06:00:00.000Z</startDate>
+					<endDate>2013-02-22T06:00:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_qZqnImPtEeKW457PZAYS9w</itemId>
+						<stateId>_IgsPNnCeEeKS_ZrvF0n3OQ</stateId>
+						<label>[2013] February R1, Sprint 1</label>
+						<id>[2013] February R1, Sprint 1</id>
+						<parentItemId>_qZqnIWPtEeKW457PZAYS9w</parentItemId>
+						<startDate>2013-01-21T06:00:00.000Z</startDate>
+						<endDate>2013-02-22T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_IZFLUXCeEeKS_ZrvF0n3OQ</itemId>
+					<stateId>_dCUZgIzUEeKIQ_WCvsnI6w</stateId>
+					<label>[2013] April R1</label>
+					<id>[2013] April R1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2013-02-23T06:00:00.000Z</startDate>
+					<endDate>2013-03-15T06:00:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_IZFLU3CeEeKS_ZrvF0n3OQ</itemId>
+						<stateId>_IJqbMH0TEeK8ycwu_hZ53A</stateId>
+						<label>[2013] April R1, Sprint 1</label>
+						<id>[2013] April R1, Sprint 1</id>
+						<parentItemId>_IZFLUXCeEeKS_ZrvF0n3OQ</parentItemId>
+						<startDate>2013-02-25T14:00:00.000Z</startDate>
+						<endDate>2013-03-15T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_c-bYAIzUEeKIQ_WCvsnI6w</itemId>
+						<stateId>_dGMz9ozUEeKIQ_WCvsnI6w</stateId>
+						<label>[2013] April R1, Sprint 2</label>
+						<id>[2013] April R1, Sprint 2</id>
+						<parentItemId>_IZFLUXCeEeKS_ZrvF0n3OQ</parentItemId>
+						<startDate>2013-03-16T06:00:00.000Z</startDate>
+						<endDate>2013-04-05T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_kRaakpyEEeKr8Yyb3oV1qA</itemId>
+					<stateId>_kX3n4JyEEeKr8Yyb3oV1qA</stateId>
+					<label>[2013] April R2</label>
+					<id>[2013] April R2</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2013-04-06T06:00:00.000Z</startDate>
+					<endDate>2013-04-21T05:00:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_kRaak5yEEeKr8Yyb3oV1qA</itemId>
+						<stateId>_kevr8JyEEeKr8Yyb3oV1qA</stateId>
+						<label>[2013] April R2, Sprint 1</label>
+						<id>[2013] April R2, Sprint 1</id>
+						<parentItemId>_kRaakpyEEeKr8Yyb3oV1qA</parentItemId>
+						<startDate>2013-04-06T06:00:00.000Z</startDate>
+						<endDate>2013-04-21T05:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_FgCPUKEqEeKyb9mJM4WX4A</itemId>
+					<stateId>_818BkDnTEeSSe9VJZg_kMg</stateId>
+					<label>Rapid Recovery 2013</label>
+					<id>Release</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2013-11-08T13:00:00.000Z</startDate>
+					<endDate>2013-11-15T13:00:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_DV750KErEeKyb9mJM4WX4A</itemId>
+						<stateId>_81k1NjnTEeSSe9VJZg_kMg</stateId>
+						<label>Rapid Recovery 2013</label>
+						<id>new_iteration</id>
+						<parentItemId>_FgCPUKEqEeKyb9mJM4WX4A</parentItemId>
+						<startDate>2013-11-08T13:00:00.000Z</startDate>
+						<endDate>2013-11-15T13:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_A1yzo6w0EeKVvp9MtmAJSA</itemId>
+					<stateId>_-VVLVse5EeKUJpLuE6qdag</stateId>
+					<label>[2013] May R1</label>
+					<id>[2013] May R1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2013-04-22T05:00:00.000Z</startDate>
+					<endDate>2013-05-24T05:00:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_A1yzpaw0EeKVvp9MtmAJSA</itemId>
+						<stateId>_BBEPh6w0EeKVvp9MtmAJSA</stateId>
+						<label>[2013] May R1, S1</label>
+						<id>[2013] May R1, S1</id>
+						<parentItemId>_A1yzo6w0EeKVvp9MtmAJSA</parentItemId>
+						<startDate>2013-04-22T05:00:00.000Z</startDate>
+						<endDate>2013-05-10T05:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_tWS6ILjNEeKMH7rCm0XIlQ</itemId>
+						<stateId>_-WK41Me5EeKUJpLuE6qdag</stateId>
+						<label>[2013] May R1, S2</label>
+						<id>[2013] May R1, S2</id>
+						<parentItemId>_A1yzo6w0EeKVvp9MtmAJSA</parentItemId>
+						<startDate>2013-05-11T05:00:00.000Z</startDate>
+						<endDate>2013-05-24T05:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_WC5n4LmYEeKMH7rCm0XIlQ</itemId>
+					<stateId>_oBhJcBg_EeSsHdSzoX4oPg</stateId>
+					<label>[2015] SW Mfg Cons R1</label>
+					<id>[2015] SW Mfg Cons R1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2014-08-02T05:00:00.000Z</startDate>
+					<endDate>2014-11-29T06:00:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_WC5n4bmYEeKMH7rCm0XIlQ</itemId>
+						<stateId>_3bOo8BhAEeSsHdSzoX4oPg</stateId>
+						<label>[2015] SW Mfg Cons R1, S1</label>
+						<id>[2015] SW Mfg Cons R1, S1</id>
+						<parentItemId>_WC5n4LmYEeKMH7rCm0XIlQ</parentItemId>
+						<startDate>2014-08-01T17:36:00.000Z</startDate>
+						<endDate>2014-08-30T05:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_tQZpwsSPEeKzSZV_KTskYw</itemId>
+					<stateId>_clrLkAOKEeOySMPUN1lTZQ</stateId>
+					<label>[2013] July R1</label>
+					<id>[2013] July R1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2013-05-27T05:00:00.000Z</startDate>
+					<endDate>2013-07-26T05:00:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_tQZpw8SPEeKzSZV_KTskYw</itemId>
+						<stateId>_frfYsNdmEeKLC5TApwcdZw</stateId>
+						<label>[2013] July R1, S1</label>
+						<id>[2013] July R1, S1</id>
+						<parentItemId>_tQZpwsSPEeKzSZV_KTskYw</parentItemId>
+						<startDate>2013-05-27T05:00:00.000Z</startDate>
+						<endDate>2013-06-14T05:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_g7Ul8NRSEeKWPqpB7yLpOw</itemId>
+						<stateId>_leFOVui9EeK3qLLD8RIYLA</stateId>
+						<label>[2013] July R1, S2</label>
+						<id>[2013] July R1, S2</id>
+						<parentItemId>_tQZpwsSPEeKzSZV_KTskYw</parentItemId>
+						<startDate>2013-06-15T05:00:00.000Z</startDate>
+						<endDate>2013-07-05T05:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_on3EIONWEeK-S92ZneUQBg</itemId>
+						<stateId>_8hr74PhrEeKGsMtq3iE-Yg</stateId>
+						<label>[2013] July R1, S3</label>
+						<id>[2013] July R1, S3</id>
+						<parentItemId>_tQZpwsSPEeKzSZV_KTskYw</parentItemId>
+						<startDate>2013-07-06T05:00:00.000Z</startDate>
+						<endDate>2013-07-26T05:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_nOazwPYUEeKi9KBWQ2Rjvw</itemId>
+						<stateId>_cmrRIAOKEeOySMPUN1lTZQ</stateId>
+						<label>[2013] July R1, S4</label>
+						<id>[2013] July R1, S4</id>
+						<parentItemId>_tQZpwsSPEeKzSZV_KTskYw</parentItemId>
+						<startDate>2013-07-27T05:00:00.000Z</startDate>
+						<endDate>2013-08-09T05:00:00.000Z</endDate>
+						<completed>true</completed>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_QZjt0gE2EeOGsMtq3iE-Yg</itemId>
+					<stateId>_ipK0IDaEEeO1S_-sspuhkQ</stateId>
+					<label>[2013] October R1</label>
+					<id>[2013] October R1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2013-08-10T05:00:00.000Z</startDate>
+					<endDate>2013-08-31T05:00:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_QZjt0wE2EeOGsMtq3iE-Yg</itemId>
+						<stateId>_dVfMNhTTEeOc0c_xNAqVyA</stateId>
+						<label>[2013] October R1, S1</label>
+						<id>[2013] October R1, S1</id>
+						<parentItemId>_QZjt0gE2EeOGsMtq3iE-Yg</parentItemId>
+						<startDate>2013-08-10T05:00:00.000Z</startDate>
+						<endDate>2013-08-31T05:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_dONfgBTTEeOc0c_xNAqVyA</itemId>
+						<stateId>_JnP4xiJBEeOh_sNGoNUxwA</stateId>
+						<label>[2013] October R1, S2</label>
+						<id>[2013] October R1, S2</id>
+						<parentItemId>_QZjt0gE2EeOGsMtq3iE-Yg</parentItemId>
+						<startDate>2013-09-02T05:00:00.000Z</startDate>
+						<endDate>2013-09-20T05:00:00.000Z</endDate>
+						<completed>true</completed>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_Vp0IACIbEeOS7OBDvv3jzg</itemId>
+						<stateId>_iqg38DaEEeO1S_-sspuhkQ</stateId>
+						<label>[2013] October R1, S3</label>
+						<id>[2013] October R1, S3</id>
+						<parentItemId>_QZjt0gE2EeOGsMtq3iE-Yg</parentItemId>
+						<startDate>2013-09-21T05:00:00.000Z</startDate>
+						<endDate>2013-10-11T05:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_RBs9ojHjEeO1S_-sspuhkQ</itemId>
+					<stateId>_ohqi1lt2EeO5pr0T3KWerg</stateId>
+					<label>[2013] November R1</label>
+					<id>[2013] November R1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2013-10-14T05:00:00.000Z</startDate>
+					<endDate>2013-11-30T06:00:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_RBs9ozHjEeO1S_-sspuhkQ</itemId>
+						<stateId>_vsDsljtvEeOyRbnsASjh5w</stateId>
+						<label>[2013] November R1, S1</label>
+						<id>[2013] November R1, S1</id>
+						<parentItemId>_RBs9ojHjEeO1S_-sspuhkQ</parentItemId>
+						<startDate>2013-10-14T05:00:00.000Z</startDate>
+						<endDate>2013-10-20T05:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_vnv0UTtvEeOyRbnsASjh5w</itemId>
+						<stateId>_sNOkcEr1EeOgcspC4h23Kw</stateId>
+						<label>[2013] November R1, S2</label>
+						<id>[2013] November R1, S2</id>
+						<parentItemId>_RBs9ojHjEeO1S_-sspuhkQ</parentItemId>
+						<startDate>2013-10-21T05:00:00.000Z</startDate>
+						<endDate>2013-11-08T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_gw6pgEfREeOGpMf7Qji9mg</itemId>
+						<stateId>_oh3-MFt2EeO5pr0T3KWerg</stateId>
+						<label>[2013] November R1, S3</label>
+						<id>[2013] November R1, S3</id>
+						<parentItemId>_RBs9ojHjEeO1S_-sspuhkQ</parentItemId>
+						<startDate>2013-11-09T06:00:00.000Z</startDate>
+						<endDate>2013-11-30T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_oBFgMFXiEeO5pr0T3KWerg</itemId>
+					<stateId>_7RQOcIxKEeOeDJAzbkTndw</stateId>
+					<label>[2014] January R1</label>
+					<id>[2014] January R1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2013-12-01T06:00:00.000Z</startDate>
+					<endDate>2014-01-31T06:00:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_oBFgMlXiEeO5pr0T3KWerg</itemId>
+						<stateId>_wPuzQGv0EeO4d4qYmv3N5A</stateId>
+						<label>[2014] January R1, S1</label>
+						<id>[2014] January R1, S1</id>
+						<parentItemId>_oBFgMFXiEeO5pr0T3KWerg</parentItemId>
+						<startDate>2013-12-01T06:00:00.000Z</startDate>
+						<endDate>2013-12-21T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_wLtO4mv0EeO4d4qYmv3N5A</itemId>
+						<stateId>_uyXbdnxdEeORopCGlE03rA</stateId>
+						<label>[2014] January R1, S2</label>
+						<id>[2014] January R1, S2</id>
+						<parentItemId>_oBFgMFXiEeO5pr0T3KWerg</parentItemId>
+						<startDate>2013-12-22T06:00:00.000Z</startDate>
+						<endDate>2014-01-11T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_aetboHlVEeORopCGlE03rA</itemId>
+						<stateId>_7Rs6ZoxKEeOeDJAzbkTndw</stateId>
+						<label>[2014] January R1, S3</label>
+						<id>[2014] January R1, S3</id>
+						<parentItemId>_oBFgMFXiEeO5pr0T3KWerg</parentItemId>
+						<startDate>2014-01-12T06:00:00.000Z</startDate>
+						<endDate>2014-01-31T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_7ukTIYq2EeOeDJAzbkTndw</itemId>
+					<stateId>_DPN4FpWiEeO0evHG5j5-9g</stateId>
+					<label>[2014] February R1</label>
+					<id>[2014] February R1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2014-02-01T06:00:00.000Z</startDate>
+					<endDate>2014-02-22T06:00:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_7ukTIoq2EeOeDJAzbkTndw</itemId>
+						<stateId>_DPm5pJWiEeO0evHG5j5-9g</stateId>
+						<label>[2014] February R1, S1</label>
+						<id>[2014] February R1, S1</id>
+						<parentItemId>_7ukTIYq2EeOeDJAzbkTndw</parentItemId>
+						<startDate>2014-02-01T06:00:00.000Z</startDate>
+						<endDate>2014-02-22T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_xrjNAZWhEeO0evHG5j5-9g</itemId>
+					<stateId>_rJfO8JsXEeO1mrPpYbIkmQ</stateId>
+					<label>[2014] February R2</label>
+					<id>[2014] February R2</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2014-02-14T06:00:00.000Z</startDate>
+					<endDate>2014-02-28T06:00:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_xrjNApWhEeO0evHG5j5-9g</itemId>
+						<stateId>_rKpFhpsXEeO1mrPpYbIkmQ</stateId>
+						<label>[2014] February R2, S1</label>
+						<id>[2014] February R1, S1</id>
+						<parentItemId>_xrjNAZWhEeO0evHG5j5-9g</parentItemId>
+						<startDate>2014-02-14T06:00:00.000Z</startDate>
+						<endDate>2014-02-28T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_xrjNA5WhEeO0evHG5j5-9g</itemId>
+					<stateId>_MWdvgNRjEeOupe5ioFVABA</stateId>
+					<label>[2014] April R1</label>
+					<id>[2014] March R1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2014-02-21T06:00:00.000Z</startDate>
+					<endDate>2014-03-21T06:00:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_DN0w8pWiEeO0evHG5j5-9g</itemId>
+						<stateId>_yIeDD7NwEeO2GpCuL1EtAQ</stateId>
+						<label>[2014] April R1, S1</label>
+						<id>[2014] March R1, S1</id>
+						<parentItemId>_xrjNA5WhEeO0evHG5j5-9g</parentItemId>
+						<startDate>2014-02-21T06:00:00.000Z</startDate>
+						<endDate>2014-03-21T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_MYiXYLBZEeOfovc-Zrrm6Q</itemId>
+						<stateId>_OreYdsPjEeONN6Xe0w7zyQ</stateId>
+						<label>[2014] April R1, S2</label>
+						<id>[2014] April R1, S2</id>
+						<parentItemId>_xrjNA5WhEeO0evHG5j5-9g</parentItemId>
+						<startDate>2014-03-24T06:00:00.000Z</startDate>
+						<endDate>2014-04-12T04:59:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_mBQ0mcDtEeONN6Xe0w7zyQ</itemId>
+						<stateId>_MXecIdRjEeOupe5ioFVABA</stateId>
+						<label>[2014] April R1, S3</label>
+						<id>[2014] April R1, S3</id>
+						<parentItemId>_xrjNA5WhEeO0evHG5j5-9g</parentItemId>
+						<startDate>2014-04-14T05:00:00.000Z</startDate>
+						<endDate>2014-05-03T04:59:00.000Z</endDate>
+						<completed>true</completed>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_mBQ0msDtEeONN6Xe0w7zyQ</itemId>
+					<stateId>_a8ecAMDuEeONN6Xe0w7zyQ</stateId>
+					<label>[2014] ETC SDC / PULSE sunset R1</label>
+					<id>[2014] ETC SDC / PULSE sunset R1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2014-03-31T06:00:00.000Z</startDate>
+					<endDate>2014-05-10T04:59:00.000Z</endDate>
+					<completed>true</completed>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_a7NQsMDuEeONN6Xe0w7zyQ</itemId>
+						<stateId>_a9AngMDuEeONN6Xe0w7zyQ</stateId>
+						<label>[2014] ETC SDC / PULSE sunset R1, S1</label>
+						<id>[2014] ETC SDC / PULSE sunset R1, S1</id>
+						<parentItemId>_mBQ0msDtEeONN6Xe0w7zyQ</parentItemId>
+						<startDate>2014-03-31T06:00:00.000Z</startDate>
+						<endDate>2014-04-19T04:59:00.000Z</endDate>
+						<completed>true</completed>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>__o93kNCQEeOupe5ioFVABA</itemId>
+					<stateId>_fQFFBuK1EeOEOpcAXDVKdg</stateId>
+					<label>[2014] May R1</label>
+					<id>[2014] May R1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2014-05-05T05:00:00.000Z</startDate>
+					<endDate>2014-05-24T04:59:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>__o93kdCQEeOupe5ioFVABA</itemId>
+						<stateId>_fQ_D9uK1EeOEOpcAXDVKdg</stateId>
+						<label>[2014] May R1, S1</label>
+						<id>[2014] May R1, S1</id>
+						<parentItemId>__o93kNCQEeOupe5ioFVABA</parentItemId>
+						<startDate>2014-05-05T05:00:00.000Z</startDate>
+						<endDate>2014-05-24T04:59:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_GRPW0OHOEeOEOpcAXDVKdg</itemId>
+					<stateId>_PE4H5hNsEeSTmIwxF2nAQQ</stateId>
+					<label>[2014] Jul R1</label>
+					<id>[2014] Jul R1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2014-05-26T05:00:00.000Z</startDate>
+					<endDate>2014-07-25T05:00:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_GRPW0eHOEeOEOpcAXDVKdg</itemId>
+						<stateId>_DajDYPZPEeOrApK-m3kgSg</stateId>
+						<label>[2014] Jul R1, S1</label>
+						<id>[2014] Jul R1, S1</id>
+						<parentItemId>_GRPW0OHOEeOEOpcAXDVKdg</parentItemId>
+						<startDate>2014-05-26T05:00:00.000Z</startDate>
+						<endDate>2014-06-14T04:59:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_DXo5UPZPEeOrApK-m3kgSg</itemId>
+						<stateId>_ziaskAYyEeSXM5jQuXmfUA</stateId>
+						<label>[2014] Jul R1, S2</label>
+						<id>[2014] Jul R1, S2</id>
+						<parentItemId>_GRPW0OHOEeOEOpcAXDVKdg</parentItemId>
+						<startDate>2014-06-16T05:00:00.000Z</startDate>
+						<endDate>2014-07-05T04:59:00.000Z</endDate>
+						<completed>true</completed>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_aXgOAAOaEeSXM5jQuXmfUA</itemId>
+						<stateId>_PF731BNsEeSTmIwxF2nAQQ</stateId>
+						<label>[2014] Jul R1, S3</label>
+						<id>[2014] Jul R1, S3</id>
+						<parentItemId>_GRPW0OHOEeOEOpcAXDVKdg</parentItemId>
+						<startDate>2014-07-07T05:00:00.000Z</startDate>
+						<endDate>2014-07-26T04:59:00.000Z</endDate>
+						<completed>true</completed>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_PAPfgBNsEeSTmIwxF2nAQQ</itemId>
+					<stateId>_guiIpjd7EeSSe9VJZg_kMg</stateId>
+					<label>[2014] Aug R1</label>
+					<id>[2014] Aug R1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2014-07-28T05:00:00.000Z</startDate>
+					<endDate>2014-09-05T05:00:00.000Z</endDate>
+					<completed>true</completed>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_PAPfgRNsEeSTmIwxF2nAQQ</itemId>
+						<stateId>__ZnMdiTQEeSiZoD3z7rhUw</stateId>
+						<label>[2014] Aug R1, S1</label>
+						<id>[2014] Aug R1, S1</id>
+						<parentItemId>_PAPfgBNsEeSTmIwxF2nAQQ</parentItemId>
+						<startDate>2014-07-28T05:00:00.000Z</startDate>
+						<endDate>2014-08-16T04:59:00.000Z</endDate>
+						<completed>true</completed>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>__VdFMCTQEeSiZoD3z7rhUw</itemId>
+						<stateId>_gvHXdjd7EeSSe9VJZg_kMg</stateId>
+						<label>[2014] Aug R1, S2</label>
+						<id>[2014] Aug R1, S2</id>
+						<parentItemId>_PAPfgBNsEeSTmIwxF2nAQQ</parentItemId>
+						<startDate>2014-08-18T05:00:00.000Z</startDate>
+						<endDate>2014-09-06T04:59:00.000Z</endDate>
+						<completed>true</completed>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_Af-RUDRYEeS8eIYgxrZiFg</itemId>
+					<stateId>_L4TH1lhwEeS2CZWZOgGMjQ</stateId>
+					<label>[2014] Oct R1</label>
+					<id>[2014] Oct R1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2014-09-08T05:00:00.000Z</startDate>
+					<endDate>2014-09-27T04:59:00.000Z</endDate>
+					<completed>true</completed>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_Af-RUTRYEeS8eIYgxrZiFg</itemId>
+						<stateId>_dqJJ0Ef-EeSDrqqPWHvJbg</stateId>
+						<label>[2014] Oct R1, S1</label>
+						<id>[2014] Oct R1, S1</id>
+						<parentItemId>_Af-RUDRYEeS8eIYgxrZiFg</parentItemId>
+						<startDate>2014-09-08T05:00:00.000Z</startDate>
+						<endDate>2014-09-27T04:59:00.000Z</endDate>
+						<completed>true</completed>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_FHMYgETJEeSDrqqPWHvJbg</itemId>
+						<stateId>_L5UbgFhwEeS2CZWZOgGMjQ</stateId>
+						<label>[2014] Oct R1, S2</label>
+						<id>[2014] Oct R1, S2</id>
+						<parentItemId>_Af-RUDRYEeS8eIYgxrZiFg</parentItemId>
+						<startDate>2014-09-29T05:00:00.000Z</startDate>
+						<endDate>2014-10-18T04:59:00.000Z</endDate>
+						<completed>true</completed>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_DHk1YDd8EeS8RIENNrVUDA</itemId>
+					<stateId>_82TN9jnTEeSSe9VJZg_kMg</stateId>
+					<label>Rapid Recovery 2014</label>
+					<id>Rapid Recovery 2014</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2014-11-08T13:00:00.000Z</startDate>
+					<endDate>2014-11-15T13:00:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_STZ9ADeVEeSxzsX-Py0rHA</itemId>
+						<stateId>_80l9wDnTEeSSe9VJZg_kMg</stateId>
+						<label>Rapid Recovery 2014</label>
+						<id>Rapid Recovery 2014</id>
+						<parentItemId>_DHk1YDd8EeS8RIENNrVUDA</parentItemId>
+						<startDate>2014-11-08T13:00:00.000Z</startDate>
+						<endDate>2014-11-15T13:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_L1RpAFhwEeS2CZWZOgGMjQ</itemId>
+					<stateId>_BI4mYHc-EeSqiuQhaWloBA</stateId>
+					<label>[2014] Nov R1</label>
+					<id>[2014] Nov R1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2014-10-20T05:00:00.000Z</startDate>
+					<endDate>2014-11-07T06:00:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_L1RpAVhwEeS2CZWZOgGMjQ</itemId>
+						<stateId>_oRISVmbZEeSvrNvavp5NKA</stateId>
+						<label>[2014] Nov R1, S1</label>
+						<id>[2014] Nov R1, S1</id>
+						<parentItemId>_L1RpAFhwEeS2CZWZOgGMjQ</parentItemId>
+						<startDate>2014-10-20T05:00:00.000Z</startDate>
+						<endDate>2014-11-08T05:59:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_leGxEGbZEeSvrNvavp5NKA</itemId>
+						<stateId>_BJ2PsHc-EeSqiuQhaWloBA</stateId>
+						<label>[2014] Nov R1, S2</label>
+						<id>[2014] Nov R1, S2</id>
+						<parentItemId>_L1RpAFhwEeS2CZWZOgGMjQ</parentItemId>
+						<startDate>2014-11-10T06:00:00.000Z</startDate>
+						<endDate>2014-11-29T05:59:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_CqAmQHcPEeSqiuQhaWloBA</itemId>
+					<stateId>_tBQqYKZcEeSicYpAbHXWsw</stateId>
+					<label>[2015] January R1</label>
+					<id>[2015] January R1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2014-12-01T06:00:00.000Z</startDate>
+					<endDate>2014-12-19T06:00:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_CqAmQXcPEeSqiuQhaWloBA</itemId>
+						<stateId>_pJX-cIqzEeS4fen3HD7Mow</stateId>
+						<label>[2015] January R1, S1</label>
+						<id>[2015] January R1, S1</id>
+						<parentItemId>_CqAmQHcPEeSqiuQhaWloBA</parentItemId>
+						<startDate>2014-12-01T06:00:00.000Z</startDate>
+						<endDate>2014-12-19T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_kXSIcYqzEeS4fen3HD7Mow</itemId>
+						<stateId>_O2ot8JprEeS4fen3HD7Mow</stateId>
+						<label>[2015] January R1, S2</label>
+						<id>[2015] January R1, S2</id>
+						<parentItemId>_CqAmQHcPEeSqiuQhaWloBA</parentItemId>
+						<startDate>2014-12-22T06:00:00.000Z</startDate>
+						<endDate>2015-01-10T05:59:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+					<iterations>
+						<itemId>_9e52SZduEeS4fen3HD7Mow</itemId>
+						<stateId>_tB7_0KZcEeSicYpAbHXWsw</stateId>
+						<label>[2015] January R1, S3</label>
+						<id>[2015] January R1, S3</id>
+						<parentItemId>_CqAmQHcPEeSqiuQhaWloBA</parentItemId>
+						<startDate>2015-01-12T06:00:00.000Z</startDate>
+						<endDate>2015-01-31T05:59:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_kOMUwKAmEeS4fen3HD7Mow</itemId>
+					<stateId>_kROaoKAmEeS4fen3HD7Mow</stateId>
+					<label>[2015] Sw Mfg Cons R2</label>
+					<id>[2015] Sw Mfg Cons R2</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2015-01-19T06:00:00.000Z</startDate>
+					<endDate>2015-02-27T06:00:00.000Z</endDate>
+					<completed>true</completed>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_kOMUwaAmEeS4fen3HD7Mow</itemId>
+						<stateId>_kTTeQKAmEeS4fen3HD7Mow</stateId>
+						<label>[2015] Sw Mfg Cons R2, S1</label>
+						<id>[2015] Sw Mfg Cons R2, S1</id>
+						<parentItemId>_kOMUwKAmEeS4fen3HD7Mow</parentItemId>
+						<startDate>2015-01-19T06:00:00.000Z</startDate>
+						<endDate>2015-02-06T06:00:00.000Z</endDate>
+						<completed>true</completed>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+				<values xsi:type="rest:IterationDTO">
+					<itemId>_H5fMQKHXEeS4fen3HD7Mow</itemId>
+					<stateId>_tCZ54KZcEeSicYpAbHXWsw</stateId>
+					<label>[2015] February R1</label>
+					<id>[2015] February R1</id>
+					<parentItemId>_nrtnkGAiEd6QQ7s7cowCAg</parentItemId>
+					<startDate>2015-01-26T06:00:00.000Z</startDate>
+					<endDate>2015-02-13T06:00:00.000Z</endDate>
+					<current>true</current>
+					<iterationTypeItemId>_iKzlYFX-Ed69G8biF2ewvg</iterationTypeItemId>
+					<hasDeliverable>true</hasDeliverable>
+					<archived>false</archived>
+					<iterations>
+						<itemId>_H5fMQaHXEeS4fen3HD7Mow</itemId>
+						<stateId>_tDKH1qZcEeSicYpAbHXWsw</stateId>
+						<label>[2015] February R1, S1</label>
+						<id>[2015] February R1, S1</id>
+						<parentItemId>_H5fMQKHXEeS4fen3HD7Mow</parentItemId>
+						<startDate>2015-01-26T06:00:00.000Z</startDate>
+						<endDate>2015-02-14T05:59:00.000Z</endDate>
+						<current>true</current>
+						<leaf>true</leaf>
+						<iterationTypeItemId>_eRgYkFX-Ed69G8biF2ewvg</iterationTypeItemId>
+						<hasDeliverable>true</hasDeliverable>
+						<archived>false</archived>
+					</iterations>
+				</values>
+			</returnValue>
+		</response>
+	</soapenv:Body>
+</soapenv:Envelope>
