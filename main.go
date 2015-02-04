@@ -129,9 +129,15 @@ func main() {
 		{
 			Name:      "releases",
 			ShortName: "rel",
-			Usage:     "show all releases",
+			Usage:     "show releases",
+			Flags: []cli.Flag{
+				cli.BoolFlag{
+					Name:  "all",
+					Usage: "Shows completed releases",
+				},
+			},
 			Action: func(c *cli.Context) {
-				releases()
+				releases(c.Bool("all"))
 			},
 		},
 
@@ -307,7 +313,7 @@ func request(method string, url string) {
 	fmt.Println(string(body))
 }
 
-func releases() {
+func releases(all bool) {
 	r, err := login()
 	if err != nil {
 		panic(err)
@@ -318,7 +324,18 @@ func releases() {
 		panic(err)
 	}
 
-	fmt.Printf("%+v\n", rels)
+	table := tablewriter.NewWriter(os.Stdout)
+	table.SetHeader([]string{"Id", "Release"})
+	table.SetAlignment(tablewriter.ALIGN_LEFT)
+	table.SetColWidth(120)
+
+	for i, rel := range rels {
+		if !all && rel.Completed == "true" {
+			continue
+		}
+		table.Append([]string{strconv.Itoa(i), rel.Label})
+	}
+	table.Render()
 }
 
 func iterations(all bool) {
@@ -391,24 +408,12 @@ func createArtifact(id string) {
 		panic(err)
 	}
 
-	// wi, err := r.CreateSubTask(id, "Artifacts")
-	// if err != nil {
-	// 	fmt.Println(err.Error())
-	// }
-
-	// fmt.Println("Created " + wi.Title())
-	m, err := r.GetAllValues()
+	wi, err := r.CreateSubTask(id, "Artifacts")
 	if err != nil {
-		panic(err)
+		fmt.Println(err.Error())
 	}
 
-	for k, v := range m {
-		fmt.Println("***", k)
-
-		for kk, vv := range v {
-			fmt.Printf("%s = %s\n", kk, vv)
-		}
-	}
+	fmt.Println("Created " + wi.Title())
 
 }
 

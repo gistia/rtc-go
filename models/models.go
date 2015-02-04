@@ -71,6 +71,8 @@ type Release struct {
 	Id         string      `xml:"id"`
 	ItemId     string      `xml:"itemid"`
 	Label      string      `xml:"label"`
+	Completed  string      `xml:"completed"`
+	Archived   string      `xml:"archived"`
 	Iterations []Iteration `xml:"iterations"`
 }
 

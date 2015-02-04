@@ -81,9 +81,12 @@ func (rtc *RTC) request(method string, url string, data string) (*http.Response,
 
 func (rtc *RTC) requestBody(method string, url string, data string) ([]byte, error) {
 	resp, err := rtc.browser.Request(method, url, data)
-
 	if err != nil {
 		return nil, err
+	}
+
+	if resp.StatusCode >= 400 {
+		return nil, errors.New(fmt.Sprintf("Error: got HTTP status code %d", resp.StatusCode))
 	}
 
 	body, err := ioutil.ReadAll(resp.Body)
@@ -307,7 +310,9 @@ func (rtc *RTC) Create(wi *WorkItem) (*WorkItem, error) {
 
 	// return nil, nil
 	env, err := rtc.requestXml("POST", createUrl, data)
-	fmt.Printf("Env: %+v\n", env)
+	if err != nil {
+		return nil, err
+	}
 
 	id := env.Body.Response.ReturnValue.Value.WorkItem.ParsedId()
 
@@ -478,6 +483,27 @@ func (rtc *RTC) Close(id string) error {
 	return errors.New("Failed to close work item " + id + ". Current state is " + wi.State + ".")
 }
 
+func (rtc *RTC) SetAttributes(id string, attrs map[string]string) (*models.Envelope, error) {
+	itemId, stateId, err := rtc.GetInternalId(id)
+	if err != nil {
+		return nil, err
+	}
+
+	changeUrl := "https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.rest.IWorkItemRestService/workItem2"
+	data := fmt.Sprintf("type=task&itemId=%s&stateId=%s&additionalSaveParameters=com.ibm.team.workitem.common.internal.updateBacklinks&sanitizeHTML=true&projectAreaItemId=_U7zMYFRcEd61fuNW84kdiQ", itemId, stateId)
+
+	for k, v := range attrs {
+		data += fmt.Sprintf("&attributeIdentifiers=%s&attributeValues=%s", k, v)
+	}
+
+	env, err := rtc.requestXml("POST", changeUrl, data)
+	if err != nil {
+		return nil, err
+	}
+
+	return env, err
+}
+
 func (rtc *RTC) SaveAttribute(id string, attr string, value string) (*models.Envelope, error) {
 	itemId, stateId, err := rtc.GetInternalId(id)
 	if err != nil {
@@ -511,12 +537,11 @@ func (rtc *RTC) AddParent(id string, parentId string) error {
 	linkUrl := "https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.rest.IWorkItemRestService/workItem2"
 	data := fmt.Sprintf("itemId=%s&type=task&stateId=%s&updateLinks=%s&additionalSaveParameters=com.ibm.team.workitem.common.internal.updateBacklinks&sanitizeHTML=true&projectAreaItemId=_U7zMYFRcEd61fuNW84kdiQ", wi.ItemId, wi.StateId, link)
 
-	body, err := rtc.requestBody("POST", linkUrl, data)
+	_, err = rtc.requestBody("POST", linkUrl, data)
 	if err != nil {
 		return err
 	}
 
-	fmt.Println(string(body))
 	return nil
 }
 
@@ -572,7 +597,10 @@ func (rtc *RTC) CreateSubTask(id string, subType string) (*WorkItem, error) {
 		return nil, err
 	}
 
-	rtc.AddParent(wi.Id, pwi.Id)
+	err = rtc.AddParent(wi.Id, pwi.Id)
+	if err != nil {
+		return nil, err
+	}
 
 	return wi, nil
 }
@@ -594,8 +622,7 @@ func (rtc *RTC) OpenWorkItem(id string) error {
 		return err
 	}
 
-	open.Start(wi.LocationUri)
-	return nil
+	return open.Start(wi.LocationUri)
 }
 
 // values["category"] = "_aXl2IGW0Ed6uZsIllQzRvg"
