@@ -171,7 +171,7 @@ func main() {
 }
 
 func login() (*rtc.RTC, error) {
-	res := rtc.NewRTC(appConfig.User, appConfig.Pass)
+	res := rtc.NewRTC(appConfig.User, appConfig.Pass, appConfig.OwnerId)
 	err := res.Login()
 
 	if err != nil {

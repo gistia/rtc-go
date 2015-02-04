@@ -18,6 +18,8 @@ type RTC struct {
 	User     string
 	Password string
 
+	OwnerId string
+
 	browser *browser.Browser
 }
 
@@ -69,8 +71,8 @@ func (wi *WorkItem) Title() string {
 	return fmt.Sprintf("%s %s - %s", wi.Type, wi.Id, wi.Summary)
 }
 
-func NewRTC(user string, password string) *RTC {
-	return &RTC{User: user, Password: password, browser: browser.NewBrowser(false)}
+func NewRTC(user string, password string, ownerId string) *RTC {
+	return &RTC{User: user, Password: password, OwnerId: ownerId, browser: browser.NewBrowser(false)}
 }
 
 func (rtc *RTC) request(method string, url string, data string) (*http.Response, error) {
@@ -285,6 +287,7 @@ func (rtc *RTC) Create(wi *WorkItem) (*WorkItem, error) {
 	values["summary"] = url.QueryEscape(wi.Summary)
 	values["workItemType"] = url.QueryEscape(wiType)
 	values["work_product_where_found"] = "Work_Product_where_found.literal.l2"
+	values["owner"] = rtc.OwnerId
 
 	createUrl := "https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.rest.IWorkItemRestService/workItem2"
 	data := fmt.Sprintf("itemId=%s&type=task&additionalSaveParameters=com.ibm.team.workitem.common.internal.updateBacklinks&sanitizeHTML=true&projectAreaItemId=_U7zMYFRcEd61fuNW84kdiQ", itemId)

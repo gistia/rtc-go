@@ -79,7 +79,7 @@ func CreateConfig() error {
 		return err
 	}
 
-	r := rtc.NewRTC(user, pass)
+	r := rtc.NewRTC(user, pass, "")
 	err = r.Login()
 	if err != nil {
 		return err
