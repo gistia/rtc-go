@@ -11,6 +11,7 @@ import (
 
 	"github.com/fcoury/rtc-go/browser"
 	"github.com/fcoury/rtc-go/models"
+	"github.com/skratchdot/open-golang/open"
 )
 
 type RTC struct {
@@ -582,6 +583,16 @@ func (rtc *RTC) GetAllValues() (map[string]map[string]string, error) {
 	}
 
 	return env.Body.Response.ReturnValue.GetItems(), nil
+}
+
+func (rtc *RTC) OpenWorkItem(id string) error {
+	wi, err := rtc.GetWorkItem(id)
+	if err != nil {
+		return err
+	}
+
+	open.Start(wi.LocationUri)
+	return nil
 }
 
 // values["category"] = "_aXl2IGW0Ed6uZsIllQzRvg"

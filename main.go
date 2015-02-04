@@ -99,6 +99,15 @@ func main() {
 			},
 		},
 
+		{
+			Name:      "open",
+			ShortName: "o",
+			Usage:     "opens the work item on the RTC web interface",
+			Action: func(c *cli.Context) {
+				open(c.Args()[0])
+			},
+		},
+
 		// dev-related commands
 
 		{
@@ -405,4 +414,16 @@ func createArtifact(id string) {
 
 func reconfig() {
 	config.CreateConfig()
+}
+
+func open(id string) {
+	r, err := login()
+	if err != nil {
+		panic(err)
+	}
+
+	err = r.OpenWorkItem(id)
+	if err != nil {
+		panic(err)
+	}
 }
