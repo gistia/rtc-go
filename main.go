@@ -7,13 +7,12 @@ import (
 	"strings"
 
 	"github.com/codegangsta/cli"
-	"github.com/fcoury/rtc-go/config"
 	"github.com/fcoury/rtc-go/rtc"
 	"github.com/kennygrant/sanitize"
 	"github.com/olekukonko/tablewriter"
 )
 
-var appConfig *config.Config
+var appConfig *Config
 
 func main() {
 	app := cli.NewApp()
@@ -165,7 +164,7 @@ func main() {
 		},
 	}
 
-	c, err := config.ReadConfig()
+	c, err := ReadConfig()
 	if err != nil {
 		fmt.Println(err.Error())
 		return
@@ -418,7 +417,7 @@ func createArtifact(id string) {
 }
 
 func reconfig() {
-	config.CreateConfig()
+	CreateConfig()
 }
 
 func open(id string) {

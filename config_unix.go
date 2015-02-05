@@ -1,6 +1,6 @@
 // +build darwin freebsd linux netbsd openbsd
 
-package config
+package main
 
 import (
 	"bytes"
