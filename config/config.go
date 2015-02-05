@@ -13,9 +13,10 @@ import (
 )
 
 type Config struct {
-	User    string `json:"user"`
-	Pass    string `json:"pass"`
-	OwnerId string `json:"rtcOwnerId"`
+	User     string `json:"user"`
+	Pass     string `json:"pass"`
+	OwnerId  string `json:"rtcOwnerId"`
+	MaxWidth int
 }
 
 func ReadConfig() (*Config, error) {
@@ -43,6 +44,8 @@ func ReadConfig() (*Config, error) {
 	if err != nil {
 		return nil, err
 	}
+
+	c.MaxWidth = 80
 
 	return c, nil
 }

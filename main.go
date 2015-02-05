@@ -191,7 +191,7 @@ func renderTable(wis []*rtc.WorkItem) {
 	table := tablewriter.NewWriter(os.Stdout)
 	table.SetHeader([]string{"Id", "Type", "Summary", "Planned For"})
 	table.SetAlignment(tablewriter.ALIGN_LEFT)
-	table.SetColWidth(120)
+	table.SetColWidth(appConfig.MaxWidth)
 
 	for _, wi := range wis {
 		table.Append([]string{wi.Id, wi.Type, wi.Summary, wi.PlannedFor})
@@ -327,7 +327,7 @@ func releases(all bool) {
 	table := tablewriter.NewWriter(os.Stdout)
 	table.SetHeader([]string{"Id", "Release"})
 	table.SetAlignment(tablewriter.ALIGN_LEFT)
-	table.SetColWidth(120)
+	table.SetColWidth(appConfig.MaxWidth)
 
 	for i, rel := range rels {
 		if !all && rel.Completed == "true" {
@@ -352,7 +352,7 @@ func iterations(all bool) {
 	table := tablewriter.NewWriter(os.Stdout)
 	table.SetHeader([]string{"Id", "Iteration"})
 	table.SetAlignment(tablewriter.ALIGN_LEFT)
-	table.SetColWidth(120)
+	table.SetColWidth(appConfig.MaxWidth)
 
 	for i, iter := range iters {
 		if !all && iter.Completed == "true" {
