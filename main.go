@@ -67,8 +67,20 @@ func main() {
 			Name:      "create",
 			ShortName: "c",
 			Usage:     "creates a new work item",
+			Flags: []cli.Flag{
+				cli.StringFlag{
+					Name:  "type",
+					Value: "task",
+					Usage: "Type of the work item to be created",
+				},
+				cli.StringFlag{
+					Name:  "parent",
+					Value: "",
+					Usage: "Id of the parent task, if any",
+				},
+			},
 			Action: func(c *cli.Context) {
-				create()
+				create(c.Args()[0], c.String("type"), c.String("parent"))
 			},
 		},
 
@@ -362,21 +374,32 @@ func tree(id string) {
 	showTree(wi)
 }
 
-func create() {
+func create(summary string, taskType string, parentId string) {
 	r, err := login()
 	if err != nil {
 		fmt.Println(err.Error())
 		return
 	}
 
-	// wi := &rtc.WorkItem{Summary: "DebugOptions", Type: "task"}
-	wi, err := r.Retrieve("1281671")
+	wi := &rtc.WorkItem{Summary: summary, Type: taskType}
+	fmt.Printf("Creating %s %s...\n", wi.Type, wi.Summary)
+
+	rwi, err := r.Create(wi)
 	if err != nil {
 		fmt.Println(err.Error())
 		return
 	}
 
-	fmt.Printf("%+v\n", wi)
+	if parentId != "" {
+		fmt.Printf("Adding %s as parent...\n", parentId)
+		err = r.AddParent(rwi.Id, parentId)
+		if err != nil {
+			fmt.Println(err.Error())
+			return
+		}
+	}
+
+	fmt.Printf("Successfully created: %s\n", rwi.Title())
 }
 
 func request(method string, url string) {
