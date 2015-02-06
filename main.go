@@ -258,20 +258,27 @@ func list(wiType string) {
 		return
 	}
 
+	fmt.Printf("Listing the %d open items assigned to you\n\n", len(rwis))
+
 	renderTable(rwis)
 }
 
 func find(query string) {
 	rtc, err := login()
 	if err != nil {
-		panic(err)
+		fmt.Println(err.Error())
+		return
 	}
+
+	fmt.Printf("Searching for work items containing \"%s\"...\n", query)
 
 	wis, err := rtc.Search(query)
 	if err != nil {
-		panic(err)
+		fmt.Println(err.Error())
+		return
 	}
 
+	fmt.Println("")
 	renderTable(wis)
 }
 
