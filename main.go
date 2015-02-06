@@ -7,6 +7,7 @@ import (
 	"strings"
 
 	"github.com/codegangsta/cli"
+	"github.com/fcoury/rtc-go/models"
 	"github.com/fcoury/rtc-go/rtc"
 	"github.com/kennygrant/sanitize"
 	"github.com/olekukonko/tablewriter"
@@ -124,6 +125,15 @@ func main() {
 			Usage:     "opens the work item on the RTC web interface",
 			Action: func(c *cli.Context) {
 				open(c.Args()[0])
+			},
+		},
+
+		{
+			Name:      "tree",
+			ShortName: "t",
+			Usage:     "shows workitem parents and children, if any",
+			Action: func(c *cli.Context) {
+				tree(c.Args()[0])
 			},
 		},
 
@@ -262,15 +272,37 @@ func find(query string) {
 	renderTable(wis)
 }
 
+func showTree(wi *rtc.WorkItem) {
+	if len(wi.Parents) > 0 {
+		fmt.Println("Parents:\n")
+		for _, p := range wi.Parents {
+			fmt.Printf("  - %s %s - %s\n", p.Type, p.Id, p.Summary)
+		}
+
+		if len(wi.Children) > 0 {
+			fmt.Println("")
+		}
+	}
+
+	if len(wi.Children) > 0 {
+		fmt.Println("Children:\n")
+		for _, p := range wi.Children {
+			fmt.Printf("  - %s %s - %s\n", p.Type, p.Id, p.Summary)
+		}
+	}
+}
+
 func info(id string) {
 	r, err := login()
 	if err != nil {
-		panic(err)
+		fmt.Println(err.Error())
+		return
 	}
 
 	wi, err := r.GetWorkItem(id)
 	if err != nil {
-		panic(err)
+		fmt.Println(err.Error())
+		return
 	}
 
 	// desc := strings.Replace(wi.Description, "<br/>", "\n", -1)
@@ -290,13 +322,11 @@ func info(id string) {
 	fmt.Println(strings.Repeat("-", len(title)))
 	fmt.Printf("\nDescription:\n\n%s\n", desc)
 
-	if len(wi.Parents) > 0 {
+	if len(wi.Parents) > 0 || len(wi.Children) > 0 {
 		fmt.Println("")
 		fmt.Println(strings.Repeat("-", len(title)))
-		fmt.Println("\nParents:\n")
-		for _, p := range wi.Parents {
-			fmt.Printf("  - %s %s - %s\n", p.Type, p.Id, p.Summary)
-		}
+		fmt.Println("")
+		showTree(wi)
 	}
 
 	fmt.Println("")
@@ -304,16 +334,36 @@ func info(id string) {
 	// 	wi.Id, wi.Type, wi.Summary, wi.PlannedFor, wi.CreatedBy, wi.OwnedBy, desc)
 }
 
+func tree(id string) {
+	r, err := login()
+	if err != nil {
+		fmt.Println(err.Error())
+		return
+	}
+
+	wi, err := r.GetWorkItem(id)
+	if err != nil {
+		fmt.Println(err.Error())
+		return
+	}
+
+	fmt.Println(wi.Title())
+	fmt.Println("")
+	showTree(wi)
+}
+
 func create() {
 	r, err := login()
 	if err != nil {
-		panic(err)
+		fmt.Println(err.Error())
+		return
 	}
 
 	// wi := &rtc.WorkItem{Summary: "DebugOptions", Type: "task"}
 	wi, err := r.Retrieve("1281671")
 	if err != nil {
-		panic(err)
+		fmt.Println(err.Error())
+		return
 	}
 
 	fmt.Printf("%+v\n", wi)
@@ -322,12 +372,14 @@ func create() {
 func request(method string, url string) {
 	r, err := login()
 	if err != nil {
-		panic(err)
+		fmt.Println(err.Error())
+		return
 	}
 
 	body, err := r.Request(method, url)
 	if err != nil {
-		panic(err)
+		fmt.Println(err.Error())
+		return
 	}
 
 	fmt.Println(string(body))
@@ -336,12 +388,14 @@ func request(method string, url string) {
 func releases(all bool) {
 	r, err := login()
 	if err != nil {
-		panic(err)
+		fmt.Println(err.Error())
+		return
 	}
 
 	rels, err := r.GetReleases()
 	if err != nil {
-		panic(err)
+		fmt.Println(err.Error())
+		return
 	}
 
 	table := tablewriter.NewWriter(os.Stdout)
@@ -361,12 +415,14 @@ func releases(all bool) {
 func iterations(all bool) {
 	r, err := login()
 	if err != nil {
-		panic(err)
+		fmt.Println(err.Error())
+		return
 	}
 
 	iters, err := r.GetIterations()
 	if err != nil {
-		panic(err)
+		fmt.Println(err.Error())
+		return
 	}
 
 	table := tablewriter.NewWriter(os.Stdout)
@@ -386,7 +442,8 @@ func iterations(all bool) {
 func test(id string) {
 	r, err := login()
 	if err != nil {
-		panic(err)
+		fmt.Println(err.Error())
+		return
 	}
 
 	r.GetWorkItem(id)
@@ -395,7 +452,8 @@ func test(id string) {
 func close(id string) {
 	r, err := login()
 	if err != nil {
-		panic(err)
+		fmt.Println(err.Error())
+		return
 	}
 
 	err = r.Close(id)
@@ -410,22 +468,31 @@ func close(id string) {
 func move(id string, iterId string) {
 	r, err := login()
 	if err != nil {
-		panic(err)
-	}
-
-	_, iter, err := r.MoveToIteration(id, iterId)
-	if err != nil {
 		fmt.Println(err.Error())
 		return
 	}
 
-	fmt.Println("Successfully moved work item " + id + " to iteration " + iter.Label)
+	ids := strings.Split(id, ",")
+
+	var iter models.Iteration
+
+	for _, i := range ids {
+		fmt.Println("Moving work item " + i + "...")
+		_, iter, err = r.MoveToIteration(i, iterId)
+		if err != nil {
+			fmt.Println(err.Error())
+			return
+		}
+	}
+
+	fmt.Println("\nSuccessfully moved work items " + id + " to iteration " + iter.Label)
 }
 
 func createArtifact(id string) {
 	r, err := login()
 	if err != nil {
-		panic(err)
+		fmt.Println(err.Error())
+		return
 	}
 
 	wi, err := r.CreateSubTask(id, "Artifacts")
@@ -447,11 +514,13 @@ func reconfig() {
 func open(id string) {
 	r, err := login()
 	if err != nil {
-		panic(err)
+		fmt.Println(err.Error())
+		return
 	}
 
 	err = r.OpenWorkItem(id)
 	if err != nil {
-		panic(err)
+		fmt.Println(err.Error())
+		return
 	}
 }

@@ -38,10 +38,11 @@ type WorkItem struct {
 	Description  string
 	State        string
 	Resolution   string
-	Parents      []Parent
+	Parents      []Reference
+	Children     []Reference
 }
 
-type Parent struct {
+type Reference struct {
 	ItemId      string
 	StateId     string
 	LocationUri string
@@ -400,6 +401,20 @@ func getAttributes(a Attributed) map[string]string {
 	return m
 }
 
+func makeRef(link models.Link) Reference {
+	refAttrs := getAttributes(link.Target)
+	ref := Reference{
+		ItemId:      link.Target.ItemId,
+		StateId:     link.Target.StateId,
+		LocationUri: link.Target.LocationUri,
+		Summary:     refAttrs["summary"],
+		Type:        refAttrs["workItemType"],
+		Id:          refAttrs["id"],
+	}
+
+	return ref
+}
+
 func (rtc *RTC) GetWorkItem(id string) (*WorkItem, error) {
 	wi, err := rtc.Retrieve(id)
 	if err != nil {
@@ -424,19 +439,18 @@ func (rtc *RTC) GetWorkItem(id string) (*WorkItem, error) {
 	// add parents
 	if len(val.LinkTypes) > 0 {
 		for _, lt := range val.LinkTypes {
+
 			if lt.EndpointId == "parent" {
 				for _, link := range lt.Links {
-					parentAttrs := getAttributes(link.Target)
+					ref := makeRef(link)
+					wi.Parents = append(wi.Parents, ref)
+				}
+			}
 
-					parent := Parent{
-						ItemId:      link.Target.ItemId,
-						StateId:     link.Target.StateId,
-						LocationUri: link.Target.LocationUri,
-						Summary:     parentAttrs["summary"],
-						Type:        parentAttrs["workItemType"],
-						Id:          parentAttrs["id"],
-					}
-					wi.Parents = append(wi.Parents, parent)
+			if lt.EndpointId == "children" {
+				for _, link := range lt.Links {
+					ref := makeRef(link)
+					wi.Children = append(wi.Children, ref)
 				}
 			}
 		}
