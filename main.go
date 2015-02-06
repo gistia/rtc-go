@@ -19,6 +19,9 @@ func main() {
 	app := cli.NewApp()
 	app.Name = "rtc"
 	app.Usage = "interact with RTC from the command line"
+	app.Author = "Felipe Coury"
+	app.Email = "fcoury@br.ibm.com"
+	app.Version = "1.0"
 	app.Flags = []cli.Flag{
 		cli.BoolFlag{
 			Name:  "verbose",
