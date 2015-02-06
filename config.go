@@ -45,6 +45,7 @@ func ReadConfig() (*Config, error) {
 		return nil, err
 	}
 
+	c.Pass = Decrypt(c.User, c.Pass)
 	c.MaxWidth = 80
 
 	return c, nil
@@ -118,7 +119,7 @@ func CreateConfig() error {
 
 	c := &Config{
 		User:    user,
-		Pass:    pass,
+		Pass:    Encrypt(user, pass),
 		OwnerId: ownerId,
 	}
 

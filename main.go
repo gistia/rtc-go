@@ -18,6 +18,12 @@ func main() {
 	app := cli.NewApp()
 	app.Name = "rtc"
 	app.Usage = "interact with RTC from the command line"
+	app.Flags = []cli.Flag{
+		cli.BoolFlag{
+			Name:  "verbose",
+			Usage: "Display verbose logs",
+		},
+	}
 	app.Commands = []cli.Command{
 		{
 			Name:      "list",
@@ -95,6 +101,20 @@ func main() {
 			Usage:     "reconfigures the app settings",
 			Action: func(c *cli.Context) {
 				reconfig()
+			},
+		},
+
+		{
+			Name:      "show-config",
+			ShortName: "shcfg",
+			Usage:     "shows the config path",
+			Action: func(c *cli.Context) {
+				s, err := configFile()
+				if err != nil {
+					fmt.Println(err.Error())
+					return
+				}
+				fmt.Println(s)
 			},
 		},
 
@@ -221,7 +241,8 @@ func list(wiType string) {
 	}
 
 	if err != nil {
-		panic(err)
+		fmt.Println(err.Error())
+		return
 	}
 
 	renderTable(rwis)
