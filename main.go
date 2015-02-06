@@ -417,7 +417,10 @@ func createArtifact(id string) {
 }
 
 func reconfig() {
-	CreateConfig()
+	err := CreateConfig()
+	if err != nil {
+		fmt.Println(err.Error())
+	}
 }
 
 func open(id string) {
