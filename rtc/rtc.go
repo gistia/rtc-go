@@ -1,6 +1,7 @@
 package rtc
 
 import (
+	"encoding/json"
 	"errors"
 	"fmt"
 	"io/ioutil"
@@ -32,12 +33,15 @@ type WorkItem struct {
 	CreatedBy    string
 	OwnedBy      string
 	Estimate     string
+	TimeSpent    string
 	FiledAgainst string
 	PlannedFor   string
 	LocationUri  string
 	Description  string
 	State        string
 	Resolution   string
+	IterationId  string
+	Iteration    Iteration
 	Parents      []Reference
 	Children     []Reference
 }
@@ -70,6 +74,15 @@ type Iteration struct {
 
 func (wi *WorkItem) Title() string {
 	return fmt.Sprintf("%s %s - %s", wi.Type, wi.Id, wi.Summary)
+}
+
+func (wi *WorkItem) Owner() string {
+	parts := strings.Split(wi.OwnedBy, " ")
+	res := ""
+	for _, c := range parts {
+		res = res + string(c[0])
+	}
+	return res
 }
 
 func NewRTC(user string, password string, ownerId string) *RTC {
@@ -135,7 +148,7 @@ func (rtc *RTC) Login() error {
 func (rtc *RTC) CurrentWorkItems() ([]*WorkItem, error) {
 	var workItems []*WorkItem
 
-	queryUrl := "https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.rest.IQueryRestService/getResultSet?startIndex=0&maxResults=100&absoluteURIs=true&projectAreaItemId=_U7zMYFRcEd61fuNW84kdiQ&columnIdentifiers=workItemType&columnIdentifiers=summary&columnIdentifiers=creator&columnIdentifiers=owner&columnIdentifiers=creationDate&columnIdentifiers=duration&columnIdentifiers=category&columnIdentifiers=target&columnIdentifiers=projectArea&columnIdentifiers=internalTags&itemId=_VMvycVRcEd61fuNW84kdiQ&skipOAuth=true&filterAttribute=&filterValue="
+	queryUrl := "https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.rest.IQueryRestService/getResultSet?startIndex=0&maxResults=100&absoluteURIs=true&projectAreaItemId=_U7zMYFRcEd61fuNW84kdiQ&columnIdentifiers=workItemType&columnIdentifiers=summary&columnIdentifiers=creator&columnIdentifiers=owner&columnIdentifiers=creationDate&columnIdentifiers=duration&columnIdentifiers=category&columnIdentifiers=target&columnIdentifiers=projectArea&columnIdentifiers=internalTags&columnIdentifiers=internalState&itemId=_VMvycVRcEd61fuNW84kdiQ&skipOAuth=true&filterAttribute=&filterValue="
 
 	resp, err := rtc.request("POST", queryUrl, "")
 	if err != nil {
@@ -181,12 +194,105 @@ func (rtc *RTC) CurrentWorkItems() ([]*WorkItem, error) {
 			Estimate:     row.Labels[5],
 			FiledAgainst: row.Labels[6],
 			PlannedFor:   row.Labels[7],
+			State:        row.Labels[10],
 			LocationUri:  row.LocationUri,
 		}
 		workItems = append(workItems, wi)
 	}
 
 	return workItems, err
+}
+
+type Filter struct {
+	Field  string
+	Oper   string
+	Values []string
+	Vars   []map[string]string
+}
+
+func (rtc *RTC) Query(filters []Filter, sortColumn string, sortAscending bool, maxResults int) ([]*WorkItem, error) {
+	// curl "https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.rest.IQueryRestService/getResultSet" -H "Cookie: com_ibm_team_process_web_ui_internal_admin_projects_ProcessTree_0SaveSelectedCookie="%"2F0; JazzFormAuth=Form; net-jazz-ajax-cookie-rememberUserId=; ibmSurvey=1422910922008; UnicaNIODID=r2adbtayyw2-ZDKlNvR; pSite=https"%"3A"%"2F"%"2Fwww.ibm.com"%"2Fdeveloperworks"%"2Ftopics"%"2Frest"%"2520api"%"2520"%"2520python"%"2F; mmcore.tst=0.911; mmid=-1314913985"%"7CAQAAAAo69LY+igsAAA"%"3D"%"3D; mmcore.pd=1780648624"%"7CAQAAAAoBQjr0tj6KC46Z2xgBAHt7sKJCDdJIEXd3dy5nb29nbGUuY29tLmJyDgAAAHt7sKJCDdJIAAAAAP////8AGQAAAP////8AEXd3dy5nb29nbGUuY29tLmJyBIoLAQAAAAAAAwAAAAAA////////////////AAAAAAABRQ"%"3D"%"3D; mmcore.srv=nycvwcgus02; CoreID6=79140352120814229109241&ci=50200000|DEVWRKS; CoreM_State=73~-1~-1~-1~-1~3~3~5~3~3~7~7~|~~|~~|~~|~||||||~|~~|~~|~~|~~|~~|~~|~~|~; CoreM_State_Content=6~|~~|~|; 50200000_clogin=v=1&l=1422910924&e=1422912724704; LtpaToken2=QT7AQ2NxDXkcEUJx0//EbS+Ta+y6IlVedjbU0yZvHSvf+W4Sxc7+s6iWWFrxE4hRkyvLTH7vrK3YQBJDUMVJSfDpv3v2AgOerm1oy/Vufc4fadGZdYiAdmIAwPIYnQpUIh30eY0EiSsXtPmxTbaOWEaniuAB5FeVy6SkYV/Ud6y2XR5UeXt0VuO+fcNNQM0ClosAE4Y3w9HgMGacuRfN3vNvh05yN87J3COyBb2m9RNcjpz0iY+YsaRxwJ7lZMPI3B5F+h9AREu5THQkczrcmVoUVwbB9bKdnIltP+nibQET5UXEzAh33tKaeKJ6Ivc3X2WkeIcxUHG1QCXTo1Jp8/uqUlaB+Fpl7TpnyLm7eFucKa3SqFiLA2Q3bsw+Cuuw95BWKsZmaHzc9bS+CJwevKREyAo2gcZMLsxouwl5daWm6LJkpvv1fLXfeOKiioNnuuA38262GLRCSVLsNYZatuuN00TRdzFQyjkYcH5uO5hHu0Od3mq+N+D8PfzWL4mrH9MrAi4CBf58mNA0NTri127jigDOcqRYdG8VZMOs+NLHxQGfJmZQZ3oQcrWP3phL3JrLKlb32OKu3tKDN2nxhR2ppiyKtK3uTVUOer5c0sbI6HUOtawD+VzyxHivgPLZg3sfwCZqD3+Z3uKd6KjalCFWPwqXKei3R3Zs1SjgXME=; JSESSIONID=0000w0b_QruvkcrpBiUBwiiWDew:-1" -H "X-jazz-downstream-auth-client-level: 4.0" -H "Origin: https://igartc01.swg.usma.ibm.com" -H "Accept-Encoding: gzip, deflate" -H "Accept-Language: en-US,en;q=0.8" -H "X-com-ibm-team-configuration-versions: LATEST" -H "User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36" -H "Content-Type: application/x-www-form-urlencoded; charset=UTF-8" -H "accept: text/json" -H "Referer: https://igartc01.swg.usma.ibm.com/jazz/web/projects/SD-OPS" -H "X-Requested-With: XMLHttpRequest" -H "Connection: keep-alive" --data "startIndex=0&maxResults=50&filterAttribute=&filterValue=&columnIdentifiers=workItemType&columnIdentifiers=id&columnIdentifiers=summary&columnIdentifiers=owner&columnIdentifiers=internalState&columnIdentifiers=internalPriority&columnIdentifiers=internalSeverity&columnIdentifiers=modified&sortColumns=modified&sortDirections=false&projectAreaItemId=_U7zMYFRcEd61fuNW84kdiQ&jsonExpression="%"7B"%"22operator"%"22"%"3A"%"22AND"%"22"%"2C"%"22attributeExpressions"%"22"%"3A"%"5B"%"7B"%"22attributeId"%"22"%"3A"%"22owner"%"22"%"2C"%"22operator"%"22"%"3A"%"22is"%"22"%"2C"%"22values"%"22"%"3A"%"5B"%"22_PrOIoMZ5Ed-Lr-wDR3V_pA"%"22"%"5D"%"2C"%"22variables"%"22"%"3A"%"5B"%"5D"%"7D"%"5D"%"2C"%"22termExpressions"%"22"%"3A"%"5B"%"5D"%"2C"%"22similarityExpressions"%"22"%"3A"%"5B"%"5D"%"7D" --compressed
+
+	var workItems []*WorkItem
+
+	// filter := Filter{Field: "owner", Oper: "is", Values: []string{"_PrOIoMZ5Ed-Lr-wDR3V_pA"}}
+	// filters := []Filter{filter}
+
+	mf := make(map[string]interface{})
+	mf["operator"] = "AND"
+	mf["termExpressions"] = []string{}
+	mf["similarityExpressions"] = []string{}
+
+	attrExps := []map[string]interface{}{}
+
+	for _, f := range filters {
+		attrExp := make(map[string]interface{})
+		attrExp["attributeId"] = f.Field
+		attrExp["operator"] = f.Oper
+		attrExp["values"] = f.Values
+		attrExp["variables"] = f.Vars
+
+		attrExps = append(attrExps, attrExp)
+	}
+
+	mf["attributeExpressions"] = attrExps
+
+	jsonStr, err := json.Marshal(mf)
+	if err != nil {
+		return workItems, err
+	}
+
+	queryUrl := "https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.rest.IQueryRestService/getResultSet"
+	// data := fmt.Sprintf("startIndex=0&maxResults=50&filterAttribute=&filterValue=&columnIdentifiers=workItemType&columnIdentifiers=id&columnIdentifiers=summary&columnIdentifiers=owner&columnIdentifiers=internalState&columnIdentifiers=internalPriority&columnIdentifiers=internalSeverity&columnIdentifiers=modified&sortColumns=modified&sortDirections=false&projectAreaItemId=_U7zMYFRcEd61fuNW84kdiQ&jsonExpression=%s", string(jsonStr))
+	data := fmt.Sprintf("startIndex=0&maxResults=%d&filterAttribute=&filterValue=&columnIdentifiers=workItemType&Q&columnIdentifiers=summary&columnIdentifiers=creator&columnIdentifiers=owner&columnIdentifiers=creationDate&columnIdentifiers=duration&columnIdentifiers=category&columnIdentifiers=target&columnIdentifiers=projectArea&columnIdentifiers=internalTags&columnIdentifiers=internalState&sortColumns=%s&sortDirections=%t&projectAreaItemId=_U7zMYFRcEd61fuNW84kdiQ&jsonExpression=%s", maxResults, sortColumn, sortAscending, string(jsonStr))
+
+	// fmt.Println(string(jsonStr))
+	// fmt.Println(string(data))
+
+	body, err := rtc.requestBody("POST", queryUrl, data)
+	if err != nil {
+		return workItems, err
+	}
+
+	// fmt.Println(string(body))
+
+	env, err := models.NewFromXml(body)
+	if err != nil {
+		return workItems, err
+	}
+
+	for _, row := range env.Body.Response.ReturnValue.Value.Rows {
+		// fmt.Printf("Row: %+v\n", row)
+		// for i, l := range row.Labels {
+		// 	fmt.Printf("%d - %s\n", i, l)
+		// }
+		// fmt.Printf("Item: %d - %s\n", row.Id, row.Labels[1])
+		// 0 - Task
+		// 1 - Analysis: Component elimination. Removal of order component failed.
+		// 2 - Marcelo De Campos
+		// 3 - Felipe Gonçalves Coury
+		// 4 - 1374758469269
+		// 5 - 24 hours
+		// 6 - Unassigned
+		// 7 - [2014] February R1, S1
+		// 8 - SD-OPS
+		// 9 -
+		wi := &WorkItem{
+			Id:           row.Id,
+			Type:         row.Labels[0],
+			Summary:      row.Labels[1],
+			CreatedBy:    row.Labels[2],
+			OwnedBy:      row.Labels[3],
+			Estimate:     row.Labels[5],
+			FiledAgainst: row.Labels[6],
+			PlannedFor:   row.Labels[7],
+			State:        row.Labels[10],
+			LocationUri:  row.LocationUri,
+		}
+		workItems = append(workItems, wi)
+	}
+
+	return workItems, nil
 }
 
 func (rtc *RTC) Search(query string) ([]*WorkItem, error) {
@@ -211,6 +317,8 @@ func (rtc *RTC) Search(query string) ([]*WorkItem, error) {
 			Type:        twi.Type,
 			OwnedBy:     twi.OwnerName,
 			LocationUri: twi.LocationUri,
+			State:       twi.StateName,
+			PlannedFor:  "-",
 		}
 		workItems = append(workItems, wi)
 	}
@@ -435,6 +543,8 @@ func (rtc *RTC) GetWorkItem(id string) (*WorkItem, error) {
 	wi.PlannedFor = attrs["target"]
 	wi.State = attrs["internalState"]
 	wi.Resolution = attrs["internalResolution"]
+	wi.TimeSpent = attrs["timeSpent"]
+	wi.Estimate = attrs["duration"]
 
 	// add parents
 	if len(val.LinkTypes) > 0 {
@@ -473,6 +583,28 @@ func (rtc *RTC) ChangeStatus(id string, s string) (*models.Envelope, error) {
 	}
 
 	return env, err
+}
+
+func (rtc *RTC) PerformAction(name string, id string, action string, expectedState string) error {
+	env, err := rtc.ChangeStatus(id, action)
+	if err != nil {
+		return err
+	}
+
+	attrs := getAttributes(env.Body.Response.ReturnValue.Value.WorkItem)
+
+	if state, ok := attrs["internalState"]; ok {
+		if state == expectedState {
+			return nil
+		}
+	}
+
+	wi, err := rtc.GetWorkItem(id)
+	if err != nil {
+		return err
+	}
+
+	return errors.New("Failed to " + name + " work item " + id + ". Current state is " + wi.State + ".")
 }
 
 func (rtc *RTC) Close(id string) error {
@@ -557,6 +689,41 @@ func (rtc *RTC) AddParent(id string, parentId string) error {
 	}
 
 	return nil
+}
+
+func (rtc *RTC) Update(wi WorkItem) error {
+	m := make(map[string]string)
+
+	if wi.TimeSpent != "" {
+		m["timeSpent"] = wi.TimeSpent
+	}
+
+	if wi.Estimate != "" {
+		m["duration"] = wi.Estimate
+	}
+
+	if wi.IterationId != "" {
+		iters, err := rtc.GetIterations()
+		if err != nil {
+			return err
+		}
+
+		iterIdNum, err := strconv.Atoi(wi.IterationId)
+
+		if iterIdNum > len(iters) {
+			return errors.New("Iteration with id " + wi.IterationId + " not found. Use iterations command.")
+		}
+
+		iter := iters[iterIdNum]
+		m["target"] = iter.ItemId
+	}
+
+	if wi.Id == "" {
+		return errors.New("Missing work item id")
+	}
+
+	_, err := rtc.SetAttributes(wi.Id, m)
+	return err
 }
 
 func (rtc *RTC) MoveToIteration(id string, iterId string) (*WorkItem, models.Iteration, error) {

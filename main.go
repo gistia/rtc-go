@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"os"
 	"strconv"
@@ -9,11 +10,48 @@ import (
 	"github.com/codegangsta/cli"
 	"github.com/fcoury/rtc-go/models"
 	"github.com/fcoury/rtc-go/rtc"
+	"github.com/gistia/tablewriter"
 	"github.com/kennygrant/sanitize"
-	"github.com/olekukonko/tablewriter"
 )
 
 var appConfig *Config
+
+type UpdateAttrs struct {
+	Estimate  string
+	TimeSpent string
+	Iteration string
+	Start     bool
+	Resolve   bool
+	Close     bool
+	Reopen    bool
+}
+
+type Query struct {
+	Mine       bool
+	Resolved   bool
+	Unresolved bool
+	Current    bool
+	Summary    string
+	Parent     string
+	Owner      string
+	Sort       string
+	SortAsc    bool
+	MaxResults int
+}
+
+func (q Query) Check() error {
+	if q.Resolved {
+		if q.Unresolved {
+			return errors.New("Can't use --closed with --open")
+		}
+	}
+
+	return nil
+}
+
+func (u UpdateAttrs) HasAttributes() bool {
+	return u.Estimate != "" && u.TimeSpent != "" && u.Iteration != ""
+}
 
 func main() {
 	app := cli.NewApp()
@@ -58,8 +96,29 @@ func main() {
 			Name:      "info",
 			ShortName: "i",
 			Usage:     "displays info about a work item",
+			Flags: []cli.Flag{
+				cli.BoolFlag{
+					Name:  "summary",
+					Usage: "Omits the description of the work item",
+				},
+			},
 			Action: func(c *cli.Context) {
-				info(c.Args()[0])
+				info(c.Args()[0], c.Bool("summary"))
+			},
+		},
+
+		{
+			Name:      "show",
+			ShortName: "s",
+			Usage:     "displays info about a work item",
+			Flags: []cli.Flag{
+				cli.BoolFlag{
+					Name:  "summary",
+					Usage: "Omits the description of the work item",
+				},
+			},
+			Action: func(c *cli.Context) {
+				info(c.Args()[0], c.Bool("summary"))
 			},
 		},
 
@@ -85,6 +144,125 @@ func main() {
 		},
 
 		{
+			Name:      "update",
+			ShortName: "u",
+			Usage:     "updates a work item",
+			Flags: []cli.Flag{
+				cli.StringFlag{
+					Name:  "estimate",
+					Value: "",
+					Usage: "Updates the estimated time for the work item",
+				},
+				cli.StringFlag{
+					Name:  "timespent",
+					Value: "",
+					Usage: "Updates the time spent working on the work item",
+				},
+				cli.StringFlag{
+					Name:  "iteration",
+					Value: "",
+					Usage: "Updates the iteration the work item (see iterations command)",
+				},
+				cli.BoolFlag{
+					Name:  "start",
+					Usage: "Starts the work item",
+				},
+				cli.BoolFlag{
+					Name:  "resolve",
+					Usage: "Resolves the work item",
+				},
+				cli.BoolFlag{
+					Name:  "close",
+					Usage: "Closes the work item",
+				},
+				cli.BoolFlag{
+					Name:  "reopen",
+					Usage: "Reopens the work item",
+				},
+			},
+			Action: func(c *cli.Context) {
+				attrs := UpdateAttrs{
+					Estimate:  c.String("estimate"),
+					TimeSpent: c.String("timespent"),
+					Iteration: c.String("iteration"),
+					Start:     c.Bool("start"),
+					Resolve:   c.Bool("resolve"),
+					Close:     c.Bool("close"),
+					Reopen:    c.Bool("reopen"),
+				}
+				update(c.Args()[0], attrs)
+			},
+		},
+
+		{
+			Name:      "query",
+			ShortName: "q",
+			Usage:     "queries work items",
+			Flags: []cli.Flag{
+				cli.StringFlag{
+					Name:  "summary",
+					Value: "",
+					Usage: "Work items that the summary contain the words",
+				},
+				cli.StringFlag{
+					Name:  "parent",
+					Value: "",
+					Usage: "Work items with the given parent id",
+				},
+				cli.StringFlag{
+					Name:  "owner",
+					Value: "",
+					Usage: "Filters by the owner name",
+				},
+				cli.StringFlag{
+					Name:  "sort",
+					Value: "modified",
+					Usage: "Field to sort by",
+				},
+				cli.IntFlag{
+					Name:  "maxresults",
+					Value: 15,
+					Usage: "How many results to display",
+				},
+				cli.BoolFlag{
+					Name:  "mine",
+					Usage: "Everything assigned to me",
+				},
+				cli.BoolFlag{
+					Name:  "closed",
+					Usage: "All work items that are closed",
+				},
+				cli.BoolFlag{
+					Name:  "open",
+					Usage: "All work items that are open or in progress",
+				},
+				cli.BoolFlag{
+					Name:  "current",
+					Usage: "Shows only work items for current iteration",
+				},
+				cli.BoolFlag{
+					Name:  "asc",
+					Usage: "Sorts by ascending order (descending is default)",
+				},
+			},
+			Action: func(c *cli.Context) {
+				q := Query{
+					Mine:       c.Bool("mine"),
+					Resolved:   c.Bool("closed"),
+					Unresolved: c.Bool("open"),
+					Current:    c.Bool("current"),
+					Summary:    c.String("summary"),
+					Parent:     c.String("parent"),
+					Owner:      c.String("owner"),
+					Sort:       c.String("sort"),
+					SortAsc:    c.Bool("asc"),
+					MaxResults: c.Int("maxresults"),
+				}
+				query(q)
+			},
+		},
+
+		{
 			Name:      "close",
 			ShortName: "cl",
 			Usage:     "closes a work item",
@@ -103,11 +281,18 @@ func main() {
 		},
 
 		{
-			Name:      "artifact",
-			ShortName: "art",
-			Usage:     "creates an artifact task for a story",
+			Name:      "subtask",
+			ShortName: "st",
+			Usage:     "creates a subtask for a story",
+			Flags: []cli.Flag{
+				cli.StringFlag{
+					Name:  "type",
+					Value: "Artifacts",
+					Usage: "Creates a subtask of a given type",
+				},
+			},
 			Action: func(c *cli.Context) {
-				createArtifact(c.Args()[0])
+				createSubtask(c.Args()[0], c.String("type"))
 			},
 		},
 
@@ -204,7 +389,7 @@ func main() {
 			Name:  "test",
 			Usage: "test",
 			Action: func(c *cli.Context) {
-				test(c.Args()[0])
+				test()
 			},
 		},
 	}
@@ -232,13 +417,18 @@ func login() (*rtc.RTC, error) {
 }
 
 func renderTable(wis []*rtc.WorkItem) {
+	if len(wis) < 1 {
+		fmt.Println("No work items to be displayed.")
+		return
+	}
+
 	table := tablewriter.NewWriter(os.Stdout)
-	table.SetHeader([]string{"Id", "Type", "Summary", "Planned For"})
+	table.SetHeader([]string{"Id", "Type", "Summary", "Planned For", "Owner", "State"})
 	table.SetAlignment(tablewriter.ALIGN_LEFT)
 	table.SetColWidth(appConfig.MaxWidth)
 
 	for _, wi := range wis {
-		table.Append([]string{wi.Id, wi.Type, wi.Summary, wi.PlannedFor})
+		table.Append([]string{wi.Id, wi.Type, wi.Summary, wi.PlannedFor, wi.Owner(), wi.State})
 	}
 	table.Render()
 }
@@ -314,7 +504,7 @@ func showTree(wi *rtc.WorkItem) {
 	}
 }
 
-func info(id string) {
+func info(id string, summary bool) {
 	r, err := login()
 	if err != nil {
 		fmt.Println(err.Error())
@@ -340,9 +530,20 @@ func info(id string) {
 	fmt.Println("   Planned For:", wi.PlannedFor)
 	fmt.Println("    Created By:", wi.CreatedBy)
 	fmt.Println("         Owner:", wi.OwnedBy)
-	fmt.Println("")
-	fmt.Println(strings.Repeat("-", len(title)))
-	fmt.Printf("\nDescription:\n\n%s\n", desc)
+
+	if wi.Estimate != "" {
+		fmt.Println("      Estimate:", wi.Estimate)
+	}
+
+	if wi.TimeSpent != "" {
+		fmt.Println("    Time spent:", wi.TimeSpent)
+	}
+
+	if !summary {
+		fmt.Println("")
+		fmt.Println(strings.Repeat("-", len(title)))
+		fmt.Printf("\nDescription:\n\n%s\n", desc)
+	}
 
 	if len(wi.Parents) > 0 || len(wi.Children) > 0 {
 		fmt.Println("")
@@ -372,6 +573,68 @@ func tree(id string) {
 	fmt.Println(wi.Title())
 	fmt.Println("")
 	showTree(wi)
+}
+
+func update(id string, attrs UpdateAttrs) {
+	r, err := login()
+	if err != nil {
+		fmt.Println(err.Error())
+		return
+	}
+
+	if attrs.Start {
+		fmt.Println("Attempting to start work item %s...\n", id)
+		err = r.PerformAction("start", id, "startWorking", "Started")
+		if err != nil {
+			fmt.Println(err.Error())
+			return
+		}
+	}
+
+	if attrs.Resolve {
+		fmt.Println("Attempting to resolve work item %s...\n", id)
+		err = r.PerformAction("resolve", id, "resolve", "Resolved")
+		if err != nil {
+			fmt.Println(err.Error())
+			return
+		}
+	}
+
+	if attrs.Close {
+		fmt.Println("Attempting to close work item %s...\n", id)
+		err = r.PerformAction("close", id, "close", "Closed")
+		if err != nil {
+			fmt.Println(err.Error())
+			return
+		}
+	}
+
+	if attrs.Reopen {
+		fmt.Println("Attempting to reopen work item %s...\n", id)
+		err = r.PerformAction("reopen", id, "reopen", "Reopened")
+		if err != nil {
+			fmt.Println(err.Error())
+			return
+		}
+	}
+
+	if attrs.HasAttributes() {
+		wi := rtc.WorkItem{
+			Id:          id,
+			Estimate:    attrs.Estimate,
+			TimeSpent:   attrs.TimeSpent,
+			IterationId: attrs.Iteration,
+		}
+
+		fmt.Printf("Updating work item %s...\n", id)
+		err = r.Update(wi)
+		if err != nil {
+			fmt.Println(err.Error())
+			return
+		}
+	}
+
+	fmt.Println("Work item successfully updated.")
 }
 
 func create(summary string, taskType string, parentId string) {
@@ -472,14 +735,14 @@ func iterations(all bool) {
 	table.Render()
 }
 
-func test(id string) {
-	r, err := login()
-	if err != nil {
-		fmt.Println(err.Error())
-		return
-	}
+func test() {
+	// r, err := login()
+	// if err != nil {
+	// 	fmt.Println(err.Error())
+	// 	return
+	// }
 
-	r.GetWorkItem(id)
+	// r.Query()
 }
 
 func close(id string) {
@@ -521,14 +784,15 @@ func move(id string, iterId string) {
 	fmt.Println("\nSuccessfully moved work items " + id + " to iteration " + iter.Label)
 }
 
-func createArtifact(id string) {
+func createSubtask(id string, taskType string) {
 	r, err := login()
 	if err != nil {
 		fmt.Println(err.Error())
 		return
 	}
 
-	wi, err := r.CreateSubTask(id, "Artifacts")
+	fmt.Printf("Creating a subtask of type %s...\n", taskType)
+	wi, err := r.CreateSubTask(id, taskType)
 	if err != nil {
 		fmt.Println(err.Error())
 	}
@@ -551,9 +815,100 @@ func open(id string) {
 		return
 	}
 
+	fmt.Printf("Opening work item %s in your browser...\n", id)
 	err = r.OpenWorkItem(id)
 	if err != nil {
 		fmt.Println(err.Error())
 		return
 	}
+}
+
+func query(q Query) {
+	fs := []rtc.Filter{}
+
+	r, err := login()
+	if err != nil {
+		fmt.Println(err.Error())
+		return
+	}
+
+	if err = q.Check(); err != nil {
+		fmt.Println(err.Error())
+		return
+	}
+
+	if q.Mine {
+		f := rtc.Filter{
+			Field:  "owner",
+			Oper:   "is",
+			Values: []string{appConfig.OwnerId},
+		}
+		fs = append(fs, f)
+	}
+
+	if q.Resolved {
+		f := rtc.Filter{
+			Field:  "internalState",
+			Oper:   "is",
+			Values: []string{},
+			Vars:   []map[string]string{map[string]string{"id": "state", "arguments": "closed"}},
+		}
+		fs = append(fs, f)
+	}
+
+	if q.Unresolved {
+		f := rtc.Filter{
+			Field:  "internalState",
+			Oper:   "is",
+			Values: []string{},
+			Vars:   []map[string]string{map[string]string{"id": "state", "arguments": "open or in progress"}},
+		}
+		fs = append(fs, f)
+	}
+
+	if q.Current {
+		f := rtc.Filter{
+			Field:  "target",
+			Oper:   "is",
+			Values: []string{},
+			Vars:   []map[string]string{map[string]string{"id": "current milestone", "arguments": ""}},
+		}
+		fs = append(fs, f)
+	}
+
+	if q.Summary != "" {
+		f := rtc.Filter{
+			Field:  "summary",
+			Oper:   "contains",
+			Values: []string{q.Summary},
+		}
+		fs = append(fs, f)
+	}
+
+	if q.Parent != "" {
+		f := rtc.Filter{
+			Field:  "link:com.ibm.team.workitem.linktype.parentworkitem:target/id",
+			Oper:   "is",
+			Values: []string{q.Parent},
+		}
+		fs = append(fs, f)
+	}
+
+	if q.Owner != "" {
+		f := rtc.Filter{
+			Field:  "owner/name",
+			Oper:   "contains",
+			Values: []string{q.Owner},
+		}
+		fs = append(fs, f)
+	}
+
+	fmt.Println("Querying RTC for work items that match your query...")
+	wis, err := r.Query(fs, q.Sort, q.SortAsc, q.MaxResults)
+	if err != nil {
+		fmt.Println(err.Error())
+		return
+	}
+
+	renderTable(wis)
 }

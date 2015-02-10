@@ -1,0 +1,1471 @@
+{
+    "_eQualifiedClassName": "http://schemas.xmlsoap.org/soap/envelope/:Envelope",
+    "soapenv:Body": {
+        "_eQualifiedClassName": "http://schemas.xmlsoap.org/soap/envelope/:Body",
+        "response": {
+            "_eQualifiedClassName": "http:///com/ibm/team/core/services.ecore:Response",
+            "interface": "com.ibm.team.workitem.common.internal.rest.IWorkItemRestService",
+            "method": "getWorkItemDTO2",
+            "returnValue": {
+                "_eQualifiedClassName": "http:///com/ibm/team/core/services.ecore:ComplexDataArg",
+                "type": "COMPLEX",
+                "value": {
+                    "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:WorkItemDTO",
+                    "attributes": [
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "rule",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "database-changes",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "documentation-changes",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:ContentDTO",
+                                "content": "",
+                                "isHTML": true
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "code-changes",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "properties-changes",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "usecase",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "relatedUseCase",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "process",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned2.gif",
+                                "id": "component.literal.l13",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "configuration",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "component",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "comments",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:ContentDTO",
+                                "content": "",
+                                "isHTML": true
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "com.ibm.team.apt.estimate.minimal",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "",
+                                "id": "-1",
+                                "label": "",
+                                "validationRegex": "([0-9]+((\\.|\\,)[0-9]+)?)|((([0-9]+((\\.|\\,)[0-9]+)?)|(\\.[0-9]+))\\s*(milliseconds|millisecond|millisecs|millisec|seconds|minutes|second|minute|weeks|hours|week|days|secs|hour|mins|day|sec|min|ms|w|d|s|h|m)\\s*)+"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "com.ibm.team.apt.estimate.maximal",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "",
+                                "id": "-1",
+                                "label": "",
+                                "validationRegex": "([0-9]+((\\.|\\,)[0-9]+)?)|((([0-9]+((\\.|\\,)[0-9]+)?)|(\\.[0-9]+))\\s*(milliseconds|millisecond|millisecs|millisec|seconds|minutes|second|minute|weeks|hours|week|days|secs|hour|mins|day|sec|min|ms|w|d|s|h|m)\\s*)+"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "com.ibm.team.apt.attribute.planitem.priority._pm7NmRYUEd6L1tNIGdz5qQ",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "items-for-deployment",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:ContentDTO",
+                                "content": "",
+                                "isHTML": true
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "package",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif",
+                                "id": "build-package-type.literal.l1",
+                                "label": "EAR"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "was",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:ContentDTO",
+                                "content": "",
+                                "isHTML": true
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "mq",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:ContentDTO",
+                                "content": "",
+                                "isHTML": true
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "code-review-time",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "id": "0",
+                                "label": "0"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "code",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "database",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "root",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:ContentDTO",
+                                "content": "",
+                                "isHTML": true
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "task",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned2.gif",
+                                "id": "task-type.literal.l1",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "key-component",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned2.gif",
+                                "id": "component-real.literal.l21",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "properties-change",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:ContentDTO",
+                                "content": "",
+                                "isHTML": true
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "code-change",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:ContentDTO",
+                                "content": "",
+                                "isHTML": true
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "database-change",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:ContentDTO",
+                                "content": "",
+                                "isHTML": true
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "test-state",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned2.gif",
+                                "id": "test-state.literal.l1",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "testPhase",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned2.gif",
+                                "id": "test-phase.literal.l7",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "defectType",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned2.gif",
+                                "id": "defect-type.literal.l11",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "environment",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned2.gif",
+                                "id": "environment.literal.l9",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "defectReproduced",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/normal.gif",
+                                "id": "defect-reproduced.literal.l1",
+                                "label": "Yes"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "phaseDetected",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned2.gif",
+                                "id": "phase-detected.literal.l7",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "projectArea",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.process.common/icons/obj16/projectarea_obj.gif",
+                                "id": "_U7zMYFRcEd61fuNW84kdiQ",
+                                "isArchived": false,
+                                "label": "SD-OPS"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "modifiedBy",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:ContributorDTO",
+                                "emailAddress": "fcoury@br.ibm.com",
+                                "id": "_PrOIoMZ5Ed-Lr-wDR3V_pA",
+                                "itemId": "_PrOIoMZ5Ed-Lr-wDR3V_pA",
+                                "label": "Felipe Gon\u00e7alves Coury",
+                                "locationUri": "https://igartc01.swg.usma.ibm.com/jazz/resource/itemOid/com.ibm.team.repository.Contributor/_PrOIoMZ5Ed-Lr-wDR3V_pA",
+                                "name": "Felipe Gon\u00e7alves Coury",
+                                "userId": "fcoury@br.ibm.com",
+                                "webUri": "https://igajts01.swg.usma.ibm.com/jts/users/fcoury%40br.ibm.com"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "modified",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif",
+                                "id": "2015-02-09T16:32:26.193Z",
+                                "label": "Feb 9, 2015 11:32 AM"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "creator",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:ContributorDTO",
+                                "emailAddress": "fcoury@br.ibm.com",
+                                "id": "_PrOIoMZ5Ed-Lr-wDR3V_pA",
+                                "itemId": "_PrOIoMZ5Ed-Lr-wDR3V_pA",
+                                "label": "Felipe Gon\u00e7alves Coury",
+                                "locationUri": "https://igartc01.swg.usma.ibm.com/jazz/resource/itemOid/com.ibm.team.repository.Contributor/_PrOIoMZ5Ed-Lr-wDR3V_pA",
+                                "name": "Felipe Gon\u00e7alves Coury",
+                                "userId": "fcoury@br.ibm.com",
+                                "webUri": "https://igajts01.swg.usma.ibm.com/jts/users/fcoury%40br.ibm.com"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "category",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:CategoryDTO",
+                                "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif",
+                                "id": "_VLyJIFRcEd61fuNW84kdiQ",
+                                "label": "Unassigned",
+                                "path": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "internalTags",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:ContentDTO",
+                                "content": "",
+                                "isHTML": false
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "internalPriority",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/unassigned.gif",
+                                "id": "priority.literal.l01",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "timeSpent",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "",
+                                "id": "7200000",
+                                "label": "2 hours",
+                                "validationRegex": "([0-9]+((\\.|\\,)[0-9]+)?)|((([0-9]+((\\.|\\,)[0-9]+)?)|(\\.[0-9]+))\\s*(milliseconds|millisecond|millisecs|millisec|seconds|minutes|second|minute|weeks|hours|week|days|secs|hour|mins|day|sec|min|ms|w|d|s|h|m)\\s*)+"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "dueDate",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "duration",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "",
+                                "id": "7200000",
+                                "label": "2 hours",
+                                "validationRegex": "([0-9]+((\\.|\\,)[0-9]+)?)|((([0-9]+((\\.|\\,)[0-9]+)?)|(\\.[0-9]+))\\s*(milliseconds|millisecond|millisecs|millisec|seconds|minutes|second|minute|weeks|hours|week|days|secs|hour|mins|day|sec|min|ms|w|d|s|h|m)\\s*)+"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "correctedEstimate",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "",
+                                "id": "-1",
+                                "label": "",
+                                "validationRegex": "([0-9]+((\\.|\\,)[0-9]+)?)|((([0-9]+((\\.|\\,)[0-9]+)?)|(\\.[0-9]+))\\s*(milliseconds|millisecond|millisecs|millisec|seconds|minutes|second|minute|weeks|hours|week|days|secs|hour|mins|day|sec|min|ms|w|d|s|h|m)\\s*)+"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "internalSequenceValue",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:ContentDTO",
+                                "content": "_PrOIoMZ5Ed-Lr-wDR3V_pA O00003",
+                                "isHTML": false
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "resolutionDate",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "startDate",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "creationDate",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif",
+                                "id": "2015-02-09T16:05:01.259Z",
+                                "label": "Feb 9, 2015 11:05 AM"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "resolver",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:ContributorDTO",
+                                "emailAddress": "unassigned",
+                                "id": "_YNh4MOlsEdq4xpiOKg5hvA",
+                                "itemId": "_YNh4MOlsEdq4xpiOKg5hvA",
+                                "label": "Unassigned",
+                                "locationUri": "https://igartc01.swg.usma.ibm.com/jazz/resource/itemOid/com.ibm.team.repository.Contributor/_YNh4MOlsEdq4xpiOKg5hvA",
+                                "name": "Unassigned",
+                                "userId": "unassigned",
+                                "webUri": "https://igajts01.swg.usma.ibm.com/jts/users/unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "summary",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:ContentDTO",
+                                "content": "Production problem: Unexpected error during Explosion",
+                                "isHTML": true
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "target",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.process.common/icons/obj16/milestone_obj.gif",
+                                "id": "_H5fMQaHXEeS4fen3HD7Mow",
+                                "label": "[2015] February R1, S1"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "owner",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:ContributorDTO",
+                                "emailAddress": "fcoury@br.ibm.com",
+                                "id": "_PrOIoMZ5Ed-Lr-wDR3V_pA",
+                                "itemId": "_PrOIoMZ5Ed-Lr-wDR3V_pA",
+                                "label": "Felipe Gon\u00e7alves Coury",
+                                "locationUri": "https://igartc01.swg.usma.ibm.com/jazz/resource/itemOid/com.ibm.team.repository.Contributor/_PrOIoMZ5Ed-Lr-wDR3V_pA",
+                                "name": "Felipe Gon\u00e7alves Coury",
+                                "userId": "fcoury@br.ibm.com",
+                                "webUri": "https://igajts01.swg.usma.ibm.com/jts/users/fcoury%40br.ibm.com"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "description",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:ContentDTO",
+                                "content": "I found a BOM explosion exception in Production&nbsp;&nbsp; <br/>\u25c4 with no details&nbsp; 2:03:19 PM<br/>\u25c4 \u00bfcould you take a look please?&nbsp; 2:03:26 PM<br/>\u25c4 Error Alert Notification<br/><br/>Severity: ERROR<br/>Issued: 2015-02-06 08:15:00 UTC<br/>From: quandary2<br/>State: New<br/>-------------------------------------------<br/>Unexpected error during execution of Explosion: null<br/><br/>Unexpected error during execution of Explosion: null<br/>Root Cause Exception: null<br/>-------------------------------------------<br/>Root cause messages:<br/>-------------------------------------------<br/>An internal error occurred while invoking BoM Explosion service. The system diagnostic message is:<br/>Unexpected error during execution of Explosion: null.<br/><br/>-------------------------------------------<br/>System Support information:<br/>com.ibm.sdops.exceptions.mfgDB.BomExplosionException: Unexpected error during execution of Explosion: null<br/>Root Cause Exception: null occurred at 2015-02-06 08:15:00.123 ::<br/>at com.ibm.sdops.mfgDb.commands.ExplodeCommand.execute(ExplodeCommand.java:182)<br/>at com.ibm.sdops.mfgDb.mfgDBServices.MfgDBServicesBean.explodeBillOfMaterial(MfgDBServicesBean.java:71)<br/>at sun.reflect.GeneratedMethodAccessor1213.invoke(Unknown Source)<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:37)<br/>at java.lang.reflect.Method.invoke(Method.java:611)<br/>at com.ibm.ejs.container.EJSContainer.invokeProceed(EJSContainer.java:5874)<br/>at com.ibm.ejs.container.interceptors.InvocationContextImpl.proceed(InvocationContextImpl.java:586)<br/>at com.ibm.sdops.jpa.interceptor.JPAInterceptor.intercept(JPAInterceptor.java:40)<br/>at sun.reflect.GeneratedMethodAccessor62.invoke(Unknown Source)<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:37)<br/>at java.lang.reflect.Method.invoke(Method.java:611)<br/>at com.ibm.ejs.container.interceptors.InterceptorProxy.invokeInterceptor(InterceptorProxy.java:227)<br/>at com.ibm.ejs.container.interceptors.InvocationContextImpl.proceed(InvocationContextImpl.java:566)<br/>at com.ibm.ejs.container.interceptors.InvocationContextImpl.doAroundInvoke(InvocationContextImpl.java:217)<br/>at com.ibm.ejs.container.EJSContainer.invoke(EJSContainer.java:5814)<br/>at com.ibm.sdops.mfgDb.mfgDBServices.WSEJBProxySLMfgDBServices_57a2dce7.explodeBillOfMaterial(WSEJBProxySLMfgDBServices_57a2dce7.java)<br/>at sun.reflect.GeneratedMethodAccessor1314.invoke(Unknown Source)<br/>at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:37)<br/>at java.lang.reflect.Method.invoke(Method.java:611)<br/>at com.ibm.ws.webservices.engine.dispatchers.java.JavaDispatcher.invokeMethod(JavaDispatcher.java:203)<br/>at com.ibm.ws.webservices.dispatchers.ejb.J2ee14EJBDispatcher.invokeMethod(J2ee14EJBDispatcher.java:269)<br/>at com.ibm.ws.webservices.engine.dispatchers.java.JavaDispatcher.invokeOperation(JavaDispatcher.java:158)<br/>at com.ibm.ws.webservices.engine.dispatchers.SoapRPCProcessor.processRequestResponse(SoapRPCProcessor.java:490)<br/>at com.ibm.ws.webservices.engine.dispatchers.SoapRPCProcessor.processMessage(SoapRPCProcessor.java:433)<br/>at com.ibm.ws.webservices.engine.dispatchers.BasicDispatcher.processMessage(BasicDispatcher.java:134)<br/>at com.ibm.ws.webservices.dispatchers.ejb.J2ee14EJBDispatcher.invoke(J2ee14EJBDispatcher.java:168)<br/>at com.ibm.ws.webservices.engine.PivotHandlerWrapper.invoke(PivotHandlerWrapper.java:263)<br/>at com.ibm.ws.webservices.engine.handlers.jaxrpc.JAXRPCHandler.invoke(JAXRPCHandler.java:148)<br/>at com.ibm.ws.webservices.engine.handlers.WrappedHandler.invoke(WrappedHandler.java:64)<br/>at com.ibm.ws.webservices.engine.PivotHandlerWrapper.invoke(PivotHandlerWrapper.java:263)<br/>at com.ibm.ws.webservices.engine.PivotHandlerWrapper.invoke(PivotHandlerWrapper.java:263)<br/>at com.ibm.ws.webservices.engine.WebServicesEngine.invoke(WebServicesEngine.java:336)<br/>at com.ibm.ws.webservices.engine.transport.http.WebServicesServlet.doPost(WebServicesServlet.java:1246)<br/>at javax.servlet.http.HttpServlet.service(HttpServlet.java:738)<br/>at com.ibm.ws.webservices.engine.transport.http.WebServicesServletBase.service(WebServicesServletBase.java:344)<br/>at javax.servlet.http.HttpServlet.service(HttpServlet.java:831)<br/>at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1694)<br/>at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:970)<br/>at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:508)<br/>at com.ibm.ws.webcontainer.servlet.ServletWrapperImpl.handleRequest(ServletWrapperImpl.java:181)<br/>at com.ibm.ws.webcontainer.servlet.CacheServletWrapper.handleRequest(CacheServletWrapper.java:91)<br/>at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:878)<br/>at com.ibm.ws.webcontainer.WSWebContainer.handleRequest(WSWebContainer.java:1592)<br/>at com.ibm.ws.webcontainer.channel.WCChannelLink.ready(WCChannelLink.java:191)<br/>at com.ibm.ws.http.channel.inbound.impl.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:454)<br/>at com.ibm.ws.http.channel.inbound.impl.HttpInboundLink.handleNewRequest(HttpInboundLink.java:516)<br/>at com.ibm.ws.http.channel.inbound.impl.HttpInboundLink.processRequest(HttpInboundLink.java:307)<br/>at com.ibm.ws.http.channel.inbound.impl.HttpInboundLink.ready(HttpInboundLink.java:278)<br/>at com.ibm.ws.ssl.channel.impl.SSLConnectionLink.determineNextChannel(SSLConnectionLink.java:1049)<br/>at com.ibm.ws.ssl.channel.impl.SSLConnectionLink$MyReadCompletedCallback.complete(SSLConnectionLink.java:643)<br/>at com.ibm.ws.ssl.channel.impl.SSLReadServiceContext$SSLReadCompletedCallback.complete(SSLReadServiceContext.java:1818)<br/>at com.ibm.ws.tcp.channel.impl.AioReadCompletionListener.futureCompleted(AioReadCompletionListener.java:175)<br/>at com.ibm.io.async.AbstractAsyncFuture.invokeCallback(AbstractAsyncFuture.java:217)<br/>at com.ibm.io.async.AsyncChannelFuture.fireCompletionActions(AsyncChannelFuture.java:161)<br/>at com.ibm.io.async.AsyncFuture.completed(AsyncFuture.java:138)<br/>at com.ibm.io.async.ResultHandler.complete(ResultHandler.java:204)<br/>at com.ibm.io.async.ResultHandler.runEventProcessingLoop(ResultHandler.java:775)<br/>at com.ibm.io.async.ResultHandler$2.run(ResultHandler.java:905)<br/>at com.ibm.ws.util.ThreadPool$Worker.run(ThreadPool.java:1662)<br/>Caused by: java.lang.NullPointerException<br/>at com.ibm.sdops.mfgDb.commands.ExplodeCommand.explodeProduct(ExplodeCommand.java:264)<br/>at com.ibm.sdops.mfgDb.commands.ExplodeCommand.execute(ExplodeCommand.java:145)<br/>... 58 more<br/>2:03:38 PM<br/>\u00a0",
+                                "isHTML": true,
+                                "links": [
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 23,
+                                        "offset": 1086,
+                                        "uri": [
+                                            "javaline://%28com.ibm.sdops.mfgDb.commands.ExplodeCommand%3A182%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 25,
+                                        "offset": 1192,
+                                        "uri": [
+                                            "javaline://%28com.ibm.sdops.mfgDb.mfgDBServices.MfgDBServicesBean%3A71%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 36,
+                                        "offset": 1344,
+                                        "uri": [
+                                            "javaline://%28sun.reflect.DelegatingMethodAccessorImpl%3A37%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 15,
+                                        "offset": 1421,
+                                        "uri": [
+                                            "javaline://%28java.lang.reflect.Method%3A611%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 22,
+                                        "offset": 1494,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ejs.container.EJSContainer%3A5874%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 30,
+                                        "offset": 1590,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ejs.container.interceptors.InvocationContextImpl%3A586%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 22,
+                                        "offset": 1684,
+                                        "uri": [
+                                            "javaline://%28com.ibm.sdops.jpa.interceptor.JPAInterceptor%3A40%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 36,
+                                        "offset": 1831,
+                                        "uri": [
+                                            "javaline://%28sun.reflect.DelegatingMethodAccessorImpl%3A37%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 15,
+                                        "offset": 1908,
+                                        "uri": [
+                                            "javaline://%28java.lang.reflect.Method%3A611%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 25,
+                                        "offset": 2002,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ejs.container.interceptors.InterceptorProxy%3A227%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 30,
+                                        "offset": 2101,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ejs.container.interceptors.InvocationContextImpl%3A566%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 30,
+                                        "offset": 2212,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ejs.container.interceptors.InvocationContextImpl%3A217%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 22,
+                                        "offset": 2293,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ejs.container.EJSContainer%3A5814%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 36,
+                                        "offset": 2581,
+                                        "uri": [
+                                            "javaline://%28sun.reflect.DelegatingMethodAccessorImpl%3A37%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 15,
+                                        "offset": 2658,
+                                        "uri": [
+                                            "javaline://%28java.lang.reflect.Method%3A611%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 23,
+                                        "offset": 2757,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.webservices.engine.dispatchers.java.JavaDispatcher%3A203%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 28,
+                                        "offset": 2861,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.webservices.dispatchers.ejb.J2ee14EJBDispatcher%3A269%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 23,
+                                        "offset": 2976,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.webservices.engine.dispatchers.java.JavaDispatcher%3A158%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 25,
+                                        "offset": 3090,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.webservices.engine.dispatchers.SoapRPCProcessor%3A490%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 25,
+                                        "offset": 3198,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.webservices.engine.dispatchers.SoapRPCProcessor%3A433%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 24,
+                                        "offset": 3305,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.webservices.engine.dispatchers.BasicDispatcher%3A134%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 28,
+                                        "offset": 3404,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.webservices.dispatchers.ejb.J2ee14EJBDispatcher%3A168%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 28,
+                                        "offset": 3498,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.webservices.engine.PivotHandlerWrapper%3A263%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 22,
+                                        "offset": 3602,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.webservices.engine.handlers.jaxrpc.JAXRPCHandler%3A148%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 22,
+                                        "offset": 3694,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.webservices.engine.handlers.WrappedHandler%3A64%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 28,
+                                        "offset": 3782,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.webservices.engine.PivotHandlerWrapper%3A263%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 28,
+                                        "offset": 3876,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.webservices.engine.PivotHandlerWrapper%3A263%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 26,
+                                        "offset": 3968,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.webservices.engine.WebServicesEngine%3A336%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 28,
+                                        "offset": 4074,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.webservices.engine.transport.http.WebServicesServlet%3A1246%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 20,
+                                        "offset": 4150,
+                                        "uri": [
+                                            "javaline://%28javax.servlet.http.HttpServlet%3A738%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 31,
+                                        "offset": 4255,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.webservices.engine.transport.http.WebServicesServletBase%3A344%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 20,
+                                        "offset": 4334,
+                                        "uri": [
+                                            "javaline://%28javax.servlet.http.HttpServlet%3A831%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 24,
+                                        "offset": 4418,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.webcontainer.servlet.ServletWrapper%3A1694%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 23,
+                                        "offset": 4512,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.webcontainer.servlet.ServletWrapper%3A970%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 23,
+                                        "offset": 4605,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.webcontainer.servlet.ServletWrapper%3A508%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 27,
+                                        "offset": 4702,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.webcontainer.servlet.ServletWrapperImpl%3A181%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 27,
+                                        "offset": 4804,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.webcontainer.servlet.CacheServletWrapper%3A91%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 21,
+                                        "offset": 4891,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.webcontainer.WebContainer%3A878%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 24,
+                                        "offset": 4974,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.webcontainer.WSWebContainer%3A1592%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 22,
+                                        "offset": 5059,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.webcontainer.channel.WCChannelLink%3A191%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 24,
+                                        "offset": 5164,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.http.channel.inbound.impl.HttpInboundLink%3A454%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 24,
+                                        "offset": 5267,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.http.channel.inbound.impl.HttpInboundLink%3A516%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 24,
+                                        "offset": 5368,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.http.channel.inbound.impl.HttpInboundLink%3A307%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 24,
+                                        "offset": 5460,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.http.channel.inbound.impl.HttpInboundLink%3A278%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 27,
+                                        "offset": 5560,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.ssl.channel.impl.SSLConnectionLink%3A1049%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 26,
+                                        "offset": 5675,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.ssl.channel.impl.SSLConnectionLink%3A643%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 31,
+                                        "offset": 5794,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.ssl.channel.impl.SSLReadServiceContext%3A1818%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 34,
+                                        "offset": 5904,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.tcp.channel.impl.AioReadCompletionListener%3A175%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 28,
+                                        "offset": 5999,
+                                        "uri": [
+                                            "javaline://%28com.ibm.io.async.AbstractAsyncFuture%3A217%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 27,
+                                        "offset": 6094,
+                                        "uri": [
+                                            "javaline://%28com.ibm.io.async.AsyncChannelFuture%3A161%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 20,
+                                        "offset": 6169,
+                                        "uri": [
+                                            "javaline://%28com.ibm.io.async.AsyncFuture%3A138%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 22,
+                                        "offset": 6238,
+                                        "uri": [
+                                            "javaline://%28com.ibm.io.async.ResultHandler%3A204%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 22,
+                                        "offset": 6323,
+                                        "uri": [
+                                            "javaline://%28com.ibm.io.async.ResultHandler%3A775%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 22,
+                                        "offset": 6391,
+                                        "uri": [
+                                            "javaline://%28com.ibm.io.async.ResultHandler%3A905%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 20,
+                                        "offset": 6460,
+                                        "uri": [
+                                            "javaline://%28com.ibm.ws.util.ThreadPool%3A1662%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 23,
+                                        "offset": 6594,
+                                        "uri": [
+                                            "javaline://%28com.ibm.sdops.mfgDb.commands.ExplodeCommand%3A264%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:InlineLinkDTO",
+                                        "length": 23,
+                                        "offset": 6678,
+                                        "uri": [
+                                            "javaline://%28com.ibm.sdops.mfgDb.commands.ExplodeCommand%3A145%29"
+                                        ],
+                                        "weburi": [
+                                            ""
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "foundIn",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "internalState",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workflow/inprogress.gif",
+                                "id": "2",
+                                "label": "In Progress"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "internalResolution",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workflow/unresolve.gif",
+                                "id": "null",
+                                "label": "Unresolved"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "internalSeverity",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/enumeration/normal.gif",
+                                "id": "severity.literal.l3",
+                                "label": "Normal"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "internalSubscriptions",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:ListDTO",
+                                "items": [
+                                    {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:ContributorDTO",
+                                        "emailAddress": "fcoury@br.ibm.com",
+                                        "id": "_PrOIoMZ5Ed-Lr-wDR3V_pA",
+                                        "itemId": "_PrOIoMZ5Ed-Lr-wDR3V_pA",
+                                        "label": "Felipe Gon\u00e7alves Coury",
+                                        "locationUri": "https://igartc01.swg.usma.ibm.com/jazz/resource/itemOid/com.ibm.team.repository.Contributor/_PrOIoMZ5Ed-Lr-wDR3V_pA",
+                                        "name": "Felipe Gon\u00e7alves Coury",
+                                        "userId": "fcoury@br.ibm.com",
+                                        "webUri": "https://igajts01.swg.usma.ibm.com/jts/users/fcoury%40br.ibm.com"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "workItemType",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/task.gif",
+                                "id": "task",
+                                "label": "Task"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "id",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "id": "1285417",
+                                "label": "1285417"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "internalComments",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:ListDTO"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "acceptance",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "com.ibm.team.apt.attribute.complexity",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "contextId",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.process.common/icons/obj16/projectarea_obj.gif",
+                                "id": "_U7zMYFRcEd61fuNW84kdiQ",
+                                "isArchived": false,
+                                "label": "SD-OPS"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "archived",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "id": "false",
+                                "label": "false"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "process_root_cause",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif",
+                                "id": "Process_Root_Cause.literal.l27",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "work_product_where_found",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif",
+                                "id": "Work_Product_where_found.literal.l2",
+                                "label": "C - Code"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "phase_injected",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif",
+                                "id": "Phase_Injected.literal.l7",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "phase_detected",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif",
+                                "id": "Phase_Detected.literal.l13",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "defect_type",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif",
+                                "id": "Defect_Type.literal.l10",
+                                "label": "Logic"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "process_area_where_found",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif",
+                                "id": "Process_Area_where_found.literal.l45",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "activity_found",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.workitem.common/icons/obj16/type_none.gif",
+                                "id": "Activity_Found.literal.l45",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "com.ibm.team.apt.attribute.planitem.newRanking._pm7NmRYUEd6L1tNIGdz5qQ",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "label": "Unassigned"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "defect_complexity",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:ListDTO"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "teamArea",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/plugin/com.ibm.team.process.common/icons/obj16/teamarea_obj.gif",
+                                "id": "_1Hjb4FYBEd69G8biF2ewvg",
+                                "isArchived": false,
+                                "label": "SD-OPS"
+                            }
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                            "key": "stateGroup",
+                            "value": {
+                                "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                "id": "4",
+                                "label": "4"
+                            }
+                        }
+                    ],
+                    "itemId": "_Zq8VUrB1EeSm4Lu8El875A",
+                    "linkTypes": [
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:LinkTypeDTO",
+                            "displayName": "Parent",
+                            "endpointId": "parent",
+                            "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/bundleentry/339.fwk670672805/icons/obj16/parent_obj.gif",
+                            "id": "com.ibm.team.workitem.linktype.parentworkitem",
+                            "isInternal": false,
+                            "isSingleValued": true,
+                            "isSource": false,
+                            "isSymmetric": false,
+                            "isUserDeleteable": true,
+                            "isUserWriteable": true,
+                            "itemType": "WorkItem",
+                            "linkDTOs": [
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:LinkDTO",
+                                    "comment": "Task 1279544: Production problem: order T05D21 completed ActivationCode but email was not sent",
+                                    "itemId": "_Vl1m16fSEeSicYpAbHXWsw",
+                                    "target": {
+                                        "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:WorkItemDTO",
+                                        "attributes": [
+                                            {
+                                                "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                                                "key": "internalSequenceValue",
+                                                "value": {
+                                                    "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:ContentDTO",
+                                                    "content": "_PrOIoMZ5Ed-Lr-wDR3V_pA O00009",
+                                                    "isHTML": false
+                                                }
+                                            },
+                                            {
+                                                "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                                                "key": "summary",
+                                                "value": {
+                                                    "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:ContentDTO",
+                                                    "content": "Production problem: order T05D21 completed ActivationCode but email was not sent",
+                                                    "isHTML": true
+                                                }
+                                            },
+                                            {
+                                                "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                                                "key": "workItemType",
+                                                "value": {
+                                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                                    "iconUrl": "/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/task.gif",
+                                                    "id": "task",
+                                                    "label": "Task"
+                                                }
+                                            },
+                                            {
+                                                "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                                                "key": "id",
+                                                "value": {
+                                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                                    "id": "1279544",
+                                                    "label": "1279544"
+                                                }
+                                            },
+                                            {
+                                                "_eQualifiedClassName": "com.ibm.team.workitem.rest.dto:AttributeEntry",
+                                                "key": "stateGroup",
+                                                "value": {
+                                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:UIItemDTO",
+                                                    "id": "1",
+                                                    "label": "1"
+                                                }
+                                            }
+                                        ],
+                                        "itemId": "_Vl1m16fSEeSicYpAbHXWsw",
+                                        "locationUri": "https://igartc01.swg.usma.ibm.com/jazz/resource/itemName/com.ibm.team.workitem.WorkItem/1279544",
+                                        "stateId": "_hJRXUKfeEeSicYpAbHXWsw"
+                                    },
+                                    "url": "https://igartc01.swg.usma.ibm.com/jazz/resource/itemOid/com.ibm.team.workitem.WorkItem/_Vl1m16fSEeSicYpAbHXWsw",
+                                    "weburi": "https://igartc01.swg.usma.ibm.com/jazz/web/projects/SD-OPS#action=com.ibm.team.workitem.viewWorkItem&id=1279544"
+                                }
+                            ]
+                        }
+                    ],
+                    "locationUri": "https://igartc01.swg.usma.ibm.com/jazz/resource/itemName/com.ibm.team.workitem.WorkItem/1285417",
+                    "stateId": "_O2R8EbB5EeSm4Lu8El875A"
+                }
+            }
+        }
+    }
+}

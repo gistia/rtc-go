@@ -45,8 +45,13 @@ func ReadConfig() (*Config, error) {
 		return nil, err
 	}
 
+	width, err := GetTermWidth()
+	if err != nil {
+		width = 80
+	}
+
 	c.Pass = Decrypt(c.User, c.Pass)
-	c.MaxWidth = 80
+	c.MaxWidth = width
 
 	return c, nil
 }

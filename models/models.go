@@ -161,6 +161,7 @@ type WorkItem struct {
 	Id          string       `xml:"id"`
 	ItemId      string       `xml:"itemId"`
 	StateId     string       `xml:"stateId"`
+	StateName   string       `xml:"stateName"`
 	Summary     string       `xml:"summary"`
 	OwnerName   string       `xml:"ownerName"`
 	CreatorName string       `xml:"creatorName"`

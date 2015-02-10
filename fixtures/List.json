@@ -1,0 +1,777 @@
+{
+    "_eQualifiedClassName": "http://schemas.xmlsoap.org/soap/envelope/:Envelope",
+    "soapenv:Body": {
+        "_eQualifiedClassName": "http://schemas.xmlsoap.org/soap/envelope/:Body",
+        "response": {
+            "_eQualifiedClassName": "http:///com/ibm/team/core/services.ecore:Response",
+            "interface": "com.ibm.team.workitem.common.internal.rest.IQueryRestService",
+            "method": "postGetResultSet",
+            "returnValue": {
+                "_eQualifiedClassName": "http:///com/ibm/team/core/services.ecore:ComplexDataArg",
+                "type": "COMPLEX",
+                "value": {
+                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ResultSetDTO",
+                    "estimatedTotal": -1,
+                    "headers": [
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ColumnHeaderDTO",
+                            "alignment": "right",
+                            "attributeId": "workItemType",
+                            "attributeType": "type",
+                            "color": null,
+                            "iconOnly": true,
+                            "isOrderable": true,
+                            "label": "Type",
+                            "labelOnly": false,
+                            "width": "2.5em"
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ColumnHeaderDTO",
+                            "alignment": "left",
+                            "attributeId": "summary",
+                            "attributeType": "mediumHtml",
+                            "color": null,
+                            "iconOnly": false,
+                            "isOrderable": true,
+                            "label": "Summary",
+                            "labelOnly": false,
+                            "width": "50em"
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ColumnHeaderDTO",
+                            "alignment": "left",
+                            "attributeId": "creator",
+                            "attributeType": "contributor",
+                            "color": null,
+                            "iconOnly": false,
+                            "isOrderable": true,
+                            "label": "Created By",
+                            "labelOnly": false,
+                            "width": "11em"
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ColumnHeaderDTO",
+                            "alignment": "left",
+                            "attributeId": "owner",
+                            "attributeType": "contributor",
+                            "color": null,
+                            "iconOnly": false,
+                            "isOrderable": true,
+                            "label": "Owned By",
+                            "labelOnly": false,
+                            "width": "11em"
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ColumnHeaderDTO",
+                            "alignment": "left",
+                            "attributeId": "creationDate",
+                            "attributeType": "timestamp",
+                            "color": "gray",
+                            "iconOnly": false,
+                            "isOrderable": true,
+                            "label": "Creation Date",
+                            "labelOnly": false,
+                            "width": "9.5em"
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ColumnHeaderDTO",
+                            "alignment": "left",
+                            "attributeId": "duration",
+                            "attributeType": "duration",
+                            "color": null,
+                            "iconOnly": false,
+                            "isOrderable": true,
+                            "label": "Estimate",
+                            "labelOnly": false,
+                            "width": "15em"
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ColumnHeaderDTO",
+                            "alignment": "left",
+                            "attributeId": "category",
+                            "attributeType": "category",
+                            "color": null,
+                            "iconOnly": false,
+                            "isOrderable": true,
+                            "label": "Filed Against",
+                            "labelOnly": false,
+                            "width": "20em"
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ColumnHeaderDTO",
+                            "alignment": "left",
+                            "attributeId": "target",
+                            "attributeType": "interval",
+                            "color": null,
+                            "iconOnly": false,
+                            "isOrderable": true,
+                            "label": "Planned For",
+                            "labelOnly": false,
+                            "width": "15em"
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ColumnHeaderDTO",
+                            "alignment": "left",
+                            "attributeId": "projectArea",
+                            "attributeType": "projectArea",
+                            "color": null,
+                            "iconOnly": false,
+                            "isOrderable": true,
+                            "label": "Project Area",
+                            "labelOnly": false,
+                            "width": "15em"
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ColumnHeaderDTO",
+                            "alignment": "left",
+                            "attributeId": "internalTags",
+                            "attributeType": "tags",
+                            "color": null,
+                            "iconOnly": false,
+                            "isOrderable": true,
+                            "label": "Tags",
+                            "labelOnly": false,
+                            "width": "15em"
+                        }
+                    ],
+                    "limit": 27,
+                    "rows": [
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ResultRowDTO",
+                            "iconUrls": [
+                                "https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/task.gif",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                ""
+                            ],
+                            "id": "1285548",
+                            "info": [
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                }
+                            ],
+                            "itemId": "_MFoRBbCHEeSm4Lu8El875A",
+                            "labels": [
+                                "Task",
+                                "MQ: XYZ",
+                                "Felipe Gon\u00e7alves Coury",
+                                "Felipe Gon\u00e7alves Coury",
+                                "1423505540991",
+                                "Unassigned",
+                                "Unassigned",
+                                "Unassigned",
+                                "SD-OPS",
+                                ""
+                            ],
+                            "locationUri": "https://igartc01.swg.usma.ibm.com/jazz/resource/itemName/com.ibm.team.workitem.WorkItem/1285548",
+                            "stateGroup": 1
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ResultRowDTO",
+                            "iconUrls": [
+                                "https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/task.gif",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                ""
+                            ],
+                            "id": "1285536",
+                            "info": [
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                }
+                            ],
+                            "itemId": "_nB9mh7CFEeSm4Lu8El875A",
+                            "labels": [
+                                "Task",
+                                "DB2: XYZ",
+                                "Felipe Gon\u00e7alves Coury",
+                                "Felipe Gon\u00e7alves Coury",
+                                "1423504862695",
+                                "4 hours",
+                                "Unassigned",
+                                "Unassigned",
+                                "SD-OPS",
+                                ""
+                            ],
+                            "locationUri": "https://igartc01.swg.usma.ibm.com/jazz/resource/itemName/com.ibm.team.workitem.WorkItem/1285536",
+                            "stateGroup": 4
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ResultRowDTO",
+                            "iconUrls": [
+                                "https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/task.gif",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                ""
+                            ],
+                            "id": "1285417",
+                            "info": [
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                }
+                            ],
+                            "itemId": "_Zq8VUrB1EeSm4Lu8El875A",
+                            "labels": [
+                                "Task",
+                                "Production problem: Unexpected error during Explosion",
+                                "Felipe Gon\u00e7alves Coury",
+                                "Felipe Gon\u00e7alves Coury",
+                                "1423497901259",
+                                "2 hours",
+                                "Unassigned",
+                                "[2015] February R1, S1",
+                                "SD-OPS",
+                                ""
+                            ],
+                            "locationUri": "https://igartc01.swg.usma.ibm.com/jazz/resource/itemName/com.ibm.team.workitem.WorkItem/1285417",
+                            "stateGroup": 4
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ResultRowDTO",
+                            "iconUrls": [
+                                "https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/task.gif",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                ""
+                            ],
+                            "id": "1283248",
+                            "info": [
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                }
+                            ],
+                            "itemId": "_s68lt6ysEeSicYpAbHXWsw",
+                            "labels": [
+                                "Task",
+                                "Artifacts: XYZ",
+                                "Felipe Gon\u00e7alves Coury",
+                                "Felipe Gon\u00e7alves Coury",
+                                "1423081848666",
+                                "Unassigned",
+                                "Unassigned",
+                                "Unassigned",
+                                "SD-OPS",
+                                ""
+                            ],
+                            "locationUri": "https://igartc01.swg.usma.ibm.com/jazz/resource/itemName/com.ibm.team.workitem.WorkItem/1283248",
+                            "stateGroup": 1
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ResultRowDTO",
+                            "iconUrls": [
+                                "https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/task.gif",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                ""
+                            ],
+                            "id": "1281636",
+                            "info": [
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                }
+                            ],
+                            "itemId": "_2JmUQKsEEeSicYpAbHXWsw",
+                            "labels": [
+                                "Task",
+                                "XYZ",
+                                "Felipe Gon\u00e7alves Coury",
+                                "Felipe Gon\u00e7alves Coury",
+                                "1422899881072",
+                                "Unassigned",
+                                "Epic/User Story",
+                                "Unassigned",
+                                "SD-OPS",
+                                ""
+                            ],
+                            "locationUri": "https://igartc01.swg.usma.ibm.com/jazz/resource/itemName/com.ibm.team.workitem.WorkItem/1281636",
+                            "stateGroup": 1
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ResultRowDTO",
+                            "iconUrls": [
+                                "https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/task.gif",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                ""
+                            ],
+                            "id": "1279544",
+                            "info": [
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                }
+                            ],
+                            "itemId": "_Vl1m16fSEeSicYpAbHXWsw",
+                            "labels": [
+                                "Task",
+                                "Production problem: order T05D21 completed ActivationCode but email was not sent",
+                                "Felipe Gon\u00e7alves Coury",
+                                "Felipe Gon\u00e7alves Coury",
+                                "1422548317897",
+                                "2 hours",
+                                "Unassigned",
+                                "[2015] January R1, S3",
+                                "SD-OPS",
+                                ""
+                            ],
+                            "locationUri": "https://igartc01.swg.usma.ibm.com/jazz/resource/itemName/com.ibm.team.workitem.WorkItem/1279544",
+                            "stateGroup": 1
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ResultRowDTO",
+                            "iconUrls": [
+                                "https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/task.gif",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                ""
+                            ],
+                            "id": "1276642",
+                            "info": [
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                }
+                            ],
+                            "itemId": "_vyGvnqJlEeS4fen3HD7Mow",
+                            "labels": [
+                                "Task",
+                                "Test: New Cancellation Option - Cancelled by OM - Pending Resolution",
+                                "Felipe Gon\u00e7alves Coury",
+                                "Felipe Gon\u00e7alves Coury",
+                                "1421951889023",
+                                "8 hours",
+                                "Epic/User Story",
+                                "[2015] February R1, S1",
+                                "SD-OPS",
+                                ""
+                            ],
+                            "locationUri": "https://igartc01.swg.usma.ibm.com/jazz/resource/itemName/com.ibm.team.workitem.WorkItem/1276642",
+                            "stateGroup": 4
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ResultRowDTO",
+                            "iconUrls": [
+                                "https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/task.gif",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                ""
+                            ],
+                            "id": "1276605",
+                            "info": [
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                }
+                            ],
+                            "itemId": "_cb5VYKJQEeS4fen3HD7Mow",
+                            "labels": [
+                                "Task",
+                                "Artifacts: Fix vulnerability discovered by WASC security scan Oct 2014",
+                                "Felipe Gon\u00e7alves Coury",
+                                "Felipe Gon\u00e7alves Coury",
+                                "1421943127123",
+                                "8 hours",
+                                "Epic/User Story",
+                                "[2015] February R1, S1",
+                                "SD-OPS",
+                                ""
+                            ],
+                            "locationUri": "https://igartc01.swg.usma.ibm.com/jazz/resource/itemName/com.ibm.team.workitem.WorkItem/1276605",
+                            "stateGroup": 4
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ResultRowDTO",
+                            "iconUrls": [
+                                "https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/story.gif",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                ""
+                            ],
+                            "id": "1276258",
+                            "info": [
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                }
+                            ],
+                            "itemId": "_gcasUKHTEeS4fen3HD7Mow",
+                            "labels": [
+                                "Story",
+                                "Fix vulnerability discovered by WASC security scan Oct 2014",
+                                "Agustin Arellano Chavez",
+                                "Felipe Gon\u00e7alves Coury",
+                                "1421889657910",
+                                "Unassigned",
+                                "Product Backlog",
+                                "[2015] February R1, S1",
+                                "SD-OPS",
+                                ""
+                            ],
+                            "locationUri": "https://igartc01.swg.usma.ibm.com/jazz/resource/itemName/com.ibm.team.workitem.WorkItem/1276258",
+                            "stateGroup": 1
+                        },
+                        {
+                            "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ResultRowDTO",
+                            "iconUrls": [
+                                "https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.model.IImageContentService/processattachment/_U7zMYFRcEd61fuNW84kdiQ/workitemtype/retrospect_obj.gif",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                ""
+                            ],
+                            "id": "1274785",
+                            "info": [
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                },
+                                {
+                                    "_eQualifiedClassName": "com.ibm.team.workitem.query.rest.dto:ListDTO"
+                                }
+                            ],
+                            "itemId": "_PfU_MKAJEeSyXYA2Qk1Jog",
+                            "labels": [
+                                "Test Case",
+                                "Manual DSW BOM creation into SD-OPS Manufacturing Database - UAT 24",
+                                "ROBERT NIELSEN",
+                                "Felipe Gon\u00e7alves Coury",
+                                "1421692273936",
+                                "Unassigned",
+                                "Epic/User Story/Test Case",
+                                "[2015] SW Mfg Cons R1, S1",
+                                "SD-OPS",
+                                ""
+                            ],
+                            "locationUri": "https://igartc01.swg.usma.ibm.com/jazz/resource/itemName/com.ibm.team.workitem.WorkItem/1274785",
+                            "stateGroup": 1
+                        }
+                    ],
+                    "startIndex": 0,
+                    "token": "_y0_kIbCPEeSm4Lu8El875A",
+                    "totalCount": 27
+                }
+            }
+        }
+    }
+}
