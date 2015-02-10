@@ -98,10 +98,54 @@ type Value struct {
 	WorkItem       WorkItem     `xml:"workItem"`
 	Attributes     []*Attribute `xml:"attributes"`
 	LinkTypes      []LinkType   `xml:"linkTypes"`
+	Approvals      []Approval   `xml:"approvals"`
 }
 
 func (val Value) GetAttributes() []*Attribute {
 	return val.Attributes
+}
+
+type Approval struct {
+	Id              string             `xml:"id"`
+	ApprovalType    string             `xml:"approvalType"`
+	Name            string             `xml:"name"`
+	CumulativeState string             `xml:"cumulativeState"`
+	DueDate         string             `xml:"dueDate"`
+	Approvals       []ApproverApproval `xml:"approvals"`
+}
+
+func (a Approval) Type() string {
+	parts := strings.Split(a.ApprovalType, ".")
+	typeName := parts[len(parts)-1]
+	return typeName
+}
+
+func (a Approval) State() string {
+	parts := strings.Split(a.CumulativeState, ".")
+	typeName := parts[len(parts)-1]
+	return typeName
+}
+
+type ApproverApproval struct {
+	TheState  string     `xml:"state"`
+	Approvers []Approver `xml:"approver"`
+}
+
+func (a ApproverApproval) State() string {
+	parts := strings.Split(a.TheState, ".")
+	typeName := parts[len(parts)-1]
+	return typeName
+}
+
+type Approver struct {
+	Id          string `xml:"id"`
+	ItemId      string `xml:"itemId"`
+	UserId      string `xml:"userId"`
+	Name        string `xml:"name"`
+	Label       string `xml:"label"`
+	Email       string `xml:"emailAddress"`
+	LocationUri string `xml:"locationUri"`
+	WebUri      string `xml:"webUri"`
 }
 
 type LinkType struct {
@@ -157,16 +201,17 @@ type Row struct {
 }
 
 type WorkItem struct {
-	WorkItemId  string       `xml:"workItemItemId"`
-	Id          string       `xml:"id"`
-	ItemId      string       `xml:"itemId"`
-	StateId     string       `xml:"stateId"`
-	StateName   string       `xml:"stateName"`
-	Summary     string       `xml:"summary"`
-	OwnerName   string       `xml:"ownerName"`
-	CreatorName string       `xml:"creatorName"`
-	Type        string       `xml:"typeName"`
-	LocationUri string       `xml:"locationUri"`
+	WorkItemId  string `xml:"workItemItemId"`
+	Id          string `xml:"id"`
+	ItemId      string `xml:"itemId"`
+	StateId     string `xml:"stateId"`
+	StateName   string `xml:"stateName"`
+	Summary     string `xml:"summary"`
+	OwnerName   string `xml:"ownerName"`
+	CreatorName string `xml:"creatorName"`
+	Type        string `xml:"typeName"`
+	LocationUri string `xml:"locationUri"`
+
 	Description string       `xml:"description"`
 	Attributes  []*Attribute `xml:"attributes"`
 }

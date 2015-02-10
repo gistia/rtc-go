@@ -42,9 +42,11 @@ type WorkItem struct {
 	State        string
 	Resolution   string
 	IterationId  string
+	CodeChanges  string
 	Iteration    Iteration
 	Parents      []Reference
 	Children     []Reference
+	Approvals    []models.Approval
 }
 
 type Reference struct {
@@ -563,6 +565,7 @@ func (rtc *RTC) GetWorkItem(id string) (*WorkItem, error) {
 	wi.Resolution = attrs["internalResolution"]
 	wi.TimeSpent = attrs["timeSpent"]
 	wi.Estimate = attrs["duration"]
+	wi.CodeChanges = attrs["code-change"]
 
 	// add parents
 	if len(val.LinkTypes) > 0 {
@@ -583,6 +586,9 @@ func (rtc *RTC) GetWorkItem(id string) (*WorkItem, error) {
 			}
 		}
 	}
+
+	// add approvals
+	wi.Approvals = val.Approvals
 
 	return wi, nil
 }
@@ -833,10 +839,6 @@ func (rtc *RTC) OpenWorkItem(id string) error {
 	}
 
 	return open.Start(wi.LocationUri)
-}
-
-func (rtc *RTC) GetApprovals() {
-	// curl "https://igartc01.swg.usma.ibm.com/jazz/service/com.ibm.team.workitem.common.internal.rest.IWorkItemRestService/approvalStates?projectAreaItemId=_U7zMYFRcEd61fuNW84kdiQ" -H "Cookie: com_ibm_team_process_web_ui_internal_admin_projects_ProcessTree_0SaveSelectedCookie="%"2F0; JazzFormAuth=Form; net-jazz-ajax-cookie-rememberUserId=; ibmSurvey=1422910922008; UnicaNIODID=r2adbtayyw2-ZDKlNvR; pSite=https"%"3A"%"2F"%"2Fwww.ibm.com"%"2Fdeveloperworks"%"2Ftopics"%"2Frest"%"2520api"%"2520"%"2520python"%"2F; mmcore.tst=0.911; mmid=-1314913985"%"7CAQAAAAo69LY+igsAAA"%"3D"%"3D; mmcore.pd=1780648624"%"7CAQAAAAoBQjr0tj6KC46Z2xgBAHt7sKJCDdJIEXd3dy5nb29nbGUuY29tLmJyDgAAAHt7sKJCDdJIAAAAAP////8AGQAAAP////8AEXd3dy5nb29nbGUuY29tLmJyBIoLAQAAAAAAAwAAAAAA////////////////AAAAAAABRQ"%"3D"%"3D; mmcore.srv=nycvwcgus02; CoreID6=79140352120814229109241&ci=50200000|DEVWRKS; CoreM_State=73~-1~-1~-1~-1~3~3~5~3~3~7~7~|~~|~~|~~|~||||||~|~~|~~|~~|~~|~~|~~|~~|~; CoreM_State_Content=6~|~~|~|; 50200000_clogin=v=1&l=1422910924&e=1422912724704; JSESSIONID=0000w0b_QruvkcrpBiUBwiiWDew:-1; LtpaToken2=3lPEXJ70vJtaT1+RnssGZxvOWQx2ePXsEZRK63IrIXbrF5zTyj4916Whdh4OUE9/HMldBG9PGovSUf+VhhhrMeCZHDsoEkQUdEFfzcydZ9J4nKZRQEQXshPiC/9uZPR3CIo6//FnHpShwrLbPNBEtLWGlzj0VwHWHkxGQ4+DiZyCfISK3XrulaiISq28+DSM7Wy8VX/LsDF5Y1R+F5gTiEovDzHHheAa5dPlbGXNtsthrSXVKzo+Rx5EOOgCF5u1JN4dEe+QF+uzJFg1F71JcDNMp4/AfFe7nqiKTybPyRDrFbbH3s9TSrcofNTokhsBLPqPu/oJUyZaG45JbBLKC2dA/myCS8ukS9XymOhfgqhEL/G0dJxq3OMJt9RlFCVjF/hV8OIkQuUtFtiy6kxanQIhRS+3aY4hFYJAaJfMA/ggrOHszuvGHYK2Fi59RwUEIzfSVCH89H8HBMTm63VX22Rt1L38w1NrsxYxG/Cb6NWn6ywUvGxykFh6lv4C7P07+iQva5rgDZjVmqjY0Eex5VMuywQfP8bzHzfcW7yYyQMiYgeHwZ1r0cXOm5LZQBzWe7e0YN5xum5ouZ/UNEdGbw7d/A8WwomHZJizC1KzCXZyYfLdrZuH6S+4i6AshozOdTybEtKWI3olhpbd/TUf+JVfuAjpJsr6XonvCMXuNi0=" -H "X-jazz-downstream-auth-client-level: 4.0" -H "Accept-Encoding: gzip, deflate, sdch" -H "Accept-Language: en-US,en;q=0.8" -H "X-com-ibm-team-configuration-versions: LATEST" -H "User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36" -H "Content-Type: application/x-www-form-urlencoded; charset=utf-8" -H "accept: text/json" -H "Referer: https://igartc01.swg.usma.ibm.com/jazz/web/projects/SD-OPS" -H "X-Requested-With: XMLHttpRequest" -H "Connection: keep-alive" --compressed
 }
 
 func (rtc *RTC) AddApproval(id string, desc string, ownerId string) error {

@@ -302,6 +302,15 @@ func main() {
 		},
 
 		{
+			Name:      "changeset",
+			ShortName: "cs",
+			Usage:     "displays files changed for an artifacts tasks",
+			Action: func(c *cli.Context) {
+				changeset(c.Args()[0])
+			},
+		},
+
+		{
 			Name:      "subtask",
 			ShortName: "st",
 			Usage:     "creates a subtask for a story",
@@ -566,11 +575,27 @@ func info(id string, summary bool) {
 		fmt.Printf("\nDescription:\n\n%s\n", desc)
 	}
 
-	if len(wi.Parents) > 0 || len(wi.Children) > 0 {
+	if !summary && len(wi.Parents) > 0 || len(wi.Children) > 0 {
 		fmt.Println("")
 		fmt.Println(strings.Repeat("-", len(title)))
 		fmt.Println("")
 		showTree(wi)
+	}
+
+	if !summary && len(wi.Approvals) > 0 {
+		fmt.Println("")
+		fmt.Println(strings.Repeat("-", len(title)))
+		fmt.Println("")
+		fmt.Println("Approvals:")
+		fmt.Println("")
+		for _, a := range wi.Approvals {
+			fmt.Printf("  %s (%s)\n", a.Name, a.State())
+			for _, aa := range a.Approvals {
+				ap := aa.Approvers[0]
+				fmt.Printf("    %s - %s\n", ap.Name, aa.State())
+			}
+			fmt.Println("")
+		}
 	}
 
 	fmt.Println("")
@@ -757,16 +782,115 @@ func iterations(all bool) {
 }
 
 func test() {
+
+}
+
+type Commit struct {
+	Oper        string
+	File        string
+	Path        string
+	OldRevision string
+	NewRevision string
+}
+
+func (c *Commit) ToString() string {
+	if c.OldRevision == "" {
+		return fmt.Sprintf("%s %s", c.File, c.NewRevision)
+	}
+
+	return fmt.Sprintf("%s %s -> %s", c.File, c.OldRevision, c.NewRevision)
+}
+
+func changeset(id string) {
 	r, err := login()
 	if err != nil {
 		fmt.Println(err.Error())
 		return
 	}
 
-	owners, err := r.GetOwners()
-	for i, o := range owners {
-		fmt.Printf("%d. %s (%s)\n", i, o.Name, o.Id)
+	fmt.Printf("Retrieving work item %s...\n", id)
+	wi, _ := r.GetWorkItem(id)
+
+	if wi.CodeChanges == "" {
+		fmt.Println("No changeset for", wi.Title())
+		return
 	}
+
+	changes := strings.Replace(wi.CodeChanges, "&nbsp;", " ", -1)
+	changes = strings.Replace(changes, "&quot;", `"`, -1)
+	changes = strings.Replace(changes, "&lt;", "<", -1)
+	changes = strings.Replace(changes, "&gt;", ">", -1)
+	lines := strings.Split(changes, "<br/>")
+
+	var c *Commit
+	c = nil
+
+	commits := []*Commit{}
+	for _, line := range lines {
+		if strings.Contains(line, "<--") {
+			if c != nil {
+				commits = append(commits, c)
+			}
+
+			parts := strings.Split(line, ",v")
+			path := parts[0]
+			path = strings.Replace(path, "/cvsroot/sd-ops/sd_ops_impl_Rsa/", "", -1)
+
+			parts = strings.Split(path, "/")
+			file := parts[len(parts)-1]
+
+			path = strings.Replace(path, file, "", -1)
+
+			c = &Commit{Path: path, File: file}
+		}
+
+		if strings.Contains(line, "new revision") {
+			if c == nil {
+				continue
+			}
+			parts := strings.Split(line, ";")
+			nr := parts[0]
+			or := parts[1]
+			nr = strings.Split(nr, ": ")[1]
+			or = strings.Split(or, ": ")[1]
+			c.NewRevision = nr
+			c.OldRevision = or
+			c.Oper = "Update"
+		}
+
+		if strings.Contains(line, "initial revision") {
+			if c == nil {
+				continue
+			}
+			nr := strings.Split(line, ": ")[1]
+			c.NewRevision = nr
+			c.Oper = "Add"
+		}
+	}
+
+	if c != nil {
+		commits = append(commits, c)
+	}
+
+	fmt.Println("")
+	fmt.Println("Listing", len(commits), "files")
+	fmt.Println("")
+
+	table := tablewriter.NewWriter(os.Stdout)
+	table.SetHeader([]string{"OP", "File", "Path", "Old", "New"})
+	table.SetAlignment(tablewriter.ALIGN_LEFT)
+	table.SetColWidth(appConfig.MaxWidth)
+
+	for _, c := range commits {
+		table.Append([]string{string(c.Oper[0]), c.File, c.Path, c.OldRevision, c.NewRevision})
+	}
+
+	table.Render()
+
+	// owners, err := r.GetOwners()
+	// for i, o := range owners {
+	// 	fmt.Printf("%d. %s (%s)\n", i, o.Name, o.Id)
+	// }
 }
 
 func close(id string) {
@@ -978,6 +1102,8 @@ func addApproval(id string, desc string, apprName string) {
 	if len(owners) < 2 {
 		approver = owners[0]
 	} else {
+		fmt.Println("\n")
+
 		for i, o := range owners {
 			fmt.Printf("%d. %s\n", i+1, o.Name)
 		}
@@ -1000,4 +1126,20 @@ func addApproval(id string, desc string, apprName string) {
 	}
 
 	fmt.Println("Approval successfully added")
+}
+
+func approvals(id string) {
+	// r, err := login()
+	// if err != nil {
+	// 	fmt.Println(err.Error())
+	// 	return
+	// }
+
+	// fmt.Printf("Retrieving work item %s...\n", id)
+	// wi, err := r.GetWorkItem(id)
+	// if err != nil {
+	// 	fmt.Println(err.Error())
+	// 	return
+	// }
+
 }
