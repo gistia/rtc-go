@@ -272,6 +272,27 @@ func main() {
 		},
 
 		{
+			Name:      "add-approval",
+			ShortName: "app",
+			Usage:     "adds an approval to an user story",
+			Flags: []cli.Flag{
+				cli.StringFlag{
+					Name:  "approver",
+					Value: "",
+					Usage: "Assigns a approver",
+				},
+				cli.StringFlag{
+					Name:  "desc",
+					Value: "Approval",
+					Usage: "Approval description",
+				},
+			},
+			Action: func(c *cli.Context) {
+				addApproval(c.Args()[0], c.String("desc"), c.String("approver"))
+			},
+		},
+
+		{
 			Name:      "move",
 			ShortName: "mv",
 			Usage:     "moves a work item to a given iteration (see iters)",
@@ -736,13 +757,16 @@ func iterations(all bool) {
 }
 
 func test() {
-	// r, err := login()
-	// if err != nil {
-	// 	fmt.Println(err.Error())
-	// 	return
-	// }
+	r, err := login()
+	if err != nil {
+		fmt.Println(err.Error())
+		return
+	}
 
-	// r.Query()
+	owners, err := r.GetOwners()
+	for i, o := range owners {
+		fmt.Printf("%d. %s (%s)\n", i, o.Name, o.Id)
+	}
 }
 
 func close(id string) {
@@ -911,4 +935,69 @@ func query(q Query) {
 	}
 
 	renderTable(wis)
+}
+
+func addApproval(id string, desc string, apprName string) {
+	var approver rtc.Owner
+	var owners []rtc.Owner
+
+	r, err := login()
+	if err != nil {
+		fmt.Println(err.Error())
+		return
+	}
+
+	fmt.Printf("Retrieving work item %s...\n", id)
+	wi, err := r.GetWorkItem(id)
+	if err != nil {
+		fmt.Println(err.Error())
+		return
+	}
+
+	if apprName == "" {
+		owners, err = r.GetOwners()
+		if err != nil {
+			fmt.Println(err.Error())
+			return
+		}
+	} else {
+		all, err := r.GetOwners()
+		if err != nil {
+			fmt.Println(err.Error())
+			return
+		}
+
+		owners = []rtc.Owner{}
+		for _, o := range all {
+			if strings.Contains(o.Name, apprName) {
+				owners = append(owners, o)
+			}
+		}
+	}
+
+	if len(owners) < 2 {
+		approver = owners[0]
+	} else {
+		for i, o := range owners {
+			fmt.Printf("%d. %s\n", i+1, o.Name)
+		}
+
+		fmt.Println("\n")
+		app, err := Read("Please select the approver:")
+		if err != nil {
+			fmt.Println(err.Error())
+			return
+		}
+		num, err := strconv.Atoi(app)
+		approver = owners[num-1]
+	}
+
+	fmt.Printf("Adding approval '%s' for %s to %s...\n", desc, approver.Name, wi.Title())
+	err = r.AddApproval(id, desc, approver.Id)
+	if err != nil {
+		fmt.Println(err.Error())
+		return
+	}
+
+	fmt.Println("Approval successfully added")
 }

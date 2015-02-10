@@ -56,7 +56,7 @@ func ReadConfig() (*Config, error) {
 	return c, nil
 }
 
-func read(s string) (string, error) {
+func Read(s string) (string, error) {
 	reader := bufio.NewReader(os.Stdin)
 
 	fmt.Printf("%s ", s)
@@ -79,11 +79,11 @@ func CreateConfig() error {
 		return err
 	}
 
-	user, err := read("RTC username:")
+	user, err := Read("RTC username:")
 	if err != nil {
 		return err
 	}
-	pass, err := read("RTC password:")
+	pass, err := Read("RTC password:")
 	if err != nil {
 		return err
 	}
@@ -110,7 +110,7 @@ func CreateConfig() error {
 		i = i + 1
 	}
 
-	ownerNum, err := read("Owner #:")
+	ownerNum, err := Read("Owner #:")
 	if err != nil {
 		return err
 	}
